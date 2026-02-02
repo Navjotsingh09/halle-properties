@@ -1,0 +1,413 @@
+/* Selling Advice Page Styles */
+
+/* Navigation Section */
+.selling-nav-section {
+    background-color: var(--dark-bg);
+    padding: 0;
+}
+
+.selling-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px 40px;
+}
+
+.selling-header .header-content {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.selling-hero-section {
+    background-color: var(--dark-bg);
+    padding: 0 80px 50px;
+}
+
+.selling-hero-container {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.selling-hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.selling-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.selling-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+}
+
+.selling-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 40px;
+}
+
+.selling-hero-title {
+    font-size: 66px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.selling-hero-subtitle {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--white);
+}
+
+/* Ready To Make A Move Section */
+.selling-steps-section {
+    background-color: var(--white);
+    padding: 78px 80px;
+}
+
+.selling-steps-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.selling-steps-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.selling-steps-header h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--dark-bg);
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.selling-steps-header p {
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--dark-bg);
+    line-height: 1.2;
+}
+
+.selling-steps-grid {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.selling-steps-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 615px;
+}
+
+.selling-step-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background-color: var(--white);
+    padding: 10px 26px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    min-height: 80px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.selling-step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.step-number {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--primary);
+    min-width: 60px;
+}
+
+.step-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark-bg);
+}
+
+/* Selling Point Sections */
+.selling-point-section {
+    padding: 50px 122px;
+    overflow: hidden;
+}
+
+.selling-point-section.grey-bg {
+    background-color: var(--grey);
+}
+
+.selling-point-section.dark-bg {
+    background-color: var(--dark-bg);
+}
+
+.selling-point-section.white-bg {
+    background-color: var(--white);
+}
+
+.selling-point-container {
+    display: flex;
+    align-items: center;
+    gap: 86px;
+    max-width: 1196px;
+    margin: 0 auto;
+}
+
+.selling-point-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.selling-point-image {
+    flex-shrink: 0;
+    width: 582px;
+    height: 360px;
+}
+
+.selling-point-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.selling-point-content {
+    flex: 1;
+}
+
+.selling-point-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--dark-bg);
+    line-height: 1.35;
+    margin-bottom: 60px;
+}
+
+.selling-point-title.primary-color {
+    color: var(--primary);
+}
+
+.selling-point-text {
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--dark-bg);
+    line-height: 1.56;
+}
+
+.selling-point-text.white-text {
+    color: var(--white);
+}
+
+/* Why Halle Section Adjustments */
+.selling-why-section {
+    background-color: var(--grey);
+}
+
+/* CTA Section Adjustments */
+.selling-cta-section {
+    background-color: var(--grey);
+    padding: 80px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .selling-hero-section {
+        padding: 0 40px 40px;
+    }
+    
+    .selling-point-section {
+        padding: 50px 60px;
+    }
+    
+    .selling-point-container {
+        gap: 50px;
+    }
+    
+    .selling-point-image {
+        width: 450px;
+        height: 300px;
+    }
+    
+    .selling-point-title {
+        font-size: 48px;
+        margin-bottom: 40px;
+    }
+    
+    .selling-point-text {
+        font-size: 24px;
+    }
+    
+    .selling-steps-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .selling-steps-column {
+        width: 100%;
+        max-width: 615px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .selling-hero-title {
+        font-size: 48px;
+    }
+    
+    .selling-hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .selling-steps-header h2,
+    .selling-steps-header p {
+        font-size: 36px;
+    }
+    
+    .selling-point-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .selling-point-container.reverse {
+        flex-direction: column;
+    }
+    
+    .selling-point-image {
+        width: 100%;
+        max-width: 582px;
+        height: 300px;
+    }
+    
+    .selling-point-title {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .selling-point-text {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .selling-hero-section {
+        padding: 0 20px 30px;
+    }
+    
+    .selling-hero-image-wrapper {
+        height: 300px;
+    }
+    
+    .selling-hero-title {
+        font-size: 36px;
+    }
+    
+    .selling-hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .selling-steps-section {
+        padding: 60px 20px;
+    }
+    
+    .selling-steps-header h2,
+    .selling-steps-header p {
+        font-size: 28px;
+    }
+    
+    .selling-step-card {
+        padding: 15px 20px;
+    }
+    
+    .step-number {
+        font-size: 32px;
+        min-width: 50px;
+    }
+    
+    .step-title {
+        font-size: 16px;
+    }
+    
+    .selling-point-section {
+        padding: 40px 20px;
+    }
+    
+    .selling-point-image {
+        height: 250px;
+    }
+    
+    .selling-point-title {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    
+    .selling-point-text {
+        font-size: 18px;
+    }
+    
+    .selling-cta-section {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .selling-hero-image-wrapper {
+        height: 250px;
+    }
+    
+    .selling-hero-title {
+        font-size: 28px;
+    }
+    
+    .selling-hero-subtitle {
+        font-size: 14px;
+    }
+    
+    .selling-steps-header h2,
+    .selling-steps-header p {
+        font-size: 24px;
+    }
+    
+    .step-number {
+        font-size: 28px;
+        min-width: 45px;
+    }
+    
+    .step-title {
+        font-size: 14px;
+    }
+    
+    .selling-point-title {
+        font-size: 28px;
+    }
+    
+    .selling-point-text {
+        font-size: 16px;
+    }
+}

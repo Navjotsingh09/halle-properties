@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties To Rent - Halle Properties</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="listings.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar Section -->
+    <section class="listings-nav-section">
+        <header class="header listings-header">
+            <div class="header-content">
+                <a href="index.html" class="logo-link">
+                    <img src="https://www.figma.com/api/mcp/asset/7fc7d617-fb91-4e3d-ba92-48f3c2c27438" alt="Halle" class="logo-img">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav-links">
+                    <a href="buying.html" class="nav-link">Buying</a>
+                    <a href="selling.html" class="nav-link">Selling</a>
+                    <a href="renting.html" class="nav-link active">Letting</a>
+                    <a href="listings.html" class="nav-link">Properties</a>
+                    <a href="#" class="nav-link">Contact</a>
+                </nav>
+                <a href="#" class="btn-valuation">Book a Valuation</a>
+            </div>
+        </header>
+    </section>
+
+    <!-- Hero Section with Search -->
+    <section class="listings-hero-section">
+        <div class="listings-hero-container">
+            <!-- Hero Image -->
+            <div class="listings-hero-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1280&h=373&fit=crop" alt="Beautiful homes" class="listings-hero-img">
+                <div class="listings-hero-overlay"></div>
+            </div>
+            
+            <!-- Hero Content -->
+            <div class="listings-hero-content">
+                <div class="listings-title-wrapper">
+                    <h1 class="listings-hero-title">House Hunting Made Easy</h1>
+                    <p class="listings-hero-subtitle">Finding The Perfect Houses To Rent, Just Got Easier!</p>
+                </div>
+                
+                <!-- Property Filter Search Box -->
+                <div class="property-filter listings-filter">
+                    <div class="filter-fields">
+                        <div class="filter-field">
+                            <label class="filter-label" for="filter-location">Location</label>
+                            <div class="filter-dropdown" data-filter="location">
+                                <select class="filter-select" id="filter-location" title="Select location">
+                                    <option value="all">All</option>
+                                    <option value="wolverhampton">Wolverhampton</option>
+                                    <option value="willenhall">Willenhall</option>
+                                    <option value="birmingham">Birmingham</option>
+                                    <option value="walsall">Walsall</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="filter-divider"></div>
+                        <div class="filter-field">
+                            <label class="filter-label" for="filter-type">Property Type</label>
+                            <div class="filter-dropdown" data-filter="type">
+                                <select class="filter-select" id="filter-type" title="Select property type">
+                                    <option value="all">All</option>
+                                    <option value="house">House</option>
+                                    <option value="flat">Flat</option>
+                                    <option value="bungalow">Bungalow</option>
+                                    <option value="commercial">Commercial</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="filter-divider"></div>
+                        <div class="filter-field">
+                            <label class="filter-label" for="filter-bedrooms">Bedrooms</label>
+                            <div class="filter-dropdown" data-filter="bedrooms">
+                                <select class="filter-select" id="filter-bedrooms" title="Select minimum bedrooms">
+                                    <option value="all">Any</option>
+                                    <option value="1">1+</option>
+                                    <option value="2">2+</option>
+                                    <option value="3">3+</option>
+                                    <option value="4">4+</option>
+                                    <option value="5">5+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="filter-divider"></div>
+                        <div class="filter-field">
+                            <label class="filter-label" for="filter-price">Price Range</label>
+                            <div class="filter-dropdown" data-filter="price">
+                                <select class="filter-select" id="filter-price" title="Select maximum price">
+                                    <option value="all">Any</option>
+                                    <option value="500">Up to £500/month</option>
+                                    <option value="750">Up to £750/month</option>
+                                    <option value="1000">Up to £1,000/month</option>
+                                    <option value="1500">Up to £1,500/month</option>
+                                    <option value="2000">Up to £2,000/month</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="filter-divider"></div>
+                        <div class="filter-field">
+                            <label class="filter-label" for="filter-status">Status</label>
+                            <div class="filter-dropdown" data-filter="status">
+                                <select class="filter-select" id="filter-status" title="Select property status">
+                                    <option value="all">All</option>
+                                    <option value="available">Available</option>
+                                    <option value="let-agreed">Let Agreed</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="filter-search-btn" id="search-btn">
+                        <img src="https://www.figma.com/api/mcp/asset/2102bc2f-e100-4ecf-af52-70781e532ed6" alt="Search" class="search-btn-img">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Listings Section -->
+    <section class="property-listings-section">
+        <!-- Property Card 1 - To Rent -->
+        <div class="property-listing-card" data-payment="rent" data-location="wolverhampton" data-type="house" data-bedrooms="3" data-price="1200" data-status="available">
+            <div class="listing-card-inner">
+                <div class="listing-content">
+                    <!-- Property Image Section -->
+                    <div class="listing-image-section">
+                        <div class="listing-main-image">
+                            <img src="https://www.figma.com/api/mcp/asset/d9f92e02-7b25-42a2-b43d-5e65ddbf65fa" alt="Property" class="main-property-img">
+                            <div class="listing-status rent">Rent</div>
+                        </div>
+                        <div class="listing-thumbnails">
+                            <div class="thumbnail-wrapper">
+                                <div class="thumbnail">
+                                    <img src="https://www.figma.com/api/mcp/asset/b6f344e2-cb0f-4799-8568-0aa0c2664c71" alt="Property thumbnail">
+                                </div>
+                                <div class="thumbnail more-images">
+                                    <img src="https://www.figma.com/api/mcp/asset/d9f92e02-7b25-42a2-b43d-5e65ddbf65fa" alt="More images">
+                                    <div class="more-overlay">
+                                        <span>+20</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Property Info Section -->
+                    <div class="listing-info-section">
+                        <div class="listing-price">£1,200<span class="price-period">/month</span></div>
+                        <div class="listing-address">
+                            <p>Newport Street, Wolverhampton</p>
+                            <p>WV1 1AA</p>
+                        </div>
+                        <div class="listing-features">
+                            <div class="listing-feature">
+                                <span class="feature-number">1200</span>
+                                <span class="feature-text">Square Feet</span>
+                            </div>
+                            <div class="listing-feature-divider"></div>
+                            <div class="listing-feature">
+                                <span class="feature-number">3</span>
+                                <span class="feature-text">Bedroom</span>
+                            </div>
+                            <div class="listing-feature-divider"></div>
+                            <div class="listing-feature">
+                                <span class="feature-number">2</span>
+                                <span class="feature-text">Bathroom</span>
+                            </div>
+                        </div>
+                        <a href="property.html" class="btn-view-details">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Property Card 2 - To Rent -->
+        <div class="property-listing-card" data-payment="rent" data-location="birmingham" data-type="flat" data-bedrooms="1" data-price="850" data-status="available">
+            <div class="listing-card-inner">
+                <div class="listing-content">
+                    <!-- Property Image Section -->
+                    <div class="listing-image-section">
+                        <div class="listing-main-image">
+                            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=582&h=512&fit=crop" alt="Property" class="main-property-img">
+                            <div class="listing-status rent">Rent</div>
+                        </div>
+                        <div class="listing-thumbnails">
+                            <div class="thumbnail-wrapper">
+                                <div class="thumbnail">
+                                    <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=120&h=120&fit=crop" alt="Property thumbnail">
+                                </div>
+                                <div class="thumbnail more-images">
+                                    <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=120&h=120&fit=crop" alt="More images">
+                                    <div class="more-overlay">
+                                        <span>+8</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Property Info Section -->
+                    <div class="listing-info-section">
+                        <div class="listing-price">£850<span class="price-period">/month</span></div>
+                        <div class="listing-address">
+                            <p>City Centre, Birmingham</p>
+                            <p>B1 1DD</p>
+                        </div>
+                        <div class="listing-features">
+                            <div class="listing-feature">
+                                <span class="feature-number">550</span>
+                                <span class="feature-text">Square Feet</span>
+                            </div>
+                            <div class="listing-feature-divider"></div>
+                            <div class="listing-feature">
+                                <span class="feature-number">1</span>
+                                <span class="feature-text">Bedroom</span>
+                            </div>
+                            <div class="listing-feature-divider"></div>
+                            <div class="listing-feature">
+                                <span class="feature-number">1</span>
+                                <span class="feature-text">Bathroom</span>
+                            </div>
+                        </div>
+                        <a href="property.html" class="btn-view-details">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Property Card 3 - Let Agreed -->
+        <div class="property-listing-card let-agreed" data-payment="rent" data-location="wolverhampton" data-type="house" data-bedrooms="4" data-price="1500" data-status="let-agreed">
+            <div class="listing-card-inner">
+                <div class="listing-content">
+                    <!-- Property Image Section -->
+                    <div class="listing-image-section">
+                        <div class="listing-main-image">
+                            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=582&h=512&fit=crop" alt="Property" class="main-property-img">
+                            <div class="let-agreed-overlay"></div>
+                            <div class="listing-status let-agreed-status">Let Agreed</div>
+                        </div>
+                        <div class="listing-thumbnails">
+                            <div class="thumbnail-wrapper">
+                                <div class="thumbnail let-agreed-thumbnail">
+                                    <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=120&h=120&fit=crop" alt="Property thumbnail">
+                                    <div class="let-agreed-thumb-overlay"></div>
+                                </div>
+                                <div class="thumbnail more-images let-agreed-thumbnail">
+                                    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=120&h=120&fit=crop" alt="More images">
+                                    <div class="more-overlay let-agreed-more">
+                                        <span>+20</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Property Info Section -->
+                    <div class="listing-info-section">
+                        <div class="listing-price">£1,500<span class="price-period">/month</span></div>
+                        <div class="listing-address">
+                            <p>Park Lane, Wolverhampton</p>
+                            <p>WV2 3CC</p>
+                        </div>
+                        <div class="listing-features">
+                            <div class="listing-feature">
+                                <span class="feature-number">1500</span>
+                                <span class="feature-text">Square Feet</span>
+                            </div>
+                            <div class="listing-feature-divider"></div>
+                            <div class="listing-feature">
+                                <span class="feature-number">4</span>
+                                <span class="feature-text">Bedroom</span>
+                            </div>
+                            <div class="listing-feature-divider"></div>
+                            <div class="listing-feature">
+                                <span class="feature-number">2</span>
+                                <span class="feature-text">Bathroom</span>
+                            </div>
+                        </div>
+                        <a href="property.html" class="btn-view-details">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Property Card 4 - To Rent -->
+        <div class="property-listing-card" data-payment="rent" data-location="willenhall" data-type="flat" data-bedrooms="2" data-price="750" data-status="available">
+            <div class="listing-card-inner">
+                <div class="listing-content">
+                    <!-- Property Image Section -->
+                    <div class="listing-image-section">
+                        <div class="listing-main-image">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=582&h=512&fit=crop" alt="Property" class="main-property-img">
+                            <div class="listing-status rent">Rent</div>
+                        </div>
+                        <div class="listing-thumbnails">
+                            <div class="thumbnail-wrapper">
+                                <div class="thumbnail">
+                                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=120&h=120&fit=crop" alt="Property thumbnail">
+                                </div>
+                                <div class="thumbnail more-images">
+                                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=120&h=120&fit=crop" alt="More images">
+                                    <div class="more-overlay">
+                                        <span>+15</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Property Info Section -->
+                    <div class="listing-info-section">
+                        <div class="listing-price">£750<span class="price-period">/month</span></div>
+                        <div class="listing-address">
+                            <p>High Street, Willenhall</p>
+                            <p>WV13 2BB</p>
+                        </div>
+                        <div class="listing-features">
+                            <div class="listing-feature">
+                                <span class="feature-number">680</span>
+                                <span class="feature-text">Square Feet</span>
+                            </div>
+                            <div class="listing-feature-divider"></div>
+                            <div class="listing-feature">
+                                <span class="feature-number">2</span>
+                                <span class="feature-text">Bedroom</span>
+                            </div>
+                            <div class="listing-feature-divider"></div>
+                            <div class="listing-feature">
+                                <span class="feature-number">1</span>
+                                <span class="feature-text">Bathroom</span>
+                            </div>
+                        </div>
+                        <a href="property.html" class="btn-view-details">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Property Card 5 - To Rent -->
+        <div class="property-listing-card" data-payment="rent" data-location="walsall" data-type="house" data-bedrooms="3" data-price="1100" data-status="available">
+            <div class="listing-card-inner">
+                <div class="listing-content">
+                    <!-- Property Image Section -->
+                    <div class="listing-image-section">
+                        <div class="listing-main-image">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=582&h=512&fit=crop" alt="Property" class="main-property-img">
+                            <div class="listing-status rent">Rent</div>
+                        </div>
+                        <div class="listing-thumbnails">
+                            <div class="thumbnail-wrapper">
+                                <div class="thumbnail">
+                                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=120&h=120&fit=crop" alt="Property thumbnail">
+                                </div>
+                                <div class="thumbnail more-images">
+                                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=120&h=120&fit=crop" alt="More images">
+                                    <div class="more-overlay">
+                                        <span>+12</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Property Info Section -->
+                    <div class="listing-info-section">
+                        <div class="listing-price">£1,100<span class="price-period">/month</span></div>
+                        <div class="listing-address">
+                            <p>Green Lane, Walsall</p>
+                            <p>WS1 4EE</p>
+                        </div>
+                        <div class="listing-features">
+                            <div class="listing-feature">
+                                <span class="feature-number">1050</span>
+                                <span class="feature-text">Square Feet</span>
+                            </div>
+                            <div class="listing-feature-divider"></div>
+                            <div class="listing-feature">
+                                <span class="feature-number">3</span>
+                                <span class="feature-text">Bedroom</span>
+                            </div>
+                            <div class="listing-feature-divider"></div>
+                            <div class="listing-feature">
+                                <span class="feature-number">2</span>
+                                <span class="feature-text">Bathroom</span>
+                            </div>
+                        </div>
+                        <a href="property.html" class="btn-view-details">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Property Card 6 - Let Agreed -->
+        <div class="property-listing-card let-agreed" data-payment="rent" data-location="birmingham" data-type="flat" data-bedrooms="2" data-price="950" data-status="let-agreed">
+            <div class="listing-card-inner">
+                <div class="listing-content">
+                    <!-- Property Image Section -->
+                    <div class="listing-image-section">
+                        <div class="listing-main-image">
+                            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=582&h=512&fit=crop" alt="Property" class="main-property-img">
+                            <div class="let-agreed-overlay"></div>
+                            <div class="listing-status let-agreed-status">Let Agreed</div>
+                        </div>
+                        <div class="listing-thumbnails">
+                            <div class="thumbnail-wrapper">
+                                <div class="thumbnail let-agreed-thumbnail">
+                                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=120&h=120&fit=crop" alt="Property thumbnail">
+                                    <div class="let-agreed-thumb-overlay"></div>
+                                </div>
+                                <div class="thumbnail more-images let-agreed-thumbnail">
+                                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=120&h=120&fit=crop" alt="More images">
+                                    <div class="more-overlay let-agreed-more">
+                                        <span>+10</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Property Info Section -->
+                    <div class="listing-info-section">
+                        <div class="listing-price">£950<span class="price-period">/month</span></div>
+                        <div class="listing-address">
+                            <p>Jewellery Quarter, Birmingham</p>
+                            <p>B18 6FF</p>
+                        </div>
+                        <div class="listing-features">
+                            <div class="listing-feature">
+                                <span class="feature-number">720</span>
+                                <span class="feature-text">Square Feet</span>
+                            </div>
+                            <div class="listing-feature-divider"></div>
+                            <div class="listing-feature">
+                                <span class="feature-number">2</span>
+                                <span class="feature-text">Bedroom</span>
+                            </div>
+                            <div class="listing-feature-divider"></div>
+                            <div class="listing-feature">
+                                <span class="feature-number">1</span>
+                                <span class="feature-text">Bathroom</span>
+                            </div>
+                        </div>
+                        <a href="property.html" class="btn-view-details">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- No Results Message -->
+        <div class="no-results" id="no-results" style="display: none;">
+            <h3>No properties found</h3>
+            <p>Try adjusting your search filters to find more properties.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section (Same as Homepage) -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-wrapper">
+                <img src="https://www.figma.com/api/mcp/asset/21b12865-f787-495b-837f-288b5041c010" alt="" class="cta-bg-image">
+                <div class="cta-gradient"></div>
+                <div class="cta-content">
+                    <h2>Find out what your property is worth in seconds</h2>
+                    <div class="cta-text">
+                        <p>With house prices shooting up, how much is your home worth now?</p>
+                        <p>Get your house valued by us today in 60 seconds!</p>
+                    </div>
+                    <a href="#" class="btn-cta">
+                        <span>Instant Valuation</span>
+                        <img src="https://www.figma.com/api/mcp/asset/487ddf1e-b01c-4939-aaeb-585a809ca544" alt="" class="cta-arrow-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-wrapper">
+                <div class="faq-heading">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-content">
+                    <!-- FAQ Item 1 - Open -->
+                    <div class="faq-item active">
+                        <div class="faq-question">
+                            <span>Title can be added here</span>
+                            <button class="faq-toggle" aria-label="Toggle answer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 15L12 9L6 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Use Jambo for analyzing and engaging with customer feedback, unlocking valuable insights, and revealing new releases. Lorem ipsum aliquam vel justo fringillas enigma.</p>
+                            <p>Lorem ipsum aliquam vel justo fringillas enigma.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Title can be added here</span>
+                            <button class="faq-toggle" aria-label="Toggle answer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Use Jambo for analyzing and engaging with customer feedback, unlocking valuable insights, and revealing new releases.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Title can be added here</span>
+                            <button class="faq-toggle" aria-label="Toggle answer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Use Jambo for analyzing and engaging with customer feedback, unlocking valuable insights, and revealing new releases.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Title can be added here</span>
+                            <button class="faq-toggle" aria-label="Toggle answer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Use Jambo for analyzing and engaging with customer feedback, unlocking valuable insights, and revealing new releases.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as Homepage) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="https://www.figma.com/api/mcp/asset/ae28e296-a670-4e4a-8882-959a8883ca88" alt="Halle" class="footer-logo-img">
+                    <p>Halle is a trusted estate agency in Willenhall, dedicated to connecting people with homes that truly fit their needs and aspirations.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <img src="https://www.figma.com/api/mcp/asset/e6189d22-a7ae-438f-9bbc-2873c1668c24" alt="Instagram" class="social-icon">
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <img src="https://www.figma.com/api/mcp/asset/e257987e-cc93-451c-96e1-c859cd108a80" alt="Facebook" class="social-icon">
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <img src="https://www.figma.com/api/mcp/asset/1a2565a4-4cb9-4519-83fc-c17694c9d428" alt="YouTube" class="social-icon">
+                        </a>
+                        <a href="#" class="social-link" aria-label="TikTok">
+                            <img src="https://www.figma.com/api/mcp/asset/c78a41b3-0118-458d-84bf-c4bf2ae6f08e" alt="TikTok" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links:</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="listings.html">Properties</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="buying.html">Buying</a></li>
+                        <li><a href="renting.html">Letting</a></li>
+                        <li><a href="#">Landlords</a></li>
+                        <li><a href="tenant-resources.html">Tenant Resources</a></li>
+                        <li><a href="#">Selling</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Halle © All rights reserved Copyrights 2025</p>
+                <p>Site By 5RV Digital</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

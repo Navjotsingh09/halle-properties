@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halle - Discover Quality Homes in Wolverhampton</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section with Header -->
+    <section class="hero-section">
+        <!-- Header Navigation -->
+        <header class="header">
+            <div class="header-content">
+                <a href="index.html" class="logo-link">
+                    <img src="https://www.figma.com/api/mcp/asset/7fc7d617-fb91-4e3d-ba92-48f3c2c27438" alt="Halle" class="logo-img">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav-links">
+                    <a href="buying.html" class="nav-link">Buying</a>
+                    <a href="selling.html" class="nav-link">Selling</a>
+                    <a href="renting.html" class="nav-link">Letting</a>
+                    <a href="listings.html" class="nav-link">Properties</a>
+                    <a href="#" class="nav-link">Contact</a>
+                </nav>
+                <a href="#" class="btn-valuation">Book a Valuation</a>
+            </div>
+        </header>
+
+        <!-- Hero Image Container -->
+        <div class="hero-image-container">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1280&h=764&fit=crop" alt="Modern luxury home" class="hero-image">
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="hero-title-wrapper">
+                <h1 class="hero-title">Discover Quality Homes in Wolverhampton with Halle.</h1>
+                <p class="hero-subtitle">Browse quality properties to rent, let, or buy - tailored to your lifestyle and investment goals.</p>
+            </div>
+
+            <!-- Property Filter Search Box -->
+            <div class="property-filter" id="home-filter">
+                <div class="filter-fields">
+                    <div class="filter-field">
+                        <label class="filter-label" for="home-filter-payment">Payment</label>
+                        <div class="filter-dropdown">
+                            <select class="filter-select" id="home-filter-payment" title="Payment Type">
+                                <option value="all">All</option>
+                                <option value="sale">For Sale</option>
+                                <option value="rent">To Rent</option>
+                                <option value="lease">Lease</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-divider"></div>
+                    <div class="filter-field">
+                        <label class="filter-label" for="home-filter-location">Location</label>
+                        <div class="filter-dropdown">
+                            <select class="filter-select" id="home-filter-location" title="Location">
+                                <option value="all">All</option>
+                                <option value="wolverhampton">Wolverhampton</option>
+                                <option value="willenhall">Willenhall</option>
+                                <option value="birmingham">Birmingham</option>
+                                <option value="walsall">Walsall</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-divider"></div>
+                    <div class="filter-field">
+                        <label class="filter-label" for="home-filter-type">Property Type</label>
+                        <div class="filter-dropdown">
+                            <select class="filter-select" id="home-filter-type" title="Property Type">
+                                <option value="all">All</option>
+                                <option value="house">House</option>
+                                <option value="flat">Flat</option>
+                                <option value="bungalow">Bungalow</option>
+                                <option value="commercial">Commercial</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-divider"></div>
+                    <div class="filter-field">
+                        <label class="filter-label" for="home-filter-bedrooms">Bedrooms</label>
+                        <div class="filter-dropdown">
+                            <select class="filter-select" id="home-filter-bedrooms" title="Bedrooms">
+                                <option value="all">Any</option>
+                                <option value="1">1+</option>
+                                <option value="2">2+</option>
+                                <option value="3">3+</option>
+                                <option value="4">4+</option>
+                                <option value="5">5+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-divider"></div>
+                    <div class="filter-field">
+                        <label class="filter-label" for="home-filter-price">Price Range</label>
+                        <div class="filter-dropdown">
+                            <select class="filter-select" id="home-filter-price" title="Price Range">
+                                <option value="all">Any</option>
+                                <option value="100000">Up to £100,000</option>
+                                <option value="200000">Up to £200,000</option>
+                                <option value="300000">Up to £300,000</option>
+                                <option value="500000">Up to £500,000</option>
+                                <option value="1000000">Up to £1,000,000</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button class="filter-search-btn" id="home-search-btn">
+                    <img src="https://www.figma.com/api/mcp/asset/2102bc2f-e100-4ecf-af52-70781e532ed6" alt="Search" class="search-btn-img">
+                </button>
+            </div>
+
+            <!-- Partner Logos -->
+            <div class="partner-logos">
+                <img src="https://www.figma.com/api/mcp/asset/6ab531c2-e697-431e-917a-cdce05f804e3" alt="PrimeLocation" class="partner-logo primelocation">
+                <img src="https://www.figma.com/api/mcp/asset/9b9b5100-c9f3-4179-8459-f52edc36e828" alt="Zoopla" class="partner-logo zoopla">
+                <img src="https://www.figma.com/api/mcp/asset/d264c4eb-8393-414d-b344-2f7c5d5f45ed" alt="OnTheMarket" class="partner-logo onthemarket">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties Section -->
+    <section class="properties-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Discover Your Perfect Dream Property Today</h2>
+                <p>Explore our hand picked selection of premium properties, featuring stunning designs, prime locations, and tailored details to match your lifestyle and needs. Find the perfect home or investment with ease.</p>
+            </div>
+            
+            <div class="properties-grid">
+                <div class="property-card">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=413&h=540&fit=crop" alt="Property" class="property-bg-image">
+                    <div class="property-info-overlay">
+                        <div class="property-info-contents">
+                            <div class="property-price-row">
+                                <span class="property-price">£195,000</span>
+                                <img src="https://www.figma.com/api/mcp/asset/6f5a1932-2a2c-4245-bf1f-1aa78eeab726" alt="" class="property-action-btn">
+                            </div>
+                            <div class="property-location">
+                                <span class="property-street">Newport Street</span>
+                                <span class="property-city">Wolverhampton</span>
+                            </div>
+                            <div class="property-features">
+                                <span class="feature"><span class="feature-value">1,800</span><span class="feature-label">Sq. Ft.</span></span>
+                                <span class="feature-divider"></span>
+                                <span class="feature"><span class="feature-value">3</span><span class="feature-label">Beds</span></span>
+                                <span class="feature-divider"></span>
+                                <span class="feature"><span class="feature-value">2</span><span class="feature-label">Baths</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=414&h=540&fit=crop" alt="Property" class="property-bg-image">
+                    <div class="property-info-overlay">
+                        <div class="property-info-contents">
+                            <div class="property-price-row">
+                                <span class="property-price">£165,500</span>
+                                <img src="https://www.figma.com/api/mcp/asset/6f5a1932-2a2c-4245-bf1f-1aa78eeab726" alt="" class="property-action-btn">
+                            </div>
+                            <div class="property-location">
+                                <span class="property-street">Newport Street</span>
+                                <span class="property-city">Wolverhampton</span>
+                            </div>
+                            <div class="property-features">
+                                <span class="feature"><span class="feature-value">1,200</span><span class="feature-label">Sq. Ft.</span></span>
+                                <span class="feature-divider"></span>
+                                <span class="feature"><span class="feature-value">2</span><span class="feature-label">Beds</span></span>
+                                <span class="feature-divider"></span>
+                                <span class="feature"><span class="feature-value">2</span><span class="feature-label">Baths</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=413&h=540&fit=crop" alt="Property" class="property-bg-image">
+                    <div class="property-info-overlay">
+                        <div class="property-info-contents">
+                            <div class="property-price-row">
+                                <span class="property-price">£250,875</span>
+                                <img src="https://www.figma.com/api/mcp/asset/6f5a1932-2a2c-4245-bf1f-1aa78eeab726" alt="" class="property-action-btn">
+                            </div>
+                            <div class="property-location">
+                                <span class="property-street">Newport Street</span>
+                                <span class="property-city">Wolverhampton</span>
+                            </div>
+                            <div class="property-features">
+                                <span class="feature"><span class="feature-value">3,200</span><span class="feature-label">Sq. Ft.</span></span>
+                                <span class="feature-divider"></span>
+                                <span class="feature"><span class="feature-value">4</span><span class="feature-label">Beds</span></span>
+                                <span class="feature-divider"></span>
+                                <span class="feature"><span class="feature-value">3</span><span class="feature-label">Baths</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-cta">
+                <a href="#" class="btn-view-more">View More Properties</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="why-section">
+        <div class="container">
+            <div class="why-content">
+                <div class="why-image">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=585&h=637&fit=crop" alt="Why Halle">
+                </div>
+                <div class="why-text">
+                    <div class="why-header">
+                        <h2>Why Halle Is Your Best Property Partner</h2>
+                        <p>At Halle, we're trusted estate agents in Wolverhampton and Willenhall. With __ years of experience, we deliver quality properties and personalised service to guide you every step of the way.</p>
+                    </div>
+                    <div class="why-reasons">
+                        <div class="reason-item">
+                            <span class="reason-number">01</span>
+                            <div class="reason-text">
+                                <strong>__+ Years of Experience</strong>
+                                <span>A proven track record of excellence in real estate.</span>
+                            </div>
+                        </div>
+                        <div class="reason-item">
+                            <span class="reason-number">02</span>
+                            <div class="reason-text">
+                                <strong>Trusted by Thousands of Clients</strong>
+                                <span>Building lasting relationships with homeowners and investors.</span>
+                            </div>
+                        </div>
+                        <div class="reason-item">
+                            <span class="reason-number">03</span>
+                            <div class="reason-text">
+                                <strong>Wide Range of Properties</strong>
+                                <span>A wide range of homes across Willenhall & Wolverhampton.</span>
+                            </div>
+                        </div>
+                        <div class="reason-item">
+                            <span class="reason-number">04</span>
+                            <div class="reason-text">
+                                <strong>Exceptional Customer Support</strong>
+                                <span>Dedicated to personalised, seamless service.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works / Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="services-title">Our Key Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <img src="https://www.figma.com/api/mcp/asset/90e25924-7552-4b6c-8c61-3e0cac2e0a7a" alt="" class="service-circle">
+                        <img src="https://www.figma.com/api/mcp/asset/73443f05-95f7-4543-acb9-d74e81983a34" alt="Book a Valuation" class="service-inner-icon">
+                    </div>
+                    <h3>Book a Valuation</h3>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <img src="https://www.figma.com/api/mcp/asset/90e25924-7552-4b6c-8c61-3e0cac2e0a7a" alt="" class="service-circle">
+                        <img src="https://www.figma.com/api/mcp/asset/08a10e28-8d90-436c-baad-c71b64a8ae51" alt="Renting & Letting" class="service-inner-icon">
+                    </div>
+                    <h3>Renting & Letting</h3>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <img src="https://www.figma.com/api/mcp/asset/90e25924-7552-4b6c-8c61-3e0cac2e0a7a" alt="" class="service-circle">
+                        <img src="https://www.figma.com/api/mcp/asset/c44388a7-bedf-4398-87d0-dcc05d6d619b" alt="Buying a Property" class="service-inner-icon">
+                    </div>
+                    <h3>Buying a Property</h3>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <img src="https://www.figma.com/api/mcp/asset/90e25924-7552-4b6c-8c61-3e0cac2e0a7a" alt="" class="service-circle">
+                        <img src="https://www.figma.com/api/mcp/asset/c2b5ba58-bf08-40fa-a83f-1e3f4485282c" alt="Selling a Property" class="service-inner-icon">
+                    </div>
+                    <h3>Selling a Property</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="testimonials-bottom-bg"></div>
+        <div class="container">
+            <div class="testimonials-header">
+                <h2>Here's What Our Satisfied Clients Have to Say About Us</h2>
+                <p>Here's what our happy clients have to say about their experience with Halle. From finding their dream home to seamless transactions, your satisfaction is our priority.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Great experience with Halle. Jatinder went out of his way to accommodate me and was genuinely friendly. Excellent service!</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Stephanie Wallis</span>
+                        <div class="author-rating">
+                            <img src="https://www.figma.com/api/mcp/asset/830e1cfa-36ca-4d78-b240-fd3a0bb2adfe" alt="★" class="star-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/830e1cfa-36ca-4d78-b240-fd3a0bb2adfe" alt="★" class="star-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/830e1cfa-36ca-4d78-b240-fd3a0bb2adfe" alt="★" class="star-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/830e1cfa-36ca-4d78-b240-fd3a0bb2adfe" alt="★" class="star-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/830e1cfa-36ca-4d78-b240-fd3a0bb2adfe" alt="★" class="star-icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Great experience with Halle. Jatinder went out of his way to accommodate me and was genuinely friendly. Excellent service!</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Stephanie Wallis</span>
+                        <div class="author-rating">
+                            <img src="https://www.figma.com/api/mcp/asset/830e1cfa-36ca-4d78-b240-fd3a0bb2adfe" alt="★" class="star-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/830e1cfa-36ca-4d78-b240-fd3a0bb2adfe" alt="★" class="star-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/830e1cfa-36ca-4d78-b240-fd3a0bb2adfe" alt="★" class="star-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/830e1cfa-36ca-4d78-b240-fd3a0bb2adfe" alt="★" class="star-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/830e1cfa-36ca-4d78-b240-fd3a0bb2adfe" alt="★" class="star-icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Great experience with Halle. Jatinder went out of his way to accommodate me and was genuinely friendly. Excellent service!</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Stephanie Wallis</span>
+                        <div class="author-rating">
+                            <img src="https://www.figma.com/api/mcp/asset/830e1cfa-36ca-4d78-b240-fd3a0bb2adfe" alt="★" class="star-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/830e1cfa-36ca-4d78-b240-fd3a0bb2adfe" alt="★" class="star-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/830e1cfa-36ca-4d78-b240-fd3a0bb2adfe" alt="★" class="star-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/830e1cfa-36ca-4d78-b240-fd3a0bb2adfe" alt="★" class="star-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/830e1cfa-36ca-4d78-b240-fd3a0bb2adfe" alt="★" class="star-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-wrapper">
+                <img src="https://www.figma.com/api/mcp/asset/21b12865-f787-495b-837f-288b5041c010" alt="" class="cta-bg-image">
+                <div class="cta-gradient"></div>
+                <div class="cta-content">
+                    <h2>Find out what your property is worth in seconds</h2>
+                    <div class="cta-text">
+                        <p>With house prices shooting up, how much is your home worth now?</p>
+                        <p>Get your house valued by us today in 60 seconds!</p>
+                    </div>
+                    <a href="#" class="btn-cta">
+                        <span>Instant Valuation</span>
+                        <img src="https://www.figma.com/api/mcp/asset/487ddf1e-b01c-4939-aaeb-585a809ca544" alt="" class="cta-arrow-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-header">
+                <span class="blog-label">Articles</span>
+                <h2>Explore New Insight</h2>
+            </div>
+            <div class="blog-content">
+                <!-- Featured Article (Left side with image) -->
+                <div class="blog-featured">
+                    <div class="blog-featured-image">
+                        <img src="https://www.figma.com/api/mcp/asset/ad81903b-fcdc-422e-ad2a-ba143a209786" alt="Featured Article">
+                    </div>
+                    <div class="blog-featured-text">
+                        <h3>10 Common Plumbing Problems and How to Fix Them Fast</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eros elit, mattis eget finibus in, blandit tristique nisl. Sed finibus, justo non malesuada aliquam.</p>
+                        <a href="#" class="btn-read-more">Read More</a>
+                    </div>
+                </div>
+                <!-- Article Cards (Right side - 2 cards only) -->
+                <div class="blog-articles">
+                    <div class="blog-article-card">
+                        <div class="blog-text-content">
+                            <h3>Why Regular Plumbing Maintenance Saves You More Money</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eros elit, mattis eget finibus in</p>
+                            <a href="#" class="btn-read-more">Read More</a>
+                        </div>
+                    </div>
+                    <div class="blog-article-card">
+                        <div class="blog-text-content">
+                            <h3>Why Regular Plumbing Maintenance Saves You More Money</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eros elit, mattis eget finibus in</p>
+                            <a href="#" class="btn-read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-wrapper">
+            <div class="faq-heading">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-content">
+                <div class="faq-item active">
+                    <div class="faq-question">
+                        <span>Title can be added here</span>
+                        <button class="faq-toggle" aria-label="Toggle answer">
+                            <svg viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.24264 1.8856L0.942813 5.18547L0 4.24267L4.24264 0L8.48531 4.24267L7.54251 5.18547L4.24264 1.8856Z" fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Use Jambo for analyzing and engaging with customer feedback, unlocking valuable insights, and revealing new releases. Lorem ipsum aliquam vel justo fringillas enigma.</p>
+                        <p>Lorem ipsum aliquam vel justo fringillas enigma.</p>
+                    </div>
+                </div>
+                <div class="faq-divider"></div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Title can be added here</span>
+                        <button class="faq-toggle" aria-label="Toggle answer">
+                            <svg viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.24264 4.11437L7.54251 0.814499L8.48531 1.7573L4.24264 5.99997L0 1.7573L0.942813 0.814499L4.24264 4.11437Z" fill="#2a363a"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Use Jambo for analyzing and engaging with customer feedback, unlocking valuable insights, and revealing new releases. Lorem ipsum aliquam vel justo fringillas enigma.</p>
+                    </div>
+                </div>
+                <div class="faq-divider"></div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Title can be added here</span>
+                        <button class="faq-toggle" aria-label="Toggle answer">
+                            <svg viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.24264 4.11437L7.54251 0.814499L8.48531 1.7573L4.24264 5.99997L0 1.7573L0.942813 0.814499L4.24264 4.11437Z" fill="#2a363a"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Use Jambo for analyzing and engaging with customer feedback, unlocking valuable insights, and revealing new releases. Lorem ipsum aliquam vel justo fringillas enigma.</p>
+                    </div>
+                </div>
+                <div class="faq-divider"></div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Title can be added here</span>
+                        <button class="faq-toggle" aria-label="Toggle answer">
+                            <svg viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.24264 4.11437L7.54251 0.814499L8.48531 1.7573L4.24264 5.99997L0 1.7573L0.942813 0.814499L4.24264 4.11437Z" fill="#2a363a"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Use Jambo for analyzing and engaging with customer feedback, unlocking valuable insights, and revealing new releases. Lorem ipsum aliquam vel justo fringillas enigma.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="https://www.figma.com/api/mcp/asset/ae28e296-a670-4e4a-8882-959a8883ca88" alt="Halle" class="footer-logo-img">
+                    <p>Halle is a trusted estate agency in Willenhall, dedicated to connecting people with homes that truly fit their needs and aspirations.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <img src="https://www.figma.com/api/mcp/asset/e6189d22-a7ae-438f-9bbc-2873c1668c24" alt="Instagram" class="social-icon">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="https://www.figma.com/api/mcp/asset/e257987e-cc93-451c-96e1-c859cd108a80" alt="Facebook" class="social-icon">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="https://www.figma.com/api/mcp/asset/1a2565a4-4cb9-4519-83fc-c17694c9d428" alt="YouTube" class="social-icon">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="https://www.figma.com/api/mcp/asset/c78a41b3-0118-458d-84bf-c4bf2ae6f08e" alt="TikTok" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links:</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Properties</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Buying</a></li>
+                        <li><a href="#">Letting</a></li>
+                        <li><a href="#">Landlords</a></li>
+                        <li><a href="tenant-resources.html">Tenant Resources</a></li>
+                        <li><a href="#">Selling</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Halle © All rights reserved Copyrights 2025</p>
+                <p>Site By 5RV Digital</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

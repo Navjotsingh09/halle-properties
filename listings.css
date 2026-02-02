@@ -1,0 +1,804 @@
+/* =========================================
+   LISTINGS PAGE STYLES
+   ========================================= */
+
+/* Navigation Section */
+.listings-nav-section {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 120px;
+    background: var(--dark-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.listings-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Hero Section */
+.listings-hero-section {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background: var(--dark-bg);
+    padding: 41px 80px;
+    overflow: hidden;
+}
+
+.listings-hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.listings-hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 373px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.listings-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.listings-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
+    border-radius: 20px;
+}
+
+.listings-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+    max-width: 1120px;
+    padding: 0 20px;
+}
+
+.listings-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    color: var(--white);
+}
+
+.listings-hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 66px;
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 986px;
+}
+
+.listings-hero-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    max-width: 812px;
+}
+
+.listings-filter {
+    position: relative;
+}
+
+/* Property Listings Section */
+.property-listings-section {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 43px 81px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.property-listing-card {
+    width: 100%;
+    max-width: 1278px;
+    padding: 29px 25px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.listing-card-inner {
+    position: relative;
+    width: 100%;
+    height: 570px;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 6px 9px 198.5px 0px rgba(36, 134, 57, 0.08);
+    display: flex;
+    align-items: center;
+    padding: 29px 25px;
+}
+
+.listing-content {
+    display: flex;
+    align-items: center;
+    gap: 84px;
+    width: 100%;
+}
+
+/* Property Image Section */
+.listing-image-section {
+    position: relative;
+    width: 582px;
+    height: 512px;
+    flex-shrink: 0;
+}
+
+.listing-main-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.main-property-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.listing-status {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 0 20px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 106px;
+    height: 57px;
+    line-height: 81px;
+}
+
+.listing-status.sale {
+    background: var(--primary);
+}
+
+.listing-status.rent {
+    background: var(--primary);
+}
+
+.listing-status.let-agreed,
+.listing-status.let-agreed-status {
+    background: var(--dark-bg);
+    width: auto;
+    padding: 19px 20px;
+}
+
+.listing-status.sold-status {
+    background: var(--dark-bg);
+}
+
+/* Sold Property Overlay */
+.sold-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(218, 221, 220, 0.6);
+    border-radius: 20px;
+}
+
+/* Thumbnails */
+.listing-thumbnails {
+    position: absolute;
+    bottom: 22px;
+    left: 20px;
+}
+
+.thumbnail-wrapper {
+    display: flex;
+    gap: 10px;
+    padding: 7px 9px;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 6px 9px 198.5px 0px rgba(36, 134, 57, 0.08);
+    width: 269px;
+    height: 134px;
+    align-items: center;
+    justify-content: center;
+}
+
+.thumbnail {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.thumbnail.more-images {
+    position: relative;
+}
+
+.more-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(42, 54, 58, 0.8);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.more-overlay span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--white);
+    line-height: 81px;
+}
+
+.more-overlay.sold-more {
+    background: rgba(218, 221, 220, 0.8);
+}
+
+/* Sold Thumbnail Overlay */
+.sold-thumbnail {
+    position: relative;
+}
+
+.sold-thumb-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(218, 221, 220, 0.6);
+    border-radius: 20px;
+}
+
+/* Price Period for Rent Properties */
+.price-period {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/* No Results Message */
+.no-results {
+    width: 100%;
+    text-align: center;
+    padding: 80px 20px;
+    background: #f8f9fa;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.no-results h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--dark-bg);
+    margin: 0 0 15px;
+}
+
+.no-results p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Hidden property card when filtered */
+.property-listing-card.hidden {
+    display: none;
+}
+
+/* Property Info Section */
+.listing-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 527px;
+}
+
+.listing-price {
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 81px;
+}
+
+.listing-address {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--dark-bg);
+    line-height: 50px;
+    height: 83px;
+    width: 100%;
+}
+
+.listing-address p {
+    margin: 0;
+}
+
+/* Property Features */
+.listing-features {
+    display: flex;
+    align-items: center;
+    gap: 46px;
+    width: 494px;
+    height: 59px;
+}
+
+.listing-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--dark-bg);
+}
+
+.listing-feature:nth-child(1) {
+    width: 119px;
+}
+
+.listing-feature:nth-child(3) {
+    width: 92px;
+}
+
+.listing-feature:nth-child(5) {
+    width: 100px;
+}
+
+.feature-number {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.feature-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.listing-feature-divider {
+    width: 1px;
+    height: 65px;
+    background: var(--dark-bg);
+    flex-shrink: 0;
+}
+
+/* View Details Button */
+.btn-view-details {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background: var(--primary);
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 53px;
+    width: 208px;
+    line-height: 100.055%;
+    text-align: center;
+    transition: background 0.2s ease;
+}
+
+.btn-view-details:hover {
+    background: var(--primary-hover);
+}
+
+/* =========================================
+   RESPONSIVE STYLES - LISTINGS SPECIFIC
+   ========================================= */
+
+/* Large Screens (1440px and below) */
+@media (max-width: 1440px) {
+    .listings-hero-section {
+        padding: 41px 50px;
+    }
+
+    .property-listings-section {
+        padding: 43px 50px;
+    }
+}
+
+/* Medium Screens (1200px and below) */
+@media (max-width: 1200px) {
+    .listings-hero-title {
+        font-size: 50px;
+    }
+
+    .listings-hero-subtitle {
+        font-size: 18px;
+    }
+
+    .listing-content {
+        gap: 50px;
+    }
+
+    .listing-image-section {
+        width: 450px;
+        height: 400px;
+    }
+
+    .listing-info-section {
+        width: 100%;
+        gap: 40px;
+    }
+
+    .listing-price {
+        font-size: 48px;
+    }
+
+    .listing-address {
+        font-size: 26px;
+        line-height: 40px;
+    }
+
+    .listing-features {
+        width: 100%;
+        gap: 30px;
+        height: auto;
+    }
+
+    .feature-number {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .feature-text {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+}
+
+/* Tablet (992px and below) */
+@media (max-width: 992px) {
+    .listings-nav-section {
+        height: 80px;
+    }
+
+    .listings-hero-section {
+        padding: 30px;
+    }
+
+    .listings-hero-image-wrapper {
+        height: 300px;
+    }
+
+    .listings-hero-title {
+        font-size: 40px;
+    }
+
+    .listings-hero-subtitle {
+        font-size: 16px;
+    }
+
+    .listings-hero-content {
+        gap: 40px;
+    }
+
+    .property-listings-section {
+        padding: 30px;
+    }
+
+    .property-listing-card {
+        box-shadow: none;
+    }
+
+    .listing-card-inner {
+        height: auto;
+    }
+
+    .listing-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .listing-image-section {
+        width: 100%;
+        height: 350px;
+    }
+
+    .listing-info-section {
+        width: 100%;
+        gap: 30px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .listing-address {
+        height: auto;
+    }
+
+    .listing-price {
+        font-size: 42px;
+    }
+
+    .listing-address {
+        font-size: 22px;
+        line-height: 34px;
+    }
+
+    .listing-features {
+        justify-content: center;
+        height: auto;
+    }
+}
+
+/* Mobile (768px and below) */
+@media (max-width: 768px) {
+    .listings-nav-section {
+        height: 70px;
+    }
+
+    .listings-header .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .listings-header .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--dark-bg);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        z-index: 150;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .listings-header .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .listings-header .btn-valuation {
+        position: fixed;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 160;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .listings-header .btn-valuation.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .listings-hero-section {
+        padding: 20px;
+    }
+
+    .listings-hero-image-wrapper {
+        height: 250px;
+    }
+
+    .listings-hero-title {
+        font-size: clamp(28px, 6vw, 36px);
+    }
+
+    .listings-hero-subtitle {
+        font-size: clamp(14px, 3vw, 16px);
+    }
+
+    .listings-hero-content {
+        gap: 25px;
+        padding: 0 10px;
+    }
+
+    .listings-filter .filter-fields {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .listings-filter .filter-field {
+        width: 100%;
+        padding: 10px 15px;
+        background: #f5f5f5;
+        border-radius: 10px;
+    }
+
+    .listings-filter .filter-divider {
+        display: none;
+    }
+
+    .listings-filter .filter-search-btn {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin: 10px auto 5px;
+    }
+
+    .property-listings-section {
+        padding: 20px;
+    }
+
+    .property-listing-card {
+        padding: 20px 0;
+    }
+
+    .listing-card-inner {
+        padding: 20px 15px;
+        height: auto;
+    }
+
+    .listing-image-section {
+        height: 280px;
+    }
+
+    .listing-status {
+        font-size: 20px;
+        width: 80px;
+        height: 45px;
+    }
+
+    .thumbnail-wrapper {
+        padding: 5px;
+        width: auto;
+        height: auto;
+    }
+
+    .thumbnail {
+        width: 80px;
+        height: 80px;
+    }
+
+    .more-overlay span {
+        font-size: 20px;
+        line-height: 60px;
+    }
+
+    .listing-price {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .listing-address {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .listing-features {
+        flex-wrap: wrap;
+        gap: 20px;
+        height: auto;
+    }
+
+    .feature-number {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+
+    .feature-text {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    .listing-feature-divider {
+        height: 50px;
+    }
+
+    .btn-view-details {
+        font-size: 18px;
+        width: 180px;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+    .listings-hero-section {
+        padding: 15px;
+    }
+
+    .listings-hero-image-wrapper {
+        height: 200px;
+    }
+
+    .listings-hero-title {
+        font-size: clamp(24px, 7vw, 30px);
+    }
+
+    .listings-hero-subtitle {
+        font-size: 14px;
+    }
+
+    .property-listings-section {
+        padding: 15px;
+    }
+
+    .listing-card-inner {
+        padding: 15px 10px;
+    }
+
+    .listing-image-section {
+        height: 220px;
+    }
+
+    .listing-status {
+        font-size: 16px;
+        width: 65px;
+        height: 38px;
+    }
+
+    .thumbnail {
+        width: 60px;
+        height: 60px;
+    }
+
+    .more-overlay span {
+        font-size: 16px;
+        line-height: 40px;
+    }
+
+    .listing-price {
+        font-size: 30px;
+    }
+
+    .listing-address {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .feature-number {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .feature-text {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+    .listing-feature-divider {
+        height: 40px;
+    }
+
+    .btn-view-details {
+        font-size: 16px;
+        width: 160px;
+        padding: 8px 16px;
+    }
+}

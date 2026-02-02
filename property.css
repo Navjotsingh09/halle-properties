@@ -1,0 +1,682 @@
+/* Property Page Styles */
+
+/* Property Hero Section */
+.property-hero-section {
+    background-color: var(--dark-bg);
+    height: auto;
+    min-height: auto;
+    padding: 0;
+    padding-bottom: 20px;
+}
+
+.property-hero-section .header {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px 40px;
+}
+
+/* Property Details Section */
+.property-details-section {
+    padding: 60px 40px;
+    background-color: var(--white);
+}
+
+.property-details-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* Property Gallery */
+.property-gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.property-main-image {
+    width: 506px;
+    height: 506px;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.property-main-image .main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property-side-images {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    width: 160px;
+    flex-shrink: 0;
+}
+
+.property-thumb {
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    width: 160px;
+    height: 160px;
+}
+
+.property-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.property-thumb:hover img {
+    transform: scale(1.05);
+}
+
+.property-more-images .more-images-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(42, 54, 58, 0.8);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Property Info */
+.property-info {
+    padding: 20px 0;
+}
+
+.property-status-row {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    margin-bottom: 10px;
+}
+
+.property-status-text {
+    font-size: 16px;
+    color: var(--dark-bg);
+}
+
+.property-status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--dark-bg);
+}
+
+.property-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--dark-bg);
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.property-location {
+    font-size: 20px;
+    color: #8c959f;
+    margin-bottom: 10px;
+}
+
+.property-price-section {
+    margin-bottom: 24px;
+}
+
+.property-price {
+    font-family: 'Mulish', sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 24px;
+}
+
+.price-suffix {
+    font-size: 44px;
+    font-weight: 700;
+}
+
+.property-financing {
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    color: #8c959f;
+}
+
+.property-features {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 71px;
+    flex-wrap: wrap;
+}
+
+.property-feature {
+    background-color: white;
+    border: 1px solid var(--dark-bg);
+    padding: 19px 29px;
+    border-radius: 20px;
+    height: 61px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-value {
+    font-family: 'Mulish', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--dark-bg);
+    text-align: center;
+}
+
+.btn-enquiry {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 53px;
+    font-size: 22px;
+    font-weight: 600;
+    width: 208px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-enquiry:hover {
+    background-color: #6ab5ab;
+    transform: translateY(-2px);
+}
+
+/* Property Tabs Section */
+.property-tabs-section {
+    padding: 60px 40px;
+    background-color: #f9fafb;
+}
+
+.property-tabs-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.property-tabs-nav {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 40px;
+}
+
+.property-tab {
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #6b7280;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.property-tab::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.property-tab:hover {
+    color: var(--dark-bg);
+}
+
+.property-tab.active {
+    color: var(--dark-bg);
+    font-weight: 600;
+}
+
+.property-tab.active::after {
+    background-color: var(--primary);
+}
+
+.property-tab-content {
+    min-height: 300px;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+.tab-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--dark-bg);
+    margin-bottom: 20px;
+}
+
+.tab-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #6b7280;
+    max-width: 800px;
+}
+
+/* Floorplan Tab */
+.floorplan-image {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.floorplan-image img {
+    width: 100%;
+    height: auto;
+    max-height: 585px;
+    object-fit: cover;
+}
+
+/* Location Tab */
+.location-map {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Schools Tab */
+.schools-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.school-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.school-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark-bg);
+    margin-bottom: 4px;
+}
+
+.school-distance {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.school-rating {
+    background-color: var(--primary);
+    color: var(--dark-bg);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Similar Properties Section */
+.similar-properties-section {
+    padding: 80px 40px;
+    background-color: var(--white);
+}
+
+.similar-properties-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.similar-title {
+    font-size: 42px;
+    font-weight: 600;
+    color: var(--dark-bg);
+    margin-bottom: 48px;
+}
+
+.similar-properties-section .properties-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.similar-properties-section .property-card {
+    position: relative;
+}
+
+.property-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    z-index: 10;
+}
+
+.sale-badge {
+    background-color: var(--primary);
+    color: var(--dark-bg);
+}
+
+.rent-badge {
+    background-color: #FFB800;
+    color: var(--dark-bg);
+}
+
+.price-period {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.similar-property-favorite:hover {
+    background-color: #6ab5ab;
+    transform: scale(1.1);
+}
+
+.similar-property-favorite svg path {
+    stroke: var(--dark-bg);
+}
+
+.similar-property-location {
+    margin-bottom: 16px;
+}
+
+.similar-street {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark-bg);
+    margin-bottom: 4px;
+}
+
+.similar-city {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.similar-property-features {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.feature-divider {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #d1d5db;
+}
+
+.btn-explore-more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: var(--dark-bg);
+    padding: 18px 48px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-explore-more:hover {
+    background-color: #6ab5ab;
+    transform: translateY(-2px);
+}
+
+/* School Checker Styles */
+.school-checker-wrapper {
+    max-width: 600px;
+    padding: 24px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.school-checker-title {
+    margin: 0 0 8px;
+    color: var(--dark-bg);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.school-checker-description {
+    margin: 0 0 16px;
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.school-search-form {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.school-postcode-input {
+    flex: 1;
+    min-width: 220px;
+    padding: 12px 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.school-postcode-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.school-search-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    background: var(--primary);
+    color: var(--dark-bg);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.school-search-button:hover {
+    background-color: #6ab5ab;
+    transform: translateY(-2px);
+}
+
+.school-search-message {
+    margin-top: 12px;
+    color: #6b7280;
+    font-size: 14px;
+    display: none;
+}
+
+.school-search-message.visible {
+    display: block;
+}
+
+.school-search-message a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .property-details-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .property-gallery {
+        flex-direction: column;
+    }
+    
+    .property-main-image {
+        width: 100%;
+        height: 400px;
+    }
+    
+    .property-side-images {
+        flex-direction: row;
+        width: 100%;
+        gap: 16px;
+    }
+    
+    .property-thumb {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .similar-properties-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .property-tabs-nav {
+        flex-wrap: wrap;
+    }
+    
+    .property-tab {
+        padding: 12px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .property-details-section {
+        padding: 40px 20px;
+    }
+    
+    .property-title {
+        font-size: 32px;
+    }
+    
+    .property-price {
+        font-size: 28px;
+    }
+    
+    .property-main-image {
+        height: 300px;
+    }
+    
+    .property-side-images {
+        gap: 10px;
+    }
+    
+    .property-thumb {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .property-tabs-section {
+        padding: 40px 20px;
+    }
+    
+    .property-tabs-nav {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .property-tab {
+        white-space: nowrap;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .similar-properties-section {
+        padding: 60px 20px;
+    }
+    
+    .similar-title {
+        font-size: 32px;
+    }
+    
+    .similar-properties-section .properties-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .property-features {
+        gap: 8px;
+    }
+    
+    .property-feature {
+        padding: 10px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .property-header .header-content {
+        padding: 15px 20px;
+    }
+    
+    .property-title {
+        font-size: 26px;
+    }
+    
+    .property-location {
+        font-size: 16px;
+    }
+    
+    .property-price {
+        font-size: 24px;
+    }
+    
+    .price-suffix {
+        font-size: 18px;
+    }
+    
+    .property-main-image {
+        height: 250px;
+    }
+    
+    .property-thumb {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .btn-enquiry {
+        width: 100%;
+        padding: 16px 32px;
+    }
+    
+    .similar-property-image {
+        height: 220px;
+    }
+}
