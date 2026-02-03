@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Valuation - Halle Properties</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="valuation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section with Navbar -->
+    <section class="valuation-hero-section">
+        <!-- Navigation Bar (positioned over hero) -->
+        <header class="header valuation-header">
+            <div class="header-content">
+                <a href="index.html" class="logo-link">
+                    <img src="https://www.figma.com/api/mcp/asset/7fc7d617-fb91-4e3d-ba92-48f3c2c27438" alt="Halle" class="logo-img">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav-links">
+                    <a href="buying.html" class="nav-link">Buying</a>
+                    <a href="selling.html" class="nav-link">Selling</a>
+                    <a href="renting.html" class="nav-link">Letting</a>
+                    <a href="resources.html" class="nav-link">Resources</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                <a href="valuation.html" class="btn-valuation active">Book a Valuation</a>
+            </div>
+        </header>
+
+        <div class="valuation-hero-container">
+            <div class="valuation-hero-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1280&h=400&fit=crop" alt="Book a valuation" class="valuation-hero-img">
+                <div class="valuation-hero-overlay"></div>
+            </div>
+            <div class="valuation-hero-content">
+                <h1 class="valuation-hero-title">Book a Valuation</h1>
+                <p class="valuation-hero-subtitle">Get an accurate, no-obligation valuation of your property from our expert team. Whether you're looking to sell or let, we'll help you understand your property's true market value.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valuation Form Section -->
+    <section class="valuation-form-section">
+        <div class="valuation-form-container">
+            <div class="valuation-form-card">
+                <form class="valuation-form">
+                    <!-- Row 1: First Name & Last Name -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">FIRST NAME</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">LAST NAME</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Email & Phone Number -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">NUMBER</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Type of Estimate & Property Type -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="estimateType">TYPE OF ESTIMATE</label>
+                            <div class="select-wrapper">
+                                <select id="estimateType" name="estimateType" required>
+                                    <option value="" disabled selected>Select estimate type</option>
+                                    <option value="sales">Sales Valuation</option>
+                                    <option value="lettings">Lettings Valuation</option>
+                                    <option value="both">Sales & Lettings</option>
+                                </select>
+                                <svg class="select-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L12 15L18 9" stroke="#2a363a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="propertyType">PROPERTY TYPE</label>
+                            <div class="select-wrapper">
+                                <select id="propertyType" name="propertyType" required>
+                                    <option value="" disabled selected>Select property type</option>
+                                    <option value="detached">Detached House</option>
+                                    <option value="semi-detached">Semi-Detached House</option>
+                                    <option value="terraced">Terraced House</option>
+                                    <option value="flat">Flat / Apartment</option>
+                                    <option value="bungalow">Bungalow</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <svg class="select-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L12 15L18 9" stroke="#2a363a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 4: Number of Bedrooms & Postcode -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bedrooms">NUMBER OF BEDROOMS</label>
+                            <div class="select-wrapper">
+                                <select id="bedrooms" name="bedrooms" required>
+                                    <option value="" disabled selected>Select bedrooms</option>
+                                    <option value="1">1 Bedroom</option>
+                                    <option value="2">2 Bedrooms</option>
+                                    <option value="3">3 Bedrooms</option>
+                                    <option value="4">4 Bedrooms</option>
+                                    <option value="5">5+ Bedrooms</option>
+                                </select>
+                                <svg class="select-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L12 15L18 9" stroke="#2a363a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="postcode">POSTCODE</label>
+                            <input type="text" id="postcode" name="postcode" placeholder="Enter postcode" required>
+                        </div>
+                    </div>
+
+                    <!-- Terms Checkbox -->
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="terms" required>
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">I agree with <a href="#">Terms of Use</a> and <a href="#">Privacy Policy.</a></span>
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn-send-message">
+                        <span>Send message</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.5 17L14.5 12L9.5 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Banner -->
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <h2 class="newsletter-title">Stay Updated & Unlock Exclusive Perks!</h2>
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="enter your email" required>
+                <button type="submit" class="newsletter-btn">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="https://www.figma.com/api/mcp/asset/ae28e296-a670-4e4a-8882-959a8883ca88" alt="Halle" class="footer-logo-img">
+                    <p>Halle is a trusted estate agency in Willenhall, dedicated to connecting people with homes that truly fit their needs and aspirations.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <img src="https://www.figma.com/api/mcp/asset/e6189d22-a7ae-438f-9bbc-2873c1668c24" alt="Instagram" class="social-icon">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="https://www.figma.com/api/mcp/asset/e257987e-cc93-451c-96e1-c859cd108a80" alt="Facebook" class="social-icon">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="https://www.figma.com/api/mcp/asset/1a2565a4-4cb9-4519-83fc-c17694c9d428" alt="YouTube" class="social-icon">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="https://www.figma.com/api/mcp/asset/c78a41b3-0118-458d-84bf-c4bf2ae6f08e" alt="TikTok" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links:</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="listings.html">Properties</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="buying.html">Buying</a></li>
+                        <li><a href="renting.html">Letting</a></li>
+                        <li><a href="renting.html">Landlords</a></li>
+                        <li><a href="tenant-resources.html">Tenant Resources</a></li>
+                        <li><a href="selling.html">Selling</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Halle © All rights reserved Copyrights 2025</p>
+                <p>Site By 5RV Digital</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
