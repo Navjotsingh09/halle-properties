@@ -598,7 +598,9 @@ body.menu-open {
 }
 
 .property-card:hover .property-action-btn {
-    transform: scale(1.1);
+    background-color: #fff;
+    border: 1px solid #2a363a;
+    color: #2a363a;
 }
 
 .property-bg-image {
@@ -659,10 +661,23 @@ body.menu-open {
 }
 
 .property-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50px;
     height: 30px;
     flex-shrink: 0;
-    transition: transform 0.3s ease;
+    background-color: #5BAEA6;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    color: #fff;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.property-action-btn svg {
+    width: 16px;
+    height: 16px;
 }
 
 .property-location {
