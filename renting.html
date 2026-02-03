@@ -53,6 +53,16 @@
                 <div class="property-filter listings-filter">
                     <div class="filter-fields">
                         <div class="filter-field">
+                            <label class="filter-label" for="filter-payment">Payment</label>
+                            <div class="filter-dropdown" data-filter="payment">
+                                <select class="filter-select" id="filter-payment" title="Select payment type">
+                                    <option value="lease" selected>Lease</option>
+                                    <option value="sale">Sale</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="filter-divider"></div>
+                        <div class="filter-field">
                             <label class="filter-label" for="filter-location">Location</label>
                             <div class="filter-dropdown" data-filter="location">
                                 <select class="filter-select" id="filter-location" title="Select location">
@@ -79,24 +89,17 @@
                         </div>
                         <div class="filter-divider"></div>
                         <div class="filter-field">
-                            <label class="filter-label" for="filter-bedrooms">Bedrooms</label>
-                            <div class="filter-dropdown" data-filter="bedrooms">
-                                <select class="filter-select" id="filter-bedrooms" title="Select minimum bedrooms">
-                                    <option value="all">Any</option>
-                                    <option value="1">1+</option>
-                                    <option value="2">2+</option>
-                                    <option value="3">3+</option>
-                                    <option value="4">4+</option>
-                                    <option value="5">5+</option>
-                                </select>
+                            <label class="filter-label" for="filter-keyword">Keyword</label>
+                            <div class="filter-input-wrapper">
+                                <input type="text" class="filter-input" id="filter-keyword" placeholder="Building/Shop/..." title="Enter keyword">
                             </div>
                         </div>
                         <div class="filter-divider"></div>
                         <div class="filter-field">
-                            <label class="filter-label" for="filter-price">Price Range</label>
+                            <label class="filter-label" for="filter-price">Price</label>
                             <div class="filter-dropdown" data-filter="price">
-                                <select class="filter-select" id="filter-price" title="Select maximum price">
-                                    <option value="all">Any</option>
+                                <select class="filter-select" id="filter-price" title="Select price range">
+                                    <option value="all">£/month</option>
                                     <option value="500">Up to £500/month</option>
                                     <option value="750">Up to £750/month</option>
                                     <option value="1000">Up to £1,000/month</option>
@@ -105,20 +108,11 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="filter-divider"></div>
-                        <div class="filter-field">
-                            <label class="filter-label" for="filter-status">Status</label>
-                            <div class="filter-dropdown" data-filter="status">
-                                <select class="filter-select" id="filter-status" title="Select property status">
-                                    <option value="all">All</option>
-                                    <option value="available">Available</option>
-                                    <option value="let-agreed">Let Agreed</option>
-                                </select>
-                            </div>
-                        </div>
                     </div>
                     <button class="filter-search-btn" id="search-btn">
-                        <img src="https://www.figma.com/api/mcp/asset/2102bc2f-e100-4ecf-af52-70781e532ed6" alt="Search" class="search-btn-img">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#82c7be" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </button>
                 </div>
             </div>
