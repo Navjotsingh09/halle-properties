@@ -94,6 +94,12 @@ body > * {
     width: 100%;
 }
 
+/* Global image rules - prevent overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .container {
     width: 100%;
     max-width: var(--container-max);
@@ -188,8 +194,6 @@ body > * {
     margin-left: auto;
     white-space: nowrap;
     flex-shrink: 0;
-}
-    margin-left: auto;
 }
 
 .btn-valuation:hover {
@@ -486,26 +490,26 @@ body.menu-open {
 .partner-logos {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: clamp(20px, 4vw, 40px);
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .partner-logo {
     object-fit: contain;
+    height: auto;
 }
 
 .partner-logo.primelocation {
-    width: 209px;
-    height: 88px;
+    width: clamp(120px, 15vw, 209px);
 }
 
 .partner-logo.zoopla {
-    width: 137.857px;
-    height: 25px;
+    width: clamp(80px, 10vw, 138px);
 }
 
 .partner-logo.onthemarket {
-    width: 143.908px;
-    height: 35px;
+    width: clamp(90px, 10vw, 144px);
 }
 
 /* ========================================
@@ -518,7 +522,7 @@ body.menu-open {
     margin: 0 auto;
     min-height: 936px;
     height: auto;
-    padding: 73px 80px;
+    padding: clamp(50px, 6vw, 73px) clamp(20px, 5vw, 80px);
     background: var(--white);
     position: relative;
 }
@@ -545,7 +549,7 @@ body.menu-open {
 
 .section-header h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 50px;
+    font-size: clamp(28px, 4vw, 50px);
     font-weight: 600;
     line-height: 1.2;
     color: var(--dark-bg);
@@ -577,17 +581,22 @@ body.menu-open {
 
 .property-card {
     position: relative;
-    width: 413px;
+    /* Fluid sizing: 3 cards at desktop, scales down gracefully */
+    width: calc(33.333% - 14px);
+    min-width: 280px;
+    max-width: 420px;
     height: 540px;
     border-radius: 20px;
     overflow: visible;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 calc(33.333% - 14px);
 }
 
 .property-card:nth-child(2) {
-    width: 414px;
+    /* Same as other cards - remove magic number */
+    width: calc(33.333% - 14px);
 }
 
 .property-card:hover {
@@ -624,7 +633,8 @@ body.menu-open {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    width: 373px;
+    /* Fluid width: 100% minus padding on both sides */
+    width: calc(100% - 40px);
     background: #2a363a;
     border-radius: 20px;
     padding: 20px;
@@ -636,8 +646,9 @@ body.menu-open {
 }
 
 .property-card:nth-child(2) .property-info-overlay {
-    width: 373.903px;
-    left: 20.05px;
+    /* Same as other cards */
+    width: calc(100% - 40px);
+    left: 20px;
 }
 
 .property-info-contents {
@@ -646,7 +657,7 @@ body.menu-open {
     gap: 15px;
     align-items: stretch;
     justify-content: center;
-    width: 333px;
+    width: 100%;
     color: #ffffff;
 }
 
@@ -701,7 +712,8 @@ body.menu-open {
     color: #ffffff !important;
     letter-spacing: -0.8px;
     line-height: normal;
-    width: 198px;
+    flex: 1;
+    min-width: 0;
 }
 
 .property-city {
@@ -712,7 +724,7 @@ body.menu-open {
     letter-spacing: -0.8px;
     line-height: normal;
     text-align: right;
-    width: 125px;
+    flex-shrink: 0;
 }
 
 .property-features {
@@ -774,9 +786,10 @@ body.menu-open {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 278px;
+    width: auto;
+    max-width: 278px;
     height: auto;
-    padding: 10px 20px;
+    padding: 10px 30px;
     background: var(--primary);
     color: #fafafa;
     font-family: 'Poppins', sans-serif;
@@ -796,14 +809,15 @@ body.menu-open {
 
 /* ========================================
    ABOUT US / WHY HALLE SECTION
-   Frame: 1440x850px
+   Frame: 1440x850px (min-height, auto expand)
 ======================================== */
 .why-section {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
-    height: 850px;
-    padding: 99px 80px;
+    min-height: 850px;
+    height: auto;
+    padding: clamp(60px, 7vw, 99px) clamp(20px, 5vw, 80px);
     background: #dadddc;
     position: relative;
 }
@@ -861,12 +875,11 @@ body.menu-open {
 
 .why-header h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 50px;
+    font-size: clamp(28px, 4vw, 50px);
     font-weight: 600;
     line-height: 1.2;
     color: var(--dark-bg);
     width: 100%;
-    white-space: pre-wrap;
 }
 
 .why-header p {
@@ -927,14 +940,15 @@ body.menu-open {
 
 /* ========================================
    HOW IT WORKS / SERVICES SECTION
-   Frame: 1440x810px
+   Frame: 1440x810px (min-height, auto expand)
 ======================================== */
 .services-section {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
-    height: 810px;
-    padding: 117px 121px;
+    min-height: 810px;
+    height: auto;
+    padding: clamp(60px, 8vw, 117px) clamp(20px, 8vw, 121px);
     background: var(--dark-bg);
     position: relative;
 }
@@ -952,14 +966,13 @@ body.menu-open {
 
 .services-title {
     font-family: 'Poppins', sans-serif;
-    font-size: 60px;
+    font-size: clamp(32px, 5vw, 60px);
     font-weight: 600;
     line-height: normal;
     color: var(--white);
     text-align: center;
     width: 100%;
     max-width: 908px;
-    white-space: pre-wrap;
 }
 
 .services-grid {
@@ -1042,14 +1055,15 @@ body.menu-open {
 
 /* ========================================
    TESTIMONIALS SECTION
-   Frame: 1440x655px
+   Frame: 1440x655px (min-height, auto expand)
 ======================================== */
 .testimonials-section {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
-    height: 655px;
-    padding: 103px 80px 0;
+    min-height: 655px;
+    height: auto;
+    padding: clamp(60px, 7vw, 103px) clamp(20px, 5vw, 80px) 0;
     background: var(--white);
     position: relative;
 }
@@ -1085,14 +1099,13 @@ body.menu-open {
 
 .testimonials-header h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 50px;
+    font-size: clamp(28px, 4vw, 50px);
     font-weight: 600;
     line-height: 1.2;
     color: var(--dark-bg);
     width: 100%;
     max-width: 730px;
     margin: 0 auto;
-    white-space: pre-wrap;
 }
 
 .testimonials-header p {
@@ -1117,9 +1130,9 @@ body.menu-open {
 
 .testimonial-card {
     position: relative;
-    width: 413px;
-    min-width: 280px;
+    /* Fluid card sizing - 3 at desktop, wraps at smaller screens */
     flex: 1 1 300px;
+    min-width: 280px;
     max-width: 420px;
     height: auto;
     min-height: 210px;
@@ -1132,8 +1145,9 @@ body.menu-open {
     gap: 20px;
 }
 
+/* All cards same width - no magic numbers */
 .testimonial-card:nth-child(2) {
-    width: 414px;
+    flex: 1 1 300px;
 }
 
 .testimonial-text {
@@ -1179,14 +1193,15 @@ body.menu-open {
 
 /* ========================================
    CTA SECTION
-   Frame: 1440x530px
+   Frame: 1440x530px (min-height, auto expand)
 ======================================== */
 .cta-section {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
-    height: 530px;
-    padding: 80px;
+    min-height: 530px;
+    height: auto;
+    padding: clamp(40px, 6vw, 80px);
     background: #dadddc;
 }
 
@@ -1198,8 +1213,9 @@ body.menu-open {
 
 .cta-wrapper {
     position: relative;
-    width: 1280px;
-    height: 370px;
+    width: 100%;
+    max-width: 1280px;
+    min-height: 370px;
     border-radius: 20px;
     overflow: hidden;
     margin: 0 auto;
@@ -1317,7 +1333,7 @@ body.menu-open {
     max-width: 1920px;
     margin: 0 auto;
     background: var(--dark-bg);
-    padding: 145px 80px;
+    padding: clamp(80px, 10vw, 145px) clamp(20px, 5vw, 80px);
 }
 
 .blog-section .container {
@@ -1347,10 +1363,10 @@ body.menu-open {
 
 .blog-header h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 50px;
+    font-size: clamp(28px, 4vw, 50px);
     font-weight: 600;
     color: var(--white);
-    line-height: 80px;
+    line-height: 1.4;
     margin: 0;
 }
 
@@ -1363,11 +1379,11 @@ body.menu-open {
     flex-wrap: wrap;
 }
 
-/* Blog 1 - Featured card with image (629px x 693px) */
+/* Blog 1 - Featured card with image (fluid sizing) */
 .blog-featured {
-    width: 629px;
-    min-width: 300px;
+    /* Fluid sizing: grows/shrinks with container */
     flex: 1 1 400px;
+    min-width: 300px;
     max-width: 650px;
     background: #fefeff;
     border-radius: 40px;
@@ -1380,7 +1396,9 @@ body.menu-open {
 
 .blog-featured-image {
     width: 100%;
-    height: 314px;
+    /* Use aspect-ratio for responsive image container */
+    aspect-ratio: 16 / 9;
+    min-height: 200px;
     border-radius: 40px;
     overflow: hidden;
     flex-shrink: 0;
@@ -1428,15 +1446,15 @@ body.menu-open {
     margin: 0;
 }
 
-/* Blog Cards column (615px, 2 cards stacked) */
+/* Blog Cards column (fluid, 2 cards stacked) */
 .blog-articles {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
-    width: 615px;
-    min-width: 300px;
+    /* Fluid sizing */
     flex: 1 1 400px;
+    min-width: 300px;
     max-width: 650px;
 }
 
@@ -1459,7 +1477,7 @@ body.menu-open {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
-    width: 540px;
+    width: 100%;
 }
 
 .blog-article-card h3,
@@ -1481,7 +1499,7 @@ body.menu-open {
     color: var(--dark-bg);
     line-height: 35px;
     margin: 0;
-    width: 479px;
+    width: 100%;
 }
 
 /* Blog Card Footer with Category Pill */
@@ -1537,7 +1555,7 @@ body.menu-open {
     max-width: 1920px;
     margin: 0 auto;
     background: var(--white);
-    padding: 88px 98px;
+    padding: clamp(50px, 6vw, 88px) clamp(20px, 6vw, 98px);
     overflow: hidden;
 }
 
@@ -1552,15 +1570,15 @@ body.menu-open {
 }
 
 .faq-heading {
-    width: 404px;
-    min-width: 280px;
+    /* Fluid sizing */
     flex: 1 1 300px;
+    min-width: 280px;
     max-width: 450px;
 }
 
 .faq-heading h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 50px;
+    font-size: clamp(32px, 4vw, 50px);
     font-weight: 600;
     color: var(--dark-bg);
     line-height: 1.2;
@@ -1668,7 +1686,7 @@ body.menu-open {
     max-width: 1920px;
     margin: 0 auto;
     background: var(--dark-bg);
-    padding: 21px 80px;
+    padding: 21px clamp(20px, 5vw, 80px);
     display: flex;
     justify-content: center;
 }
@@ -1679,36 +1697,38 @@ body.menu-open {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    gap: clamp(20px, 4vw, 40px);
+    flex-wrap: wrap;
 }
 
 .newsletter-title {
     font-family: 'Poppins', sans-serif;
-    font-size: 32px;
+    font-size: clamp(20px, 3vw, 32px);
     font-weight: 600;
     color: var(--white);
     letter-spacing: -1.6px;
     line-height: normal;
     margin: 0;
-    white-space: nowrap;
 }
 
 .newsletter-form {
     display: flex;
     align-items: center;
     position: relative;
-    width: 540px;
+    flex: 1 1 300px;
+    max-width: 540px;
+    min-width: 280px;
 }
 
 .newsletter-input {
     width: 100%;
     height: 60px;
-    padding: 0 180px 0 30px;
+    padding: 0 140px 0 20px;
     border: 1px solid var(--white);
     border-radius: 40px;
     background: transparent;
     font-family: 'Poppins', sans-serif;
-    font-size: 24px;
+    font-size: clamp(16px, 2vw, 24px);
     font-weight: 300;
     color: var(--white);
     outline: none;
@@ -1723,12 +1743,12 @@ body.menu-open {
     position: absolute;
     right: 5px;
     height: 50px;
-    padding: 0 40px;
+    padding: 0 clamp(20px, 3vw, 40px);
     background: var(--primary);
     border: none;
     border-radius: 40px;
     font-family: 'Poppins', sans-serif;
-    font-size: 24px;
+    font-size: clamp(16px, 2vw, 24px);
     font-weight: 600;
     color: var(--dark-bg);
     cursor: pointer;
@@ -1749,7 +1769,7 @@ body.menu-open {
     max-width: 1920px;
     margin: 0 auto;
     min-height: 457px;
-    padding: 80px 80px 25px;
+    padding: clamp(40px, 6vw, 80px) clamp(20px, 5vw, 80px) 25px;
     background: var(--dark-bg);
     position: relative;
 }
@@ -1762,16 +1782,19 @@ body.menu-open {
 
 .footer-content {
     display: flex;
-    gap: 145px;
+    gap: clamp(40px, 8vw, 145px);
     margin-bottom: 75px;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .footer-brand {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    width: 352px;
+    flex: 1 1 280px;
+    max-width: 352px;
+    min-width: 200px;
 }
 
 .footer-logo-img {
@@ -1808,18 +1831,15 @@ body.menu-open {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    flex: 0 0 auto;
+    min-width: 100px;
 }
 
-.footer-links:nth-child(2) {
-    width: 137px;
-}
-
-.footer-links:nth-child(3) {
-    width: 133px;
-}
-
+/* Remove magic number widths - use natural sizing */
+.footer-links:nth-child(2),
+.footer-links:nth-child(3),
 .footer-links:nth-child(4) {
-    width: 130px;
+    flex: 0 0 auto;
 }
 
 .footer-links h4 {
@@ -1882,14 +1902,40 @@ body.menu-open {
 
 /* ========================================
    RESPONSIVE SYSTEM
-   Breakpoints: 1280px, 1024px, 768px, 480px
-   Mobile-first overrides using fluid values
+   Breakpoints: 1920px, 1440px, 1280px, 1024px, 900px, 800px, 768px, 480px, 375px
+   Desktop-first with fluid values
 ======================================== */
 
 /* Prevent horizontal overflow globally */
 html, body {
     overflow-x: hidden;
     max-width: 100vw;
+}
+
+/* ========================================
+   LAPTOP (1280px and below)
+======================================== */
+@media (max-width: 1280px) {
+    :root {
+        --container-padding: 40px;
+    }
+    
+    /* Property cards: 3 still fit but smaller */
+    .property-card,
+    .property-card:nth-child(2) {
+        min-width: 260px;
+        height: 500px;
+    }
+    
+    /* Services grid tighter */
+    .services-grid {
+        gap: 40px;
+    }
+    
+    /* Section headers */
+    .section-header h2 {
+        font-size: 44px;
+    }
 }
 
 /* ========================================
@@ -2085,7 +2131,7 @@ html, body {
     .properties-section {
         padding-top: 80px;
         padding-bottom: 120px;
-        min-height: auto;
+        min-height: 0;
     }
     
     .section-header {
@@ -2969,6 +3015,7 @@ html, body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
+    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
 }
 
@@ -3107,9 +3154,9 @@ html, body {
     color: var(--dark-bg);
     outline: none;
     cursor: pointer;
-    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    appearance: none;
     transition: border-color 0.3s ease;
 }
 
