@@ -1455,18 +1455,20 @@ body > * {
     letter-spacing: -1.6px;
     line-height: normal;
     margin: 0;
+    white-space: nowrap;
 }
 
 .newsletter-form {
     display: flex;
     align-items: center;
-    gap: 21px;
+    position: relative;
+    width: 540px;
 }
 
 .newsletter-input {
-    width: 423px;
+    width: 100%;
     height: 60px;
-    padding: 0 30px;
+    padding: 0 180px 0 30px;
     border: 1px solid var(--white);
     border-radius: 40px;
     background: transparent;
@@ -1483,7 +1485,9 @@ body > * {
 }
 
 .newsletter-btn {
-    height: 60px;
+    position: absolute;
+    right: 5px;
+    height: 50px;
     padding: 0 40px;
     background: var(--primary);
     border: none;
@@ -1525,7 +1529,7 @@ body > * {
     display: flex;
     gap: 145px;
     margin-bottom: 75px;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .footer-brand {
@@ -1671,20 +1675,22 @@ html, body {
 
     .newsletter-title {
         font-size: 26px;
+        white-space: normal;
     }
 
     .newsletter-form {
-        justify-content: center;
+        width: 100%;
+        max-width: 480px;
     }
 
     .newsletter-input {
-        width: 320px;
         font-size: 18px;
+        padding: 0 150px 0 25px;
     }
 
     .newsletter-btn {
         font-size: 18px;
-        padding: 0 30px;
+        padding: 0 25px;
     }
 
     .container {
@@ -2973,27 +2979,29 @@ html, body {
 
     .newsletter-title {
         font-size: 22px;
+        white-space: normal;
     }
 
     .newsletter-form {
         flex-direction: column;
         width: 100%;
+        max-width: 320px;
     }
 
     .newsletter-input {
         width: 100%;
-        max-width: 300px;
         height: 50px;
         font-size: 16px;
         padding: 0 20px;
     }
 
     .newsletter-btn {
+        position: relative;
+        right: auto;
         width: 100%;
-        max-width: 300px;
         height: 50px;
         font-size: 18px;
-        padding: 0;
+        margin-top: 10px;
     }
     
     .footer {
