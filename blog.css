@@ -259,7 +259,7 @@
     padding: 24px 31px;
     box-shadow: 6px 9px 198.5px rgba(36, 134, 57, 0.08);
     width: 385px;
-    height: 240px;
+    min-height: 240px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -271,10 +271,9 @@
     background: var(--primary);
     color: white;
     padding: 4px 12px;
-    border-radius: 20px;
+    border-radius: 12px;
     font-size: 12px;
     font-weight: 500;
-    margin-bottom: 10px;
     width: fit-content;
 }
 
@@ -311,6 +310,14 @@
 
 .blog-card-btn:hover {
     opacity: 0.9;
+}
+
+.blog-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    width: 100%;
 }
 
 /* Pagination Section */
