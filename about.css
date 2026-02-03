@@ -252,3 +252,238 @@
         font-size: 14px;
     }
 }
+
+/* About Halle Section */
+.about-halle-section {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 99px 80px;
+}
+
+.about-halle-content {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.about-halle-image {
+    flex-shrink: 0;
+    width: 585px;
+    height: 637px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.about-halle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-halle-text {
+    flex: 1;
+    max-width: 615px;
+}
+
+.about-halle-text h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.about-halle-text p {
+    font-size: 18px;
+    color: var(--dark-bg);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-halle-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Why Halle Section */
+.why-halle-section {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: var(--grey);
+    padding: 99px 80px;
+}
+
+.why-halle-content {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.why-halle-text {
+    flex: 1;
+    max-width: 615px;
+}
+
+.why-halle-text h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--dark-bg);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.why-halle-intro {
+    font-size: 18px;
+    color: var(--dark-bg);
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.why-halle-reasons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.reason-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 10px 26px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.reason-number {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--primary);
+    width: 60px;
+    flex-shrink: 0;
+}
+
+.reason-text {
+    font-size: 16px;
+    color: var(--dark-bg);
+    line-height: 1.5;
+}
+
+.reason-text strong {
+    font-weight: 600;
+}
+
+.why-halle-image {
+    flex-shrink: 0;
+    width: 585px;
+    height: 637px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.why-halle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Styles for About Halle and Why Halle Sections */
+@media (max-width: 1200px) {
+    .about-halle-section,
+    .why-halle-section {
+        padding: 60px 40px;
+    }
+    
+    .about-halle-content,
+    .why-halle-content {
+        gap: 40px;
+    }
+    
+    .about-halle-image,
+    .why-halle-image {
+        width: 400px;
+        height: 500px;
+    }
+    
+    .about-halle-text h2,
+    .why-halle-text h2 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-halle-content,
+    .why-halle-content {
+        flex-direction: column;
+    }
+    
+    .about-halle-image,
+    .why-halle-image {
+        width: 100%;
+        max-width: 585px;
+        height: 400px;
+    }
+    
+    .about-halle-text,
+    .why-halle-text {
+        max-width: 100%;
+    }
+    
+    .why-halle-content {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-halle-section,
+    .why-halle-section {
+        padding: 60px 20px;
+    }
+    
+    .about-halle-text h2,
+    .why-halle-text h2 {
+        font-size: 32px;
+    }
+    
+    .about-halle-text p,
+    .why-halle-intro {
+        font-size: 16px;
+    }
+    
+    .reason-number {
+        font-size: 32px;
+    }
+    
+    .reason-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-halle-image,
+    .why-halle-image {
+        height: 300px;
+    }
+    
+    .about-halle-text h2,
+    .why-halle-text h2 {
+        font-size: 28px;
+    }
+    
+    .reason-card {
+        padding: 15px 20px;
+    }
+    
+    .reason-number {
+        font-size: 28px;
+        width: 45px;
+    }
+}
