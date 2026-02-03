@@ -58,8 +58,27 @@
                         <input type="hidden" name="_template" value="table">
                         <input type="hidden" name="_next" value="https://halleproperties.co.uk/contact.html?submitted=true">
                         <div class="form-group">
+                            <label for="firstName">NAME</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="First" required>
+                            <input type="text" id="lastName" name="lastName" placeholder="Last" required>
+                        </div>
+                        <div class="form-group">
                             <label for="email">EMAIL</label>
-                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            <input type="email" id="email" name="email" placeholder="Your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hearAboutUs">WHERE DID YOU HEAR ABOUT US?</label>
+                            <select id="hearAboutUs" name="hearAboutUs" required>
+                                <option value="" disabled selected>Select one...</option>
+                                <option value="google">Google Search</option>
+                                <option value="social">Social Media</option>
+                                <option value="referral">Friend/Family Referral</option>
+                                <option value="signage">Property Signage</option>
+                                <option value="newspaper">Newspaper/Magazine</option>
+                                <option value="rightmove">Rightmove</option>
+                                <option value="zoopla">Zoopla</option>
+                                <option value="other">Other</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="message">MESSAGE</label>
@@ -74,10 +93,7 @@
                             </label>
                         </div>
                         <button type="submit" class="btn-send-message">
-                            <span>Send message</span>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.5 17L14.5 12L9.5 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                            <span>Submit</span>
                         </button>
                     </form>
                 </div>

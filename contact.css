@@ -107,8 +107,8 @@
 }
 
 .contact-form-wrapper {
-    width: 384px;
-    flex-shrink: 0;
+    flex: 1;
+    max-width: 420px;
 }
 
 .contact-form {
@@ -232,7 +232,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     transition: opacity 0.3s ease;
 }
 
@@ -241,12 +241,41 @@
 }
 
 .contact-map-wrapper {
-    width: 816px;
-    min-height: 464px;
+    flex: 1.5;
+    min-height: 560px;
     border-radius: 20px;
     overflow: hidden;
-    background: #22242f;
-    flex-shrink: 0;
+    background: #f5f5f5;
+}
+
+/* Select dropdown styling */
+.form-group select {
+    width: 100%;
+    padding: 20px 24px;
+    border: 1px solid var(--grey);
+    border-radius: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: var(--dark-bg);
+    background: white;
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%232a363a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 24px center;
+}
+
+.form-group select:focus {
+    border-color: var(--primary);
+}
+
+.form-group select option {
+    padding: 12px;
 }
 
 /* Contact Info Cards */
@@ -328,11 +357,12 @@
     
     .contact-form-wrapper {
         width: 100%;
+        max-width: none;
     }
     
     .contact-map-wrapper {
         width: 100%;
-        min-height: 350px;
+        min-height: 400px;
     }
     
     .contact-info-cards {
