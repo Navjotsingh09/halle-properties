@@ -353,8 +353,8 @@
 }
 
 .comparison-header .comparison-cell.highlight {
-    background-color: var(--primary);
-    color: var(--dark-bg);
+    background-color: var(--dark-bg);
+    color: white;
 }
 
 .comparison-row {
@@ -391,7 +391,7 @@
 }
 
 .comparison-row .comparison-cell.highlight {
-    background-color: rgba(130, 199, 190, 0.08);
+    background-color: #f8f9fa;
 }
 
 .comparison-row .comparison-cell svg {
