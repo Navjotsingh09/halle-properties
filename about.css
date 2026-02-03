@@ -16,16 +16,17 @@
     top: 0;
     left: 0;
     transform: none;
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 39px 80px;
     background: transparent;
 }
 
 .about-nav-section .header-content {
-    max-width: 1440px;
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+    gap: clamp(20px, 5vw, 140px);
 }
 
 /* Hero Section */
