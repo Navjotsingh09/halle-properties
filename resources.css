@@ -1,0 +1,633 @@
+/* Resources Page Styles */
+
+/* Navigation Section */
+.resources-nav-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: var(--dark-bg);
+    padding: 0;
+}
+
+.resources-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 80px;
+    background: transparent;
+}
+
+.resources-header .header-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+/* Hero Section */
+.resources-hero-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: var(--dark-bg);
+    padding: 0 80px 49px;
+}
+
+.resources-hero-container {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resources-hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.resources-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.resources-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+}
+
+.resources-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 69px;
+    z-index: 2;
+}
+
+.resources-hero-title {
+    font-size: 66px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.resources-hero-subtitle {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Feature Cards - 2 Cards Version */
+.resources-feature-cards {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: -53px;
+    position: relative;
+    z-index: 10;
+}
+
+.resources-feature-card {
+    width: 378px;
+    height: 106px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.resources-feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.resources-feature-card:hover .feature-icon {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.resources-feature-card:hover .feature-icon svg path {
+    stroke: white;
+}
+
+.resources-feature-card .feature-icon {
+    width: 56px;
+    height: 56px;
+    border: 2px solid var(--primary);
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.resources-feature-card .feature-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.resources-feature-card .feature-icon svg path {
+    transition: stroke 0.3s ease;
+}
+
+.resources-feature-card .feature-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-bg);
+    line-height: 24px;
+    margin: 0;
+}
+
+/* Introduction Section */
+.resources-intro-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 80px;
+}
+
+.resources-intro-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.resources-intro-text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--dark-bg);
+    margin: 0;
+}
+
+/* Content Sections */
+.resources-content-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 80px;
+}
+
+.resources-content-section.grey-bg {
+    background-color: var(--grey);
+}
+
+.resources-content-section.dark-bg {
+    background-color: var(--dark-bg);
+}
+
+.resources-content-container {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.resources-content-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.resources-content-image {
+    flex-shrink: 0;
+    width: 585px;
+    height: 470px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.resources-content-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.resources-content-text {
+    flex: 1;
+}
+
+.resources-content-text h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.resources-content-section.dark-bg .resources-content-text h2 {
+    color: var(--primary);
+}
+
+.resources-content-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--dark-bg);
+    margin-bottom: 30px;
+}
+
+.resources-content-section.dark-bg .resources-content-text p {
+    color: white;
+}
+
+.btn-explore {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    background-color: var(--primary);
+    color: var(--dark-bg);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-explore:hover {
+    background-color: var(--dark-bg);
+    color: white;
+}
+
+.btn-explore svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Why Let With Us Section */
+.why-let-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 80px;
+}
+
+.why-let-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.why-let-container h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.why-let-container p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--dark-bg);
+    margin: 0;
+}
+
+/* Comparison Table Section */
+.comparison-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: var(--grey);
+    padding: 80px;
+}
+
+.comparison-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.comparison-table {
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    background-color: var(--dark-bg);
+}
+
+.comparison-header .comparison-cell {
+    padding: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comparison-header .comparison-cell:last-child {
+    border-right: none;
+}
+
+.comparison-header .feature-header {
+    text-align: left;
+    color: var(--primary);
+}
+
+.comparison-header .comparison-cell.highlight {
+    background-color: var(--primary);
+    color: var(--dark-bg);
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    border-bottom: 1px solid #eee;
+}
+
+.comparison-row:last-child {
+    border-bottom: none;
+}
+
+.comparison-row .comparison-cell {
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #eee;
+}
+
+.comparison-row .comparison-cell:last-child {
+    border-right: none;
+}
+
+.comparison-row .comparison-cell.feature {
+    justify-content: flex-start;
+    font-size: 15px;
+    color: var(--dark-bg);
+    font-weight: 500;
+}
+
+.comparison-row .comparison-cell.highlight {
+    background-color: rgba(130, 199, 190, 0.1);
+}
+
+.comparison-row .comparison-cell svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* CTA Section Override */
+.resources-cta-section {
+    background-color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .resources-hero-section {
+        padding: 0 40px 40px;
+    }
+    
+    .resources-feature-cards {
+        gap: 20px;
+    }
+    
+    .resources-feature-card {
+        width: calc(50% - 10px);
+        max-width: 378px;
+    }
+    
+    .resources-content-container {
+        gap: 40px;
+    }
+    
+    .resources-content-image {
+        width: 400px;
+        height: 350px;
+    }
+    
+    .resources-content-text h2 {
+        font-size: 40px;
+    }
+    
+    .comparison-header,
+    .comparison-row {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .resources-hero-title {
+        font-size: 48px;
+    }
+    
+    .resources-hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .resources-hero-image-wrapper {
+        height: 350px;
+    }
+    
+    .resources-content-container,
+    .resources-content-container.reverse {
+        flex-direction: column;
+    }
+    
+    .resources-content-image {
+        width: 100%;
+        height: 400px;
+    }
+    
+    .resources-content-text {
+        text-align: center;
+    }
+    
+    .btn-explore {
+        margin: 0 auto;
+    }
+    
+    .why-let-container h2 {
+        font-size: 40px;
+    }
+    
+    /* Comparison table mobile */
+    .comparison-header,
+    .comparison-row {
+        grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr;
+    }
+    
+    .comparison-header .comparison-cell,
+    .comparison-row .comparison-cell {
+        padding: 16px 12px;
+        font-size: 14px;
+    }
+    
+    .comparison-row .comparison-cell.feature {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .resources-hero-section {
+        padding: 0 20px 30px;
+    }
+    
+    .resources-header {
+        padding: 20px;
+    }
+    
+    .resources-hero-title {
+        font-size: 36px;
+    }
+    
+    .resources-hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .resources-hero-image-wrapper {
+        height: 300px;
+    }
+    
+    .resources-hero-content {
+        padding: 0 20px;
+    }
+    
+    .resources-feature-cards {
+        flex-direction: column;
+        align-items: center;
+        margin-top: -40px;
+    }
+    
+    .resources-feature-card {
+        width: 100%;
+        max-width: 378px;
+    }
+    
+    .resources-intro-section,
+    .resources-content-section,
+    .why-let-section,
+    .comparison-section {
+        padding: 60px 20px;
+    }
+    
+    .resources-content-text h2,
+    .why-let-container h2 {
+        font-size: 32px;
+    }
+    
+    /* Comparison table stacked on mobile */
+    .comparison-table {
+        display: block;
+    }
+    
+    .comparison-header {
+        display: none;
+    }
+    
+    .comparison-row {
+        display: block;
+        padding: 20px;
+        position: relative;
+    }
+    
+    .comparison-row .comparison-cell {
+        display: block;
+        padding: 10px 0;
+        border: none;
+        text-align: left;
+    }
+    
+    .comparison-row .comparison-cell.feature {
+        font-weight: 700;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .comparison-row .comparison-cell:not(.feature) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .comparison-row .comparison-cell:not(.feature)::before {
+        font-size: 13px;
+        color: #666;
+    }
+    
+    .comparison-row .comparison-cell:nth-child(2)::before {
+        content: "Tenant Find:";
+    }
+    
+    .comparison-row .comparison-cell:nth-child(3)::before {
+        content: "Rent Collect:";
+    }
+    
+    .comparison-row .comparison-cell:nth-child(4)::before {
+        content: "Fully Managed:";
+    }
+    
+    .comparison-row .comparison-cell.highlight {
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 480px) {
+    .resources-hero-title {
+        font-size: 28px;
+    }
+    
+    .resources-hero-subtitle {
+        font-size: 14px;
+    }
+    
+    .resources-hero-image-wrapper {
+        height: 250px;
+    }
+    
+    .resources-feature-card {
+        padding: 20px;
+        height: auto;
+    }
+    
+    .resources-feature-card .feature-text {
+        font-size: 14px;
+    }
+    
+    .resources-intro-text {
+        font-size: 16px;
+    }
+    
+    .resources-content-image {
+        height: 280px;
+    }
+    
+    .resources-content-text h2,
+    .why-let-container h2 {
+        font-size: 28px;
+    }
+    
+    .why-let-container p {
+        font-size: 16px;
+    }
+}
