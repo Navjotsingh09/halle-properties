@@ -1335,8 +1335,19 @@ body.menu-open {
 .blog-featured-text {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     width: 529px;
+}
+
+.blog-category-badge {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    width: fit-content;
 }
 
 .blog-featured-text h3 {
@@ -1383,7 +1394,7 @@ body.menu-open {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 40px;
+    gap: 20px;
     width: 540px;
 }
 
