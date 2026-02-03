@@ -94,8 +94,8 @@ body > * {
     width: 100%;
 }
 
-/* Global image rules - prevent overflow */
-img {
+/* Global image rules - prevent overflow (excludes partner logos) */
+img:not(.partner-logo) {
     max-width: 100%;
     height: auto;
 }
