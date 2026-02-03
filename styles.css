@@ -1313,6 +1313,7 @@ body > * {
     display: flex;
     gap: 15px;
     align-items: flex-start;
+    justify-content: center;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -1447,6 +1448,7 @@ body > * {
     display: flex;
     gap: 145px;
     margin-bottom: 40px;
+    justify-content: center;
 }
 
 .footer-brand {
