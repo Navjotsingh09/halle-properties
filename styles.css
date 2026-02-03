@@ -495,21 +495,19 @@ body.menu-open {
 
 .partner-logo {
     object-fit: contain;
+    height: auto;
 }
 
 .partner-logo.primelocation {
     width: 209px;
-    height: 88px;
 }
 
 .partner-logo.zoopla {
     width: 138px;
-    height: 25px;
 }
 
 .partner-logo.onthemarket {
     width: 144px;
-    height: 35px;
 }
 
 /* ========================================
