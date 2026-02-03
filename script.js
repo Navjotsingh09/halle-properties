@@ -656,48 +656,124 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Show/hide search results
-        // When 'All' is selected with no search, show all cards without pagination
+        // Always show paginated results when filtering or searching
         if (filter === 'all' && query === '') {
             isSearchActive = true;
-            showAllBlogs(matchingCards);
+            showPaginatedResults(matchingCards, query, filter);
         } else if (query !== '' || filter !== 'all') {
             isSearchActive = true;
-            showSearchResults(matchingCards, query, filter);
+            showPaginatedResults(matchingCards, query, filter);
         } else {
             isSearchActive = false;
             hideSearchResults();
         }
     }
     
-    // Function to show all blogs without pagination
-    function showAllBlogs(cards) {
-        // Hide original blog pages and pagination
+    // Function to show paginated results (6 per page)
+    function showPaginatedResults(cards, query, filter) {
+        const cardsPerPage = 6;
+        const totalPages = Math.ceil(cards.length / cardsPerPage);
+        let currentResultPage = 1;
+        
+        // Hide original blog pages
         document.querySelectorAll('.blog-page').forEach(page => {
             page.style.display = 'none';
         });
-        if (paginationSection) {
-            paginationSection.style.display = 'none';
+        
+        // Clear search results container
+        searchResultsContainer.innerHTML = '';
+        
+        if (cards.length === 0) {
+            noResultsMessage.style.display = 'block';
+            searchResultsContainer.style.display = 'none';
+            if (paginationSection) {
+                paginationSection.style.display = 'none';
+            }
+            searchResultsInfo.classList.add('visible');
+            searchResultsInfo.innerHTML = `No results found${query ? ' for "<strong>' + escapeHtml(query) + '</strong>"' : ''}${filter !== 'all' ? ' in <strong>' + capitalizeFirst(filter) + '</strong>' : ''}`;
+            return;
         }
         
-        // Clear and populate search results container with all cards
-        searchResultsContainer.innerHTML = '';
         noResultsMessage.style.display = 'none';
         searchResultsContainer.style.display = 'flex';
         searchResultsContainer.style.flexWrap = 'wrap';
         searchResultsContainer.style.gap = '20px';
         searchResultsContainer.style.justifyContent = 'flex-start';
         
-        // Clone and append all cards
-        cards.forEach(card => {
-            const clone = card.cloneNode(true);
-            searchResultsContainer.appendChild(clone);
-        });
+        // Function to render a page of results
+        function renderPage(pageNum) {
+            searchResultsContainer.innerHTML = '';
+            const startIndex = (pageNum - 1) * cardsPerPage;
+            const endIndex = Math.min(startIndex + cardsPerPage, cards.length);
+            
+            for (let i = startIndex; i < endIndex; i++) {
+                const clone = cards[i].cloneNode(true);
+                searchResultsContainer.appendChild(clone);
+            }
+            
+            currentResultPage = pageNum;
+            updatePaginationUI(pageNum, totalPages);
+        }
         
-        // Hide results info for 'All' view
-        searchResultsInfo.classList.remove('visible');
+        // Function to update pagination UI
+        function updatePaginationUI(currentPage, totalPages) {
+            if (paginationSection) {
+                const paginationContainer = paginationSection.querySelector('.blog-pagination');
+                if (paginationContainer) {
+                    paginationContainer.innerHTML = '';
+                    
+                    // Create page buttons
+                    for (let i = 1; i <= totalPages; i++) {
+                        const btn = document.createElement('button');
+                        btn.className = 'pagination-btn' + (i === currentPage ? ' active' : '');
+                        btn.setAttribute('data-page', i);
+                        btn.textContent = i;
+                        btn.addEventListener('click', () => {
+                            renderPage(i);
+                            window.scrollTo({ top: searchResultsContainer.offsetTop - 100, behavior: 'smooth' });
+                        });
+                        paginationContainer.appendChild(btn);
+                    }
+                    
+                    // Add next button if more than 1 page
+                    if (totalPages > 1) {
+                        const nextBtn = document.createElement('button');
+                        nextBtn.className = 'pagination-btn pagination-next';
+                        nextBtn.setAttribute('data-action', 'next');
+                        nextBtn.innerHTML = '&gt;';
+                        nextBtn.addEventListener('click', () => {
+                            if (currentResultPage < totalPages) {
+                                renderPage(currentResultPage + 1);
+                                window.scrollTo({ top: searchResultsContainer.offsetTop - 100, behavior: 'smooth' });
+                            }
+                        });
+                        paginationContainer.appendChild(nextBtn);
+                    }
+                }
+                paginationSection.style.display = totalPages > 1 ? 'flex' : 'none';
+            }
+        }
+        
+        // Show results info only for search/filter (not for 'All')
+        if (query !== '' || filter !== 'all') {
+            searchResultsInfo.classList.add('visible');
+            let infoText = `Found <strong>${cards.length}</strong> result${cards.length !== 1 ? 's' : ''}`;
+            if (query) {
+                infoText += ` for "<strong>${escapeHtml(query)}</strong>"`;
+            }
+            if (filter !== 'all') {
+                infoText += ` in <strong>${capitalizeFirst(filter)}</strong>`;
+            }
+            searchResultsInfo.innerHTML = infoText;
+        } else {
+            searchResultsInfo.classList.remove('visible');
+        }
+        
+        // Render first page
+        renderPage(1);
     }
-    
-    // Function to show search results
+
+    // Function to show search results (kept for backwards compatibility)
     function showSearchResults(cards, query, filter) {
         // Hide original blog pages and pagination
         document.querySelectorAll('.blog-page').forEach(page => {
