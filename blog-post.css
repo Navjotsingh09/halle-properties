@@ -1,6 +1,204 @@
-/* Blog Post Page Styles - Matching About Page Hero Style */
+/* Blog Post Page Styles */
 
-/* Navigation uses about-nav-section and about-header from about.css */
+/* ========================================
+   TEMPLATE A - Standard Blog Post Layout
+   (Used for all blog detail pages)
+======================================== */
+
+/* Navigation Section */
+.blog-post-nav-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: var(--dark-bg);
+    padding: 0;
+}
+
+.blog-post-nav-section .header {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 39px 80px;
+    background: transparent;
+}
+
+.blog-post-nav-section .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(20px, 5vw, 140px);
+}
+
+/* Blog Post Hero Section */
+.blog-post-hero {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: var(--dark-bg);
+    padding: 0 80px 50px;
+}
+
+.blog-post-hero-container {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.blog-post-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-post-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+}
+
+.blog-post-hero-content {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    right: 50px;
+    color: white;
+    z-index: 2;
+}
+
+.blog-post-category {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.blog-post-hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    max-width: 900px;
+}
+
+.blog-post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.blog-post-meta span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.blog-post-meta svg {
+    opacity: 0.8;
+}
+
+/* Blog Post Content Section */
+.blog-post-content {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 60px 80px;
+}
+
+.blog-post-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.blog-post-summary {
+    margin-bottom: 50px;
+}
+
+.blog-post-summary p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--dark-bg);
+    margin: 0 0 20px;
+}
+
+.blog-post-summary p:last-child {
+    margin-bottom: 0;
+}
+
+.blog-post-body {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.blog-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--dark-bg);
+    margin: 0 0 25px;
+}
+
+.blog-section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--dark-bg);
+    margin: 30px 0 15px;
+}
+
+.blog-section p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin: 0 0 20px;
+}
+
+.blog-section ul, .blog-section ol {
+    margin: 0 0 20px;
+    padding-left: 25px;
+}
+
+.blog-section li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.blog-section-image {
+    margin: 30px 0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.blog-section-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========================================
+   TEMPLATE B - Feature Cards Layout
+   (Legacy - kept for backwards compatibility)
+======================================== */
 
 /* Hero Section - Same as About Page */
 .blog-hero-section {
@@ -302,6 +500,108 @@
 }
 
 /* Responsive Styles */
+
+/* Template A Responsive */
+@media (max-width: 1300px) {
+    .blog-post-hero-title {
+        font-size: 36px;
+    }
+    
+    .blog-post-hero-container {
+        height: 450px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .blog-post-nav-section .header {
+        padding: 20px 40px;
+    }
+    
+    .blog-post-hero {
+        padding: 0 40px 40px;
+    }
+    
+    .blog-post-hero-container {
+        height: 400px;
+    }
+    
+    .blog-post-hero-title {
+        font-size: 30px;
+    }
+    
+    .blog-post-hero-content {
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+    }
+    
+    .blog-post-content {
+        padding: 50px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-post-nav-section .header {
+        padding: 20px;
+    }
+    
+    .blog-post-hero {
+        padding: 0 20px 30px;
+    }
+    
+    .blog-post-hero-container {
+        height: 350px;
+    }
+    
+    .blog-post-hero-title {
+        font-size: 24px;
+    }
+    
+    .blog-post-hero-content {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+    
+    .blog-post-category {
+        font-size: 12px;
+        padding: 4px 15px;
+        margin-bottom: 15px;
+    }
+    
+    .blog-post-meta {
+        gap: 15px;
+        font-size: 12px;
+    }
+    
+    .blog-post-content {
+        padding: 40px 20px;
+    }
+    
+    .blog-post-summary p {
+        font-size: 16px;
+    }
+    
+    .blog-section h2 {
+        font-size: 22px;
+    }
+    
+    .blog-section h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-post-hero-container {
+        height: 300px;
+    }
+    
+    .blog-post-hero-title {
+        font-size: 20px;
+    }
+}
+
+/* Template B Responsive */
 @media (max-width: 1300px) {
     .blog-hero-title {
         font-size: 42px;
