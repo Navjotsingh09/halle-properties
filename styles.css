@@ -486,30 +486,30 @@ body.menu-open {
     font-style: italic;
 }
 
-/* Partner Logos */
+/* Partner Logos - DESKTOP (1440px baseline) */
 .partner-logos {
     display: flex;
     align-items: center;
-    gap: clamp(20px, 4vw, 40px);
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 40px;
 }
 
 .partner-logo {
     object-fit: contain;
-    height: auto;
 }
 
 .partner-logo.primelocation {
-    width: clamp(120px, 15vw, 209px);
+    width: 209px;
+    height: 88px;
 }
 
 .partner-logo.zoopla {
-    width: clamp(80px, 10vw, 138px);
+    width: 138px;
+    height: 25px;
 }
 
 .partner-logo.onthemarket {
-    width: clamp(90px, 10vw, 144px);
+    width: 144px;
+    height: 35px;
 }
 
 /* ========================================
