@@ -1420,6 +1420,28 @@ body.menu-open {
     width: 479px;
 }
 
+/* Blog Card Footer with Category Pill */
+.blog-card-footer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: auto;
+}
+
+.blog-category-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 16px;
+    background: var(--grey);
+    color: var(--dark-bg);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
 .btn-read-more {
     display: inline-flex;
     align-items: center;
