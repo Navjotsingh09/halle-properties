@@ -79,8 +79,10 @@
     <!-- Blog Cards Section -->
     <section class="blog-cards-section">
         <div class="blog-cards-container">
-            <!-- Row 1 - Most Recent -->
-            <div class="blog-cards-row">
+            <!-- Page 1 -->
+            <div class="blog-page" data-page="1">
+                <!-- Row 1 - Most Recent -->
+                <div class="blog-cards-row">
                 <article class="blog-card" data-category="landlord">
                     <div class="blog-card-image">
                         <img src="https://cdn.prod.website-files.com/695e7c94e6eb721285c35f4a/697b70c080d90449020f421b_69689a9f46b7a4cc68d41570_untitled-design-7-1.jpeg" alt="Rising Insurance Costs">
@@ -164,9 +166,12 @@
                     </div>
                 </article>
             </div>
+            </div>
 
+            <!-- Page 2 -->
+            <div class="blog-page" data-page="2" style="display: none;">
             <!-- Row 3 - Tenant Posts -->
-            <div class="blog-cards-row">
+            <div class="blog-cards-row">>
                 <article class="blog-card" data-category="tenant">
                     <div class="blog-card-image">
                         <img src="https://cdn.prod.website-files.com/695e7c94e6eb721285c35f4a/6980c8113400b3d7e47b2018_Countryside%20homes.png" alt="West Midlands Rentals">
@@ -207,13 +212,16 @@
                     </div>
                 </article>
             </div>
+            </div>
         </div>
     </section>
 
     <!-- Pagination Section -->
     <section class="blog-pagination-section">
         <div class="blog-pagination">
-            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn active" data-page="1">1</button>
+            <button class="pagination-btn" data-page="2">2</button>
+            <button class="pagination-btn pagination-next" data-action="next">&gt;</button>
         </div>
     </section>
 
