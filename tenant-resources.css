@@ -3,9 +3,9 @@
 /* Navigation Section */
 .tenant-nav-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     background-color: var(--dark-bg);
     padding: 0;
@@ -16,20 +16,20 @@
     top: 0;
     left: 0;
     transform: none;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 20px 40px;
 }
 
 .tenant-header .header-content {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
 /* Hero Section */
 .tenant-hero-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     background-color: var(--dark-bg);
     padding: 0 80px 50px;
@@ -37,7 +37,7 @@
 
 .tenant-hero-container {
     position: relative;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -94,14 +94,14 @@
 /* Resources Section */
 .resources-section {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     background-color: var(--white);
     padding: 34px 80px;
 }
 
 .resources-container {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -218,7 +218,7 @@
 /* Tenant CTA Section */
 .tenant-cta-section {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     background-color: var(--grey);
     padding: 80px;
@@ -226,7 +226,7 @@
 
 .tenant-cta-wrapper {
     position: relative;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     height: 370px;
     border-radius: 20px;

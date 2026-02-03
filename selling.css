@@ -3,9 +3,9 @@
 /* Navigation Section */
 .selling-nav-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     background-color: var(--dark-bg);
     padding: 0;
@@ -16,20 +16,20 @@
     top: 0;
     left: 0;
     transform: none;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 20px 40px;
 }
 
 .selling-header .header-content {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
 /* Hero Section */
 .selling-hero-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     background-color: var(--dark-bg);
     padding: 0 80px 50px;
@@ -37,7 +37,7 @@
 
 .selling-hero-container {
     position: relative;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -92,14 +92,14 @@
 /* Ready To Make A Move Section */
 .selling-steps-section {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     background-color: var(--white);
     padding: 78px 80px;
 }
 
 .selling-steps-container {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -170,7 +170,7 @@
 /* Selling Point Sections */
 .selling-point-section {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 50px 122px;
     overflow: hidden;
@@ -248,7 +248,7 @@
 /* CTA Section Adjustments */
 .selling-cta-section {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     background-color: var(--grey);
     padding: 80px;

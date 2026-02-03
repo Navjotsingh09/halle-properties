@@ -3,7 +3,7 @@
 /* Navigation Section */
 .about-nav-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     background-color: var(--dark-bg);
     padding: 0;
@@ -14,14 +14,14 @@
     top: 0;
     left: 0;
     transform: none;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 20px 80px;
     background: transparent;
 }
 
 .about-header .header-content {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     justify-content: space-between;
 }
@@ -29,7 +29,7 @@
 /* Hero Section */
 .about-hero-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     background-color: var(--dark-bg);
     padding: 0 80px 49px;
@@ -37,7 +37,7 @@
 
 .about-hero-container {
     position: relative;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -256,7 +256,7 @@
 /* About Halle Section */
 .about-halle-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     background-color: white;
     padding: 99px 80px;
@@ -266,7 +266,7 @@
     display: flex;
     gap: 80px;
     align-items: center;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -312,7 +312,7 @@
 /* Why Halle Section */
 .why-halle-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     background-color: var(--grey);
     padding: 99px 80px;
@@ -322,7 +322,7 @@
     display: flex;
     gap: 80px;
     align-items: center;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 

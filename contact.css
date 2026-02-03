@@ -3,7 +3,7 @@
 /* Navigation Section */
 .contact-nav-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     background-color: var(--dark-bg);
     padding: 0;
@@ -14,14 +14,14 @@
     top: 0;
     left: 0;
     transform: none;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 20px 80px;
     background: transparent;
 }
 
 .contact-header .header-content {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     justify-content: space-between;
 }
@@ -29,7 +29,7 @@
 /* Hero Section */
 .contact-hero-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     background-color: var(--dark-bg);
     padding: 0 80px 50px;
@@ -37,7 +37,7 @@
 
 .contact-hero-container {
     position: relative;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -93,14 +93,14 @@
 /* Contact Form Section */
 .contact-form-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     background-color: white;
     padding: 59px 80px;
 }
 
 .contact-form-container {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -322,13 +322,13 @@
 @media (max-width: 1200px) {
     .contact-hero-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
         padding: 0 40px 40px;
     }
     
     .contact-form-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
         padding: 40px;
     }
     
@@ -374,13 +374,13 @@
 @media (max-width: 768px) {
     .contact-hero-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
         padding: 0 20px 30px;
     }
     
     .contact-form-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
         padding: 30px 20px;
     }
     

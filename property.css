@@ -3,7 +3,7 @@
 /* Property Hero Section */
 .property-hero-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     background-color: var(--dark-bg);
     height: auto;
@@ -17,7 +17,7 @@
     top: 0;
     left: 0;
     transform: none;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 20px 40px;
 }
@@ -25,14 +25,14 @@
 /* Property Details Section */
 .property-details-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     padding: 60px 40px;
     background-color: var(--white);
 }
 
 .property-details-container {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -215,14 +215,14 @@
 /* Property Tabs Section */
 .property-tabs-section {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 60px 40px;
     background-color: #f9fafb;
 }
 
 .property-tabs-container {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -355,14 +355,14 @@
 /* Similar Properties Section */
 .similar-properties-section {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 80px 40px;
     background-color: var(--white);
 }
 
 .similar-properties-container {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     text-align: center;
 }

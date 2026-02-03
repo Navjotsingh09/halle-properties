@@ -45,7 +45,7 @@ body > * {
 
 .container {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 80px;
 }
@@ -56,9 +56,9 @@ body > * {
 ======================================== */
 .hero-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     height: 971px;
     background: var(--dark-bg);
@@ -402,7 +402,7 @@ body > * {
 ======================================== */
 .properties-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     height: 936px;
     padding: 73px 80px;
@@ -411,7 +411,7 @@ body > * {
 }
 
 .properties-section .container {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0;
     display: flex;
@@ -660,7 +660,7 @@ body > * {
 ======================================== */
 .why-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     height: 850px;
     padding: 99px 80px;
@@ -669,7 +669,7 @@ body > * {
 }
 
 .why-section .container {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0;
 }
@@ -783,7 +783,7 @@ body > * {
 ======================================== */
 .services-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     height: 810px;
     padding: 117px 121px;
@@ -873,7 +873,7 @@ body > * {
 ======================================== */
 .testimonials-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     height: 655px;
     padding: 103px 80px 0;
@@ -894,7 +894,7 @@ body > * {
 .testimonials-section .container {
     position: relative;
     z-index: 1;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0;
     display: flex;
@@ -1002,7 +1002,7 @@ body > * {
 ======================================== */
 .cta-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     height: 530px;
     padding: 80px;
@@ -1011,7 +1011,7 @@ body > * {
 
 .cta-section .container {
     padding: 0;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -1119,7 +1119,7 @@ body > * {
 ======================================== */
 .blog-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     background: var(--dark-bg);
     padding: 145px 80px;
@@ -1127,7 +1127,7 @@ body > * {
 
 .blog-section .container {
     padding: 0;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -1295,7 +1295,7 @@ body > * {
 ======================================== */
 .faq-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     background: var(--white);
     padding: 88px 98px;
@@ -1306,7 +1306,7 @@ body > * {
     display: flex;
     gap: 15px;
     align-items: flex-start;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -1422,7 +1422,7 @@ body > * {
 ======================================== */
 .footer {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     min-height: 457px;
     padding: 80px 80px 25px;
@@ -1431,7 +1431,7 @@ body > * {
 }
 
 .footer .container {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0;
 }
@@ -1579,7 +1579,7 @@ html, body {
 
     .hero-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
         height: auto;
         min-height: 100vh;
         padding-bottom: 60px;
@@ -1980,7 +1980,7 @@ html, body {
 
     .hero-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
         height: auto;
         min-height: 0;
     }
@@ -2371,7 +2371,7 @@ html, body {
     /* Hero Section Mobile */
     .hero-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
         height: auto;
         min-height: 100vh;
         padding: 0 0 40px 0;
@@ -2925,7 +2925,7 @@ html, body {
     /* Hero Section Small Mobile */
     .hero-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
         padding-bottom: 25px;
         min-height: 0;
     }
