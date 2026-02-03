@@ -514,37 +514,65 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let currentPage = 1;
     const totalPages = blogPages.length;
+    let isTransitioning = false;
     
     function showPage(pageNum) {
-        // Hide all pages
-        blogPages.forEach(page => {
-            page.style.display = 'none';
-        });
+        if (isTransitioning || pageNum === currentPage) return;
+        isTransitioning = true;
         
-        // Show the selected page
-        const targetPage = document.querySelector(`.blog-page[data-page="${pageNum}"]`);
-        if (targetPage) {
-            targetPage.style.display = 'flex';
-            targetPage.style.flexDirection = 'column';
-            targetPage.style.gap = '20px';
+        const currentPageEl = document.querySelector(`.blog-page[data-page="${currentPage}"]`);
+        const targetPageEl = document.querySelector(`.blog-page[data-page="${pageNum}"]`);
+        
+        if (!targetPageEl) {
+            isTransitioning = false;
+            return;
         }
         
-        // Update button states
-        paginationBtns.forEach(btn => {
-            btn.classList.remove('active');
-            const btnPage = btn.getAttribute('data-page');
-            if (btnPage && parseInt(btnPage) === pageNum) {
-                btn.classList.add('active');
+        // Fade out current page
+        if (currentPageEl) {
+            currentPageEl.classList.add('fade-out');
+        }
+        
+        // After fade out, switch pages
+        setTimeout(() => {
+            // Hide current page
+            if (currentPageEl) {
+                currentPageEl.classList.add('hidden');
+                currentPageEl.classList.remove('fade-out');
             }
-        });
-        
-        currentPage = pageNum;
-        
-        // Scroll to top of blog section
-        const blogSection = document.querySelector('.blog-cards-section');
-        if (blogSection) {
-            blogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+            
+            // Show target page (initially faded out)
+            targetPageEl.classList.remove('hidden');
+            targetPageEl.classList.add('fade-out');
+            
+            // Force reflow to ensure transition works
+            targetPageEl.offsetHeight;
+            
+            // Fade in target page
+            targetPageEl.classList.remove('fade-out');
+            
+            // Update button states
+            paginationBtns.forEach(btn => {
+                btn.classList.remove('active');
+                const btnPage = btn.getAttribute('data-page');
+                if (btnPage && parseInt(btnPage) === pageNum) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            currentPage = pageNum;
+            
+            // Scroll to top of blog section
+            const blogSection = document.querySelector('.blog-cards-section');
+            if (blogSection) {
+                blogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            
+            // Reset transitioning flag after fade in completes
+            setTimeout(() => {
+                isTransitioning = false;
+            }, 400);
+        }, 400);
     }
     
     paginationBtns.forEach(btn => {
