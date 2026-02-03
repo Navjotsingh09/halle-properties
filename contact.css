@@ -242,11 +242,12 @@
 }
 
 .contact-map-wrapper {
-    flex: 1;
+    width: 816px;
     min-height: 464px;
     border-radius: 20px;
     overflow: hidden;
     background: #22242f;
+    flex-shrink: 0;
 }
 
 /* Contact Info Cards */
@@ -327,6 +328,7 @@
     }
     
     .contact-map-wrapper {
+        width: 100%;
         min-height: 350px;
     }
     
