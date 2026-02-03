@@ -516,7 +516,8 @@ body.menu-open {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
-    height: 936px;
+    min-height: 936px;
+    height: auto;
     padding: 73px 80px;
     background: var(--white);
     position: relative;
@@ -2084,6 +2085,7 @@ html, body {
     .properties-section {
         padding-top: 80px;
         padding-bottom: 120px;
+        min-height: auto;
     }
     
     .section-header {
@@ -2094,16 +2096,27 @@ html, body {
         font-size: clamp(28px, 4vw, 36px);
     }
     
-    /* Property cards - 2 column */
+    /* Property cards - 2 column with third card wrapping */
     .properties-grid {
         gap: 20px;
+        justify-content: center;
     }
     
     .property-card,
     .property-card:nth-child(2) {
         width: calc(50% - 10px);
-        min-width: 260px;
+        max-width: 400px;
+        min-width: 280px;
         height: 450px;
+        flex: 1 1 calc(50% - 10px);
+    }
+    
+    .property-card:nth-child(3) {
+        width: calc(50% - 10px);
+        max-width: 400px;
+        min-width: 280px;
+        height: 450px;
+        flex: 1 1 calc(50% - 10px);
     }
     
     .property-info-overlay {
