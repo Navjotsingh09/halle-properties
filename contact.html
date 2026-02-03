@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Halle Properties</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar Section -->
+    <section class="contact-nav-section">
+        <header class="header contact-header">
+            <div class="header-content">
+                <a href="index.html" class="logo-link">
+                    <img src="https://www.figma.com/api/mcp/asset/7fc7d617-fb91-4e3d-ba92-48f3c2c27438" alt="Halle" class="logo-img">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav-links">
+                    <a href="buying.html" class="nav-link">Buying</a>
+                    <a href="selling.html" class="nav-link">Selling</a>
+                    <a href="renting.html" class="nav-link">Letting</a>
+                    <a href="listings.html" class="nav-link">Properties</a>
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </nav>
+                <a href="#" class="btn-valuation">Book a Valuation</a>
+            </div>
+        </header>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="contact-hero-section">
+        <div class="contact-hero-container">
+            <div class="contact-hero-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1280&h=400&fit=crop" alt="Contact us" class="contact-hero-img">
+                <div class="contact-hero-overlay"></div>
+            </div>
+            <div class="contact-hero-content">
+                <h1 class="contact-hero-title">Click Or Call. We Do It All.</h1>
+                <p class="contact-hero-subtitle">Get in touch to find out how we can help you along your property<br>journey. Where you're buying, selling, letting, or renting, we're on<br>hand to help and advise.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="contact-form-container">
+            <div class="contact-form-card">
+                <div class="contact-form-wrapper">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">MESSAGE</label>
+                            <textarea id="message" name="message" placeholder="Your message..." rows="5" maxlength="256" required></textarea>
+                            <span class="char-count">max. <span class="char-highlight">256 chars</span></span>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="terms" required>
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">I agree with <a href="#">Terms of Use</a> and <a href="#">Privacy Policy.</a></span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-send-message">
+                            <span>Send message</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.5 17L14.5 12L9.5 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2419.829584788893!2d-2.0614!3d52.5831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870a4e0c76f85a9%3A0x5b5b0f8c8b1f6b0a!2sWalsall%20Rd%2C%20Willenhall!5e0!3m2!1sen!2suk!4v1700000000000"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; border-radius: 20px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Contact Info Cards -->
+            <div class="contact-info-cards">
+                <div class="contact-info-card">
+                    <div class="info-icon email-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22 6L12 13L2 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="info-text">
+                        <h4>Email us</h4>
+                        <p>info@halleuk.com</p>
+                    </div>
+                </div>
+                <div class="contact-info-card">
+                    <div class="info-icon call-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.09501 3.90347 2.12787 3.62476 2.21649 3.36162C2.30512 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.5953 1.99522 8.06579 2.16708 8.43376 2.48353C8.80173 2.79999 9.04207 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.89390 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5765 14.4765 14.08 15.9L15.35 14.63C15.6219 14.3611 15.9651 14.1759 16.3391 14.0961C16.7131 14.0163 17.1021 14.0454 17.46 14.18C18.3673 14.5186 19.3099 14.7534 20.27 14.88C20.7558 14.9485 21.1998 15.1946 21.5181 15.5704C21.8365 15.9463 22.0065 16.4259 22 16.92Z" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="info-text">
+                        <h4>Call us</h4>
+                        <p>+44 (0) 1902 504455</p>
+                    </div>
+                </div>
+                <div class="contact-info-card">
+                    <div class="info-icon location-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="info-text">
+                        <h4>Address</h4>
+                        <p>2-3 Walsall Rd, WV13 2EH</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-wrapper">
+            <div class="faq-heading">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-content">
+                <div class="faq-item active">
+                    <div class="faq-question">
+                        <span>Title can be added here</span>
+                        <button class="faq-toggle" aria-label="Toggle answer">
+                            <svg viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.24264 1.8856L0.942813 5.18547L0 4.24267L4.24264 0L8.48531 4.24267L7.54251 5.18547L4.24264 1.8856Z" fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Use Jambo for analyzing and engaging with customer feedback, unlocking valuable insights, and revealing new releases. Lorem ipsum aliquam vel justo fringillas enigma.</p>
+                        <p>Lorem ipsum aliquam vel justo fringillas enigma.</p>
+                    </div>
+                </div>
+                <div class="faq-divider"></div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Title can be added here</span>
+                        <button class="faq-toggle" aria-label="Toggle answer">
+                            <svg viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.24264 4.11437L7.54251 0.814499L8.48531 1.7573L4.24264 5.99997L0 1.7573L0.942813 0.814499L4.24264 4.11437Z" fill="#2a363a"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Use Jambo for analyzing and engaging with customer feedback, unlocking valuable insights, and revealing new releases. Lorem ipsum aliquam vel justo fringillas enigma.</p>
+                    </div>
+                </div>
+                <div class="faq-divider"></div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Title can be added here</span>
+                        <button class="faq-toggle" aria-label="Toggle answer">
+                            <svg viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.24264 4.11437L7.54251 0.814499L8.48531 1.7573L4.24264 5.99997L0 1.7573L0.942813 0.814499L4.24264 4.11437Z" fill="#2a363a"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Use Jambo for analyzing and engaging with customer feedback, unlocking valuable insights, and revealing new releases. Lorem ipsum aliquam vel justo fringillas enigma.</p>
+                    </div>
+                </div>
+                <div class="faq-divider"></div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Title can be added here</span>
+                        <button class="faq-toggle" aria-label="Toggle answer">
+                            <svg viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.24264 4.11437L7.54251 0.814499L8.48531 1.7573L4.24264 5.99997L0 1.7573L0.942813 0.814499L4.24264 4.11437Z" fill="#2a363a"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Use Jambo for analyzing and engaging with customer feedback, unlocking valuable insights, and revealing new releases. Lorem ipsum aliquam vel justo fringillas enigma.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="https://www.figma.com/api/mcp/asset/ae28e296-a670-4e4a-8882-959a8883ca88" alt="Halle" class="footer-logo-img">
+                    <p>Halle is a trusted estate agency in Willenhall, dedicated to connecting people with homes that truly fit their needs and aspirations.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <img src="https://www.figma.com/api/mcp/asset/e6189d22-a7ae-438f-9bbc-2873c1668c24" alt="Instagram" class="social-icon">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="https://www.figma.com/api/mcp/asset/e257987e-cc93-451c-96e1-c859cd108a80" alt="Facebook" class="social-icon">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="https://www.figma.com/api/mcp/asset/1a2565a4-4cb9-4519-83fc-c17694c9d428" alt="YouTube" class="social-icon">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="https://www.figma.com/api/mcp/asset/c78a41b3-0118-458d-84bf-c4bf2ae6f08e" alt="TikTok" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links:</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="listings.html">Properties</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="buying.html">Buying</a></li>
+                        <li><a href="renting.html">Letting</a></li>
+                        <li><a href="#">Landlords</a></li>
+                        <li><a href="tenant-resources.html">Tenant Resources</a></li>
+                        <li><a href="selling.html">Selling</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Halle © All rights reserved Copyrights 2025</p>
+                <p>Site By 5RV Digital</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
