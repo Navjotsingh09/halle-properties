@@ -88,7 +88,7 @@
                     </div>
                 </div>
 
-                <a href="#" class="btn-enquiry">Make Enquiry</a>
+                <button type="button" class="btn-enquiry" id="openEnquiryModal">Make Enquiry</button>
             </div>
         </div>
     </section>
@@ -405,6 +405,77 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- Enquiry Modal -->
+    <div class="enquiry-modal-overlay" id="enquiryModal">
+        <div class="enquiry-modal">
+            <button class="modal-close-btn" id="closeEnquiryModal" aria-label="Close modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="#2a363a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <form class="enquiry-form" id="enquiryForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="firstName">FIRST NAME</label>
+                        <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Enter first name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="lastName">LAST NAME</label>
+                        <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Enter last name" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Enter email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="phone">NUMBER</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter phone number">
+                    </div>
+                </div>
+                <div class="form-viewing-request">
+                    <span class="viewing-label">REQUESTING A VIEWING?</span>
+                    <div class="viewing-options">
+                        <label class="viewing-option">
+                            <input type="radio" name="viewing" value="yes">
+                            <span class="custom-radio"></span>
+                            <span class="option-text">Yes</span>
+                        </label>
+                        <label class="viewing-option">
+                            <input type="radio" name="viewing" value="no" checked>
+                            <span class="custom-radio"></span>
+                            <span class="option-text">No</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group form-group-full">
+                    <label class="form-label" for="message">MESSAGE</label>
+                    <textarea id="message" name="message" class="form-textarea" placeholder="Your message..." maxlength="256"></textarea>
+                    <div class="char-count">max. <span class="char-count-highlight">256 chars</span></div>
+                </div>
+                <div class="form-agreement">
+                    <label class="agreement-label">
+                        <input type="checkbox" name="agreement" required>
+                        <span class="custom-checkbox">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span class="agreement-text">I agree with <a href="#">Terms of Use</a> and <a href="#">Privacy Policy.</a></span>
+                    </label>
+                </div>
+                <button type="submit" class="btn-send-message">
+                    <span>Send message</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
     <script>
         // Property Tabs Functionality
         document.addEventListener('DOMContentLoaded', function() {
@@ -423,6 +494,48 @@
                     this.classList.add('active');
                     document.getElementById(targetTab).classList.add('active');
                 });
+            });
+
+            // Enquiry Modal Functionality
+            const openModalBtn = document.getElementById('openEnquiryModal');
+            const closeModalBtn = document.getElementById('closeEnquiryModal');
+            const modal = document.getElementById('enquiryModal');
+            const enquiryForm = document.getElementById('enquiryForm');
+
+            openModalBtn.addEventListener('click', function() {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+
+            closeModalBtn.addEventListener('click', function() {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            // Close modal when clicking outside
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Form submission
+            enquiryForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Here you would typically send the form data to a server
+                alert('Thank you for your enquiry! We will be in touch soon.');
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+                enquiryForm.reset();
             });
         });
     </script>
