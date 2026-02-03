@@ -712,7 +712,8 @@ body.menu-open {
 .property-features {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 0;
     width: 100%;
 }
 
@@ -747,7 +748,6 @@ body.menu-open {
     height: 40px;
     background: #ffffff;
     flex-shrink: 0;
-    margin: 0;
 }
 
 .section-cta {
