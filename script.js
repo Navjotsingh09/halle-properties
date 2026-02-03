@@ -590,3 +590,222 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Blog Search and Filter Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('blogSearchInput');
+    const searchBtn = document.getElementById('blogSearchBtn');
+    const filterTags = document.querySelectorAll('.filter-tag');
+    const clearFiltersBtn = document.getElementById('clearFiltersBtn');
+    const searchResultsInfo = document.getElementById('searchResultsInfo');
+    const blogCardsContainer = document.querySelector('.blog-cards-container');
+    const paginationSection = document.querySelector('.blog-pagination-section');
+    
+    if (!searchInput || !blogCardsContainer) return;
+    
+    // Get all blog cards
+    const allBlogCards = document.querySelectorAll('.blog-card');
+    let activeFilter = 'all';
+    let searchQuery = '';
+    let isSearchActive = false;
+    
+    // Create a container for search results
+    const searchResultsContainer = document.createElement('div');
+    searchResultsContainer.className = 'blog-search-results';
+    searchResultsContainer.style.display = 'none';
+    blogCardsContainer.parentNode.insertBefore(searchResultsContainer, blogCardsContainer);
+    
+    // Create no results message
+    const noResultsMessage = document.createElement('div');
+    noResultsMessage.className = 'no-results-message';
+    noResultsMessage.style.display = 'none';
+    noResultsMessage.innerHTML = `
+        <h3>No results found</h3>
+        <p>Try adjusting your search or filter to find what you're looking for.</p>
+    `;
+    blogCardsContainer.parentNode.insertBefore(noResultsMessage, blogCardsContainer);
+    
+    // Function to get card data
+    function getCardData(card) {
+        const title = card.querySelector('.blog-card-title')?.textContent.toLowerCase() || '';
+        const excerpt = card.querySelector('.blog-card-excerpt')?.textContent.toLowerCase() || '';
+        const category = card.getAttribute('data-category')?.toLowerCase() || '';
+        return { title, excerpt, category, element: card };
+    }
+    
+    // Function to perform search and filter
+    function performSearchAndFilter() {
+        const query = searchQuery.toLowerCase().trim();
+        const filter = activeFilter.toLowerCase();
+        
+        let matchingCards = [];
+        
+        allBlogCards.forEach(card => {
+            const data = getCardData(card);
+            
+            // Check category filter
+            let categoryMatch = filter === 'all' || data.category === filter;
+            
+            // Check search query
+            let searchMatch = query === '' || 
+                data.title.includes(query) || 
+                data.excerpt.includes(query);
+            
+            if (categoryMatch && searchMatch) {
+                matchingCards.push(card);
+            }
+        });
+        
+        // Show/hide search results
+        if (query !== '' || filter !== 'all') {
+            isSearchActive = true;
+            showSearchResults(matchingCards, query, filter);
+        } else {
+            isSearchActive = false;
+            hideSearchResults();
+        }
+        
+        // Update clear button visibility
+        if (clearFiltersBtn) {
+            if (query !== '' || filter !== 'all') {
+                clearFiltersBtn.classList.add('visible');
+            } else {
+                clearFiltersBtn.classList.remove('visible');
+            }
+        }
+    }
+    
+    // Function to show search results
+    function showSearchResults(cards, query, filter) {
+        // Hide original blog pages and pagination
+        document.querySelectorAll('.blog-page').forEach(page => {
+            page.style.display = 'none';
+        });
+        if (paginationSection) {
+            paginationSection.style.display = 'none';
+        }
+        
+        // Clear and populate search results container
+        searchResultsContainer.innerHTML = '';
+        
+        if (cards.length === 0) {
+            noResultsMessage.style.display = 'block';
+            searchResultsContainer.style.display = 'none';
+            searchResultsInfo.classList.add('visible');
+            searchResultsInfo.innerHTML = `No results found${query ? ' for "<strong>' + escapeHtml(query) + '</strong>"' : ''}${filter !== 'all' ? ' in <strong>' + capitalizeFirst(filter) + '</strong>' : ''}`;
+        } else {
+            noResultsMessage.style.display = 'none';
+            searchResultsContainer.style.display = 'flex';
+            searchResultsContainer.style.flexWrap = 'wrap';
+            searchResultsContainer.style.gap = '20px';
+            searchResultsContainer.style.justifyContent = 'flex-start';
+            
+            // Clone and append matching cards
+            cards.forEach(card => {
+                const clone = card.cloneNode(true);
+                searchResultsContainer.appendChild(clone);
+            });
+            
+            // Show results count
+            searchResultsInfo.classList.add('visible');
+            let infoText = `Found <strong>${cards.length}</strong> result${cards.length !== 1 ? 's' : ''}`;
+            if (query) {
+                infoText += ` for "<strong>${escapeHtml(query)}</strong>"`;
+            }
+            if (filter !== 'all') {
+                infoText += ` in <strong>${capitalizeFirst(filter)}</strong>`;
+            }
+            searchResultsInfo.innerHTML = infoText;
+        }
+    }
+    
+    // Function to hide search results
+    function hideSearchResults() {
+        searchResultsContainer.style.display = 'none';
+        noResultsMessage.style.display = 'none';
+        searchResultsInfo.classList.remove('visible');
+        
+        // Show original blog pages and pagination
+        document.querySelectorAll('.blog-page').forEach((page, index) => {
+            page.style.display = index === 0 ? 'flex' : 'none';
+            if (index === 0) {
+                page.classList.remove('hidden');
+            } else {
+                page.classList.add('hidden');
+            }
+        });
+        if (paginationSection) {
+            paginationSection.style.display = 'flex';
+        }
+    }
+    
+    // Helper function to escape HTML
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+    
+    // Helper function to capitalize first letter
+    function capitalizeFirst(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+    
+    // Event listeners for search
+    searchBtn.addEventListener('click', function() {
+        searchQuery = searchInput.value;
+        performSearchAndFilter();
+    });
+    
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            searchQuery = searchInput.value;
+            performSearchAndFilter();
+        }
+    });
+    
+    // Live search on input (debounced)
+    let searchTimeout;
+    searchInput.addEventListener('input', function() {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            searchQuery = searchInput.value;
+            performSearchAndFilter();
+        }, 300);
+    });
+    
+    // Event listeners for filter tags
+    filterTags.forEach(tag => {
+        tag.addEventListener('click', function() {
+            // Remove active class from all tags
+            filterTags.forEach(t => t.classList.remove('active'));
+            // Add active class to clicked tag
+            this.classList.add('active');
+            // Update active filter
+            activeFilter = this.getAttribute('data-category') || 'all';
+            // Perform search and filter
+            performSearchAndFilter();
+        });
+    });
+    
+    // Clear filters button
+    if (clearFiltersBtn) {
+        clearFiltersBtn.addEventListener('click', function() {
+            // Reset search input
+            searchInput.value = '';
+            searchQuery = '';
+            // Reset filter
+            activeFilter = 'all';
+            filterTags.forEach(t => t.classList.remove('active'));
+            // Set "All" as active if it exists
+            const allTag = document.querySelector('.filter-tag[data-category="all"]');
+            if (allTag) {
+                allTag.classList.add('active');
+            }
+            // Hide search results
+            hideSearchResults();
+            // Hide clear button
+            this.classList.remove('visible');
+        });
+    }
+});

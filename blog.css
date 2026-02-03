@@ -1,46 +1,22 @@
 /* Blog Page Styles */
 
-/* Navigation Section */
-.blog-nav-section {
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
-    background-color: var(--dark-bg);
-    padding: 0;
-}
-
-.blog-header {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 20px 80px;
-    background: transparent;
-}
-
-.blog-header .header-content {
-    max-width: 1440px;
-    margin: 0 auto;
-    justify-content: space-between;
-}
-
-/* Hero Section */
+/* Hero Section - Contains Header */
 .blog-hero-section {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
     background-color: var(--dark-bg);
     padding: 0 80px 50px;
+    position: relative;
 }
 
 .blog-hero-container {
     position: relative;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1280px;
     height: 400px;
     margin: 0 auto;
+    margin-top: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +68,7 @@
     max-width: 1920px;
     margin: 0 auto;
     background-color: white;
-    padding: 20px 78px 15px;
+    padding: 30px 80px 25px;
 }
 
 .blog-search-container {
@@ -101,7 +77,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 50px;
     flex-wrap: wrap;
 }
 
@@ -184,6 +160,81 @@
 .filter-tag.active,
 .filter-tag:hover {
     background: var(--primary);
+    color: white;
+}
+
+/* Clear Filters Button */
+.clear-filters-btn {
+    padding: 3px 15px;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid #dc3545;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #dc3545;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: none;
+}
+
+.clear-filters-btn.visible {
+    display: inline-block;
+}
+
+.clear-filters-btn:hover {
+    background: #dc3545;
+    color: white;
+}
+
+/* No Results Message */
+.no-results-message {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+}
+
+.no-results-message h3 {
+    font-size: 24px;
+    color: #334148;
+    margin-bottom: 10px;
+}
+
+.no-results-message p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Search Results Count */
+.search-results-info {
+    text-align: center;
+    padding: 15px 0 0;
+    font-size: 14px;
+    color: #666;
+    display: none;
+}
+
+.search-results-info.visible {
+    display: block;
+}
+
+.search-results-info strong {
+    color: var(--primary);
+}
+
+/* Blog Search Results Container */
+.blog-search-results {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0 80px;
+}
+
+.blog-search-results .blog-card {
+    width: 413px;
+    flex-shrink: 0;
 }
 
 /* Blog Cards Section */
@@ -222,7 +273,7 @@
 .blog-cards-row {
     display: flex;
     gap: 20px;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .blog-card {
@@ -432,11 +483,26 @@
         max-width: 385px;
         margin: 0 auto;
     }
+    
+    .blog-search-results {
+        padding: 0 40px;
+        justify-content: center;
+    }
+    
+    .blog-search-results .blog-card {
+        width: 100%;
+        max-width: 413px;
+    }
 }
 
 @media (max-width: 768px) {
     .blog-hero-section {
         padding: 0 20px 30px;
+    }
+    
+    .blog-hero-container {
+        margin-top: 80px;
+        height: 300px;
     }
     
     .blog-search-section {
@@ -455,10 +521,6 @@
         font-size: 16px;
     }
     
-    .blog-hero-container {
-        height: 300px;
-    }
-    
     .blog-hero-content {
         padding: 0 20px;
     }
@@ -471,6 +533,10 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+    }
+    
+    .clear-filters-btn {
+        margin-top: 5px;
     }
     
     .blog-card {
@@ -491,6 +557,23 @@
         width: 50px;
         height: 50px;
         font-size: 16px;
+    }
+    
+    .blog-search-results {
+        padding: 0 20px;
+    }
+    
+    .no-results-message {
+        padding: 40px 20px;
+    }
+    
+    .no-results-message h3 {
+        font-size: 20px;
+    }
+    
+    .blog-cards-row {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
