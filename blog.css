@@ -3,7 +3,7 @@
 /* Navigation Section */
 .blog-nav-section {
     width: 100%;
-    max-width: 1920px;
+    max-width: 1440px;
     margin: 0 auto;
     background-color: var(--dark-bg);
     padding: 0;
@@ -14,14 +14,14 @@
     top: 0;
     left: 0;
     transform: none;
-    max-width: 1920px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 20px 80px;
     background: transparent;
 }
 
 .blog-header .header-content {
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto;
     justify-content: space-between;
 }
@@ -29,7 +29,7 @@
 /* Hero Section */
 .blog-hero-section {
     width: 100%;
-    max-width: 1920px;
+    max-width: 1440px;
     margin: 0 auto;
     background-color: var(--dark-bg);
     padding: 0 80px 50px;
@@ -38,7 +38,7 @@
 .blog-hero-container {
     position: relative;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1280px;
     height: 400px;
     margin: 0 auto;
     display: flex;
@@ -89,14 +89,14 @@
 /* Search & Filter Section */
 .blog-search-section {
     width: 100%;
-    max-width: 1920px;
+    max-width: 1440px;
     margin: 0 auto;
     background-color: white;
     padding: 20px 78px 15px;
 }
 
 .blog-search-container {
-    max-width: 1287px;
+    max-width: 1280px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -189,14 +189,14 @@
 /* Blog Cards Section */
 .blog-cards-section {
     width: 100%;
-    max-width: 1920px;
+    max-width: 1440px;
     margin: 0 auto;
     background-color: white;
     padding: 34px 80px;
 }
 
 .blog-cards-container {
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -304,7 +304,7 @@
 /* Pagination Section */
 .blog-pagination-section {
     width: 100%;
-    max-width: 1920px;
+    max-width: 1440px;
     margin: 0 auto;
     background-color: white;
     padding: 37px 80px;

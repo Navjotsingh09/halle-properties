@@ -5,7 +5,9 @@
 /* Navigation Section */
 .listings-nav-section {
     width: 100%;
-    max-width: 1920px;
+    max-width: 1440px;
+    width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
     height: 120px;
     background: var(--dark-bg);
@@ -23,7 +25,7 @@
 /* Hero Section */
 .listings-hero-section {
     width: 100%;
-    max-width: 1920px;
+    max-width: 1440px;
     margin: 0 auto;
     background: var(--dark-bg);
     padding: 41px 80px;
@@ -36,7 +38,7 @@
     align-items: center;
     position: relative;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
@@ -106,7 +108,7 @@
 /* Property Listings Section */
 .property-listings-section {
     width: 100%;
-    max-width: 1920px;
+    max-width: 1280px;
     margin: 0 auto;
     background: var(--white);
     padding: 43px 81px;
@@ -426,7 +428,7 @@
    ========================================= */
 
 /* Large Screens (1440px and below) */
-@media (max-width: 1440px) {
+@media (max-width: 1280px) {
     .listings-hero-section {
         padding: 41px 50px;
     }
@@ -489,6 +491,8 @@
 /* Tablet (992px and below) */
 @media (max-width: 992px) {
     .listings-nav-section {
+    width: 100%;
+    max-width: 1440px;
         height: 80px;
     }
 
@@ -563,6 +567,8 @@
 /* Mobile (768px and below) */
 @media (max-width: 768px) {
     .listings-nav-section {
+    width: 100%;
+    max-width: 1440px;
         height: 70px;
     }
 
