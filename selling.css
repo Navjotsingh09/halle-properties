@@ -1,22 +1,21 @@
 /* Selling Advice Page Styles */
 
-/* Navigation Section */
-.selling-nav-section {
+/* Hero Section */
+.selling-hero-section {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
     background-color: var(--dark-bg);
-    padding: 0;
+    padding: 41px 80px 50px;
+    position: relative;
 }
 
 .selling-header {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 20px 40px;
+    position: absolute;
+    top: 41px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
 }
 
 .selling-header .header-content {
@@ -24,19 +23,11 @@
     margin: 0 auto;
 }
 
-/* Hero Section */
-.selling-hero-section {
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
-    background-color: var(--dark-bg);
-    padding: 0 80px 50px;
-}
-
 .selling-hero-container {
     position: relative;
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto;
+    margin-top: 80px;
 }
 
 .selling-hero-image-wrapper {

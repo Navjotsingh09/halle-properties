@@ -1,23 +1,21 @@
 /* Contact Us Page Styles */
 
-/* Navigation Section */
-.contact-nav-section {
+/* Hero Section */
+.contact-hero-section {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
     background-color: var(--dark-bg);
-    padding: 0;
+    padding: 41px 80px 50px;
+    position: relative;
 }
 
 .contact-header {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 20px 80px;
-    background: transparent;
+    position: absolute;
+    top: 41px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
 }
 
 .contact-header .header-content {
@@ -26,19 +24,11 @@
     justify-content: space-between;
 }
 
-/* Hero Section */
-.contact-hero-section {
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
-    background-color: var(--dark-bg);
-    padding: 0 80px 50px;
-}
-
 .contact-hero-container {
     position: relative;
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto;
+    margin-top: 80px;
 }
 
 .contact-hero-image-wrapper {
