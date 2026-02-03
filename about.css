@@ -9,18 +9,20 @@
     padding: 0;
 }
 
-.about-header {
+/* About header uses the main .header class from styles.css */
+/* Only set positioning, not override other styles */
+.about-nav-section .header {
     position: relative;
     top: 0;
     left: 0;
     transform: none;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 20px 80px;
+    padding: 39px 80px;
     background: transparent;
 }
 
-.about-header .header-content {
+.about-nav-section .header-content {
     max-width: 1440px;
     margin: 0 auto;
     justify-content: space-between;

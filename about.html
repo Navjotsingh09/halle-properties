@@ -11,13 +11,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Section -->
+    <!-- Navigation Section - Same as Home Page -->
     <section class="about-nav-section">
-        <header class="about-header">
+        <header class="header about-header">
             <div class="header-content">
                 <a href="index.html" class="logo-link">
                     <img src="https://www.figma.com/api/mcp/asset/7fc7d617-fb91-4e3d-ba92-48f3c2c27438" alt="Halle" class="logo-img">
                 </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <nav class="nav-links">
                     <a href="buying.html" class="nav-link">Buying</a>
                     <a href="selling.html" class="nav-link">Selling</a>
@@ -134,48 +139,38 @@
         </div>
     </section>
 
-    <!-- Our Key Services Section (Repeating from index) -->
+    <!-- Our Key Services Section - Same as Home Page -->
     <section class="services-section">
         <div class="container">
             <h2 class="services-title">Our Key Services</h2>
             <div class="services-grid">
-                <a href="#" class="service-card">
+                <a href="contact.html" class="service-item">
                     <div class="service-icon">
-                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M32 56C45.2548 56 56 45.2548 56 32C56 18.7452 45.2548 8 32 8C18.7452 8 8 18.7452 8 32C8 45.2548 18.7452 56 32 56Z" stroke="white" stroke-width="2"/>
-                            <path d="M32 20V32L40 36" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
+                        <img src="https://www.figma.com/api/mcp/asset/90e25924-7552-4b6c-8c61-3e0cac2e0a7a" alt="" class="service-circle">
+                        <img src="https://www.figma.com/api/mcp/asset/73443f05-95f7-4543-acb9-d74e81983a34" alt="Book a Valuation" class="service-inner-icon">
                     </div>
-                    <span class="service-name">Book a Valuation</span>
+                    <h3>Book a Valuation</h3>
                 </a>
-                <a href="renting.html" class="service-card">
+                <a href="renting.html" class="service-item">
                     <div class="service-icon">
-                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 24L32 8L56 24V52C56 53.0609 55.5786 54.0783 54.8284 54.8284C54.0783 55.5786 53.0609 56 52 56H12C10.9391 56 9.92172 55.5786 9.17157 54.8284C8.42143 54.0783 8 53.0609 8 52V24Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M24 56V32H40V56" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <img src="https://www.figma.com/api/mcp/asset/90e25924-7552-4b6c-8c61-3e0cac2e0a7a" alt="" class="service-circle">
+                        <img src="https://www.figma.com/api/mcp/asset/08a10e28-8d90-436c-baad-c71b64a8ae51" alt="Renting & Letting" class="service-inner-icon">
                     </div>
-                    <span class="service-name">Renting & Letting</span>
+                    <h3>Renting & Letting</h3>
                 </a>
-                <a href="buying.html" class="service-card">
+                <a href="buying.html" class="service-item">
                     <div class="service-icon">
-                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M56 28C56 46 32 58 32 58C32 58 8 46 8 28C8 22.6957 10.1071 17.6086 13.8579 13.8579C17.6086 10.1071 22.6957 8 28 8C33.3043 8 38.3914 10.1071 42.1421 13.8579C45.8929 17.6086 48 22.6957 48 28" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="32" cy="28" r="8" stroke="white" stroke-width="2"/>
-                        </svg>
+                        <img src="https://www.figma.com/api/mcp/asset/90e25924-7552-4b6c-8c61-3e0cac2e0a7a" alt="" class="service-circle">
+                        <img src="https://www.figma.com/api/mcp/asset/c44388a7-bedf-4398-87d0-dcc05d6d619b" alt="Buying a Property" class="service-inner-icon">
                     </div>
-                    <span class="service-name">Buying a Property</span>
+                    <h3>Buying a Property</h3>
                 </a>
-                <a href="selling.html" class="service-card">
+                <a href="selling.html" class="service-item">
                     <div class="service-icon">
-                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M52 20H12C9.79086 20 8 21.7909 8 24V52C8 54.2091 9.79086 56 12 56H52C54.2091 56 56 54.2091 56 52V24C56 21.7909 54.2091 20 52 20Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8 32H56" stroke="white" stroke-width="2"/>
-                            <path d="M20 8V20" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M44 8V20" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
+                        <img src="https://www.figma.com/api/mcp/asset/90e25924-7552-4b6c-8c61-3e0cac2e0a7a" alt="" class="service-circle">
+                        <img src="https://www.figma.com/api/mcp/asset/c2b5ba58-bf08-40fa-a83f-1e3f4485282c" alt="Selling a Property" class="service-inner-icon">
                     </div>
-                    <span class="service-name">Selling a Property</span>
+                    <h3>Selling a Property</h3>
                 </a>
             </div>
         </div>
