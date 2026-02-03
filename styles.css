@@ -542,21 +542,22 @@ img.partner-logo.onthemarket {
 
 .section-header {
     display: flex;
-    gap: 40px;
+    gap: 200px;
     align-items: center;
     justify-content: center;
     width: 100%;
-    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .section-header h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(28px, 4vw, 50px);
+    font-size: 50px;
     font-weight: 600;
     line-height: 1.2;
     color: var(--dark-bg);
-    max-width: 580px;
-    flex: 1 1 300px;
+    width: 580px;
+    flex-shrink: 0;
     white-space: pre-wrap;
 }
 
@@ -566,8 +567,8 @@ img.partner-logo.onthemarket {
     font-weight: 400;
     line-height: normal;
     color: var(--dark-bg);
-    max-width: 496px;
-    flex: 1 1 280px;
+    width: 496px;
+    flex-shrink: 0;
 }
 
 .properties-grid {
@@ -1999,6 +2000,23 @@ html, body {
         padding-right: 30px;
     }
     
+    /* Section header - reduce gap at 1024px */
+    .section-header {
+        gap: clamp(40px, 10vw, 120px);
+    }
+    
+    .section-header h2 {
+        width: auto;
+        max-width: 480px;
+        font-size: clamp(32px, 4vw, 42px);
+    }
+    
+    .section-header p {
+        width: auto;
+        max-width: 400px;
+        font-size: 16px;
+    }
+    
     /* Property grid */
     .property-card,
     .property-card:nth-child(2) {
@@ -2137,11 +2155,21 @@ html, body {
     }
     
     .section-header {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
         margin-bottom: 40px;
     }
     
     .section-header h2 {
-        font-size: clamp(28px, 4vw, 36px);
+        width: 100%;
+        max-width: 580px;
+        font-size: clamp(28px, 5vw, 36px);
+    }
+    
+    .section-header p {
+        width: 100%;
+        max-width: 496px;
     }
     
     /* Property cards - 2 column with third card wrapping */
