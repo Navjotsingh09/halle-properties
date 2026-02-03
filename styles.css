@@ -454,6 +454,7 @@ body > * {
     gap: 20px;
     align-items: flex-start;
     width: 1280px;
+    margin: 0 auto;
 }
 
 .property-card {
@@ -679,6 +680,8 @@ body > * {
     gap: 80px;
     align-items: center;
     height: 651px;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .why-image {
@@ -1021,6 +1024,7 @@ body > * {
     height: 370px;
     border-radius: 20px;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 .cta-bg-image {
@@ -1162,6 +1166,8 @@ body > * {
     display: flex;
     gap: 36px;
     align-items: stretch;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 /* Blog 1 - Featured card with image (629px x 693px) */
