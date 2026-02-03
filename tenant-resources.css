@@ -2,6 +2,9 @@
 
 /* Navigation Section */
 .tenant-nav-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
     background-color: var(--dark-bg);
     padding: 0;
 }
@@ -23,6 +26,9 @@
 
 /* Hero Section */
 .tenant-hero-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
     background-color: var(--dark-bg);
     padding: 0 80px 50px;
 }
@@ -85,6 +91,9 @@
 
 /* Resources Section */
 .resources-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
     background-color: var(--white);
     padding: 34px 80px;
 }
@@ -206,6 +215,9 @@
 
 /* Tenant CTA Section */
 .tenant-cta-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
     background-color: var(--grey);
     padding: 80px;
 }

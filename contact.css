@@ -2,6 +2,9 @@
 
 /* Navigation Section */
 .contact-nav-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
     background-color: var(--dark-bg);
     padding: 0;
 }
@@ -25,6 +28,9 @@
 
 /* Hero Section */
 .contact-hero-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
     background-color: var(--dark-bg);
     padding: 0 80px 50px;
 }
@@ -86,6 +92,9 @@
 
 /* Contact Form Section */
 .contact-form-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
     background-color: white;
     padding: 59px 80px;
 }

@@ -2,6 +2,9 @@
 
 /* Property Hero Section */
 .property-hero-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
     background-color: var(--dark-bg);
     height: auto;
     min-height: auto;
@@ -21,6 +24,9 @@
 
 /* Property Details Section */
 .property-details-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
     padding: 60px 40px;
     background-color: var(--white);
 }
@@ -208,6 +214,9 @@
 
 /* Property Tabs Section */
 .property-tabs-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
     padding: 60px 40px;
     background-color: #f9fafb;
 }
@@ -345,6 +354,9 @@
 
 /* Similar Properties Section */
 .similar-properties-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
     padding: 80px 40px;
     background-color: var(--white);
 }
