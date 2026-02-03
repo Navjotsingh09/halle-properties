@@ -435,8 +435,8 @@ body.menu-open {
     position: absolute;
     right: 12px;
     top: 12px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background: var(--white);
     border: none;
     border-radius: 50%;
@@ -454,13 +454,13 @@ body.menu-open {
 }
 
 .filter-search-btn svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
 }
 
 .search-btn-img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 }
 
@@ -544,10 +544,11 @@ img.partner-logo.onthemarket {
     display: flex;
     gap: 200px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .section-header h2 {
