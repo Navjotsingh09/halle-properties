@@ -6,8 +6,6 @@
 .listings-nav-section {
     width: 100%;
     max-width: 1920px;
-    width: 100%;
-    max-width: 1440px;
     margin: 0 auto;
     height: 120px;
     background: var(--dark-bg);
@@ -108,7 +106,7 @@
 /* Property Listings Section */
 .property-listings-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     background: var(--white);
     padding: 43px 81px;
@@ -119,7 +117,8 @@
 
 .property-listing-card {
     width: 100%;
-    max-width: 1278px;
+    max-width: 1440px;
+    margin: 0 auto;;
     padding: 29px 25px;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
 }
