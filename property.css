@@ -165,11 +165,11 @@
     gap: 24px;
 }
 
-.property-price {
+.property-details-section .property-price {
     font-family: 'Mulish', sans-serif;
     font-size: 44px;
     font-weight: 700;
-    color: #82c7be;
+    color: #82c7be !important;
     line-height: normal;
     margin: 0;
 }
@@ -623,7 +623,7 @@
         font-size: 32px;
     }
     
-    .property-price {
+    .property-details-section .property-price {
         font-size: 28px;
     }
     
@@ -691,7 +691,7 @@
         font-size: 16px;
     }
     
-    .property-price {
+    .property-details-section .property-price {
         font-size: 24px;
     }
     
