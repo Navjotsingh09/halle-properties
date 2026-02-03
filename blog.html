@@ -30,7 +30,7 @@
                     <a href="resources.html" class="nav-link">Resources</a>
                     <a href="contact.html" class="nav-link">Contact</a>
                 </nav>
-                <a href="valuation.html" class="btn-valuation">Book a Valuation</a>
+                <a href="#" class="btn-valuation">Book a Valuation</a>
             </div>
         </header>
     </section>
@@ -349,6 +349,109 @@
             </div>
         </div>
     </footer>
+
+    <!-- Valuation Modal Popup -->
+    <div id="valuationModal" class="valuation-modal">
+        <div class="valuation-modal-overlay"></div>
+        <div class="valuation-modal-content">
+            <button class="valuation-modal-close" aria-label="Close modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="#2a363a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h2 class="valuation-modal-title">Book a Valuation</h2>
+            <form id="valuationForm" class="valuation-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">FIRST NAME</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">LAST NAME</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="valuationEmail">EMAIL</label>
+                        <input type="email" id="valuationEmail" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">NUMBER</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="estimateType">TYPE OF ESTIMATE</label>
+                        <div class="select-wrapper">
+                            <select id="estimateType" name="estimateType" required>
+                                <option value="" disabled selected>Select estimate type</option>
+                                <option value="sales">Sales Valuation</option>
+                                <option value="lettings">Lettings Valuation</option>
+                                <option value="both">Sales & Lettings</option>
+                            </select>
+                            <svg class="select-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="#2a363a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="propertyType">PROPERTY TYPE</label>
+                        <div class="select-wrapper">
+                            <select id="propertyType" name="propertyType" required>
+                                <option value="" disabled selected>Select property type</option>
+                                <option value="detached">Detached House</option>
+                                <option value="semi-detached">Semi-Detached House</option>
+                                <option value="terraced">Terraced House</option>
+                                <option value="flat">Flat / Apartment</option>
+                                <option value="bungalow">Bungalow</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <svg class="select-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="#2a363a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bedrooms">NUMBER OF BEDROOMS</label>
+                        <div class="select-wrapper">
+                            <select id="bedrooms" name="bedrooms" required>
+                                <option value="" disabled selected>Select bedrooms</option>
+                                <option value="1">1 Bedroom</option>
+                                <option value="2">2 Bedrooms</option>
+                                <option value="3">3 Bedrooms</option>
+                                <option value="4">4 Bedrooms</option>
+                                <option value="5">5+ Bedrooms</option>
+                            </select>
+                            <svg class="select-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="#2a363a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="postcode">POSTCODE</label>
+                        <input type="text" id="postcode" name="postcode" placeholder="Enter postcode" required>
+                    </div>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="terms" required>
+                        <span class="checkmark"></span>
+                        <span class="checkbox-text">I agree with <a href="#">Terms of Use</a> and <a href="#">Privacy Policy.</a></span>
+                    </label>
+                </div>
+                <button type="submit" class="btn-send-message">
+                    <span>Send message</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.5 17L14.5 12L9.5 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

@@ -333,3 +333,59 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Valuation Modal Popup
+document.addEventListener('DOMContentLoaded', function() {
+    const valuationModal = document.getElementById('valuationModal');
+    const valuationBtns = document.querySelectorAll('.btn-valuation');
+    const modalClose = document.querySelector('.valuation-modal-close');
+    const modalOverlay = document.querySelector('.valuation-modal-overlay');
+    const valuationForm = document.getElementById('valuationForm');
+    
+    // Open modal when clicking Book a Valuation button
+    valuationBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (valuationModal) {
+                valuationModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+    
+    // Close modal functions
+    function closeModal() {
+        if (valuationModal) {
+            valuationModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+    
+    // Close on X button click
+    if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+    }
+    
+    // Close on overlay click
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', closeModal);
+    }
+    
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && valuationModal && valuationModal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+    
+    // Handle form submission
+    if (valuationForm) {
+        valuationForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // You can add form submission logic here (e.g., send to server)
+            alert('Thank you! Your valuation request has been submitted. We will contact you soon.');
+            closeModal();
+            valuationForm.reset();
+        });
+    }
+});
