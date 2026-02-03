@@ -231,26 +231,30 @@
 }
 
 .resources-content-text h2 {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 600;
-    color: var(--primary);
+    color: var(--dark-bg);
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .resources-content-section.dark-bg .resources-content-text h2 {
-    color: var(--primary);
+    color: white;
 }
 
 .resources-content-text p {
     font-size: 16px;
-    line-height: 1.8;
+    line-height: 1.7;
     color: var(--dark-bg);
+    margin-bottom: 16px;
+}
+
+.resources-content-text p:last-of-type {
     margin-bottom: 30px;
 }
 
 .resources-content-section.dark-bg .resources-content-text p {
-    color: white;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .btn-explore {
