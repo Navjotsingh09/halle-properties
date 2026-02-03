@@ -596,7 +596,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('blogSearchInput');
     const searchBtn = document.getElementById('blogSearchBtn');
     const filterTags = document.querySelectorAll('.filter-tag');
-    const clearFiltersBtn = document.getElementById('clearFiltersBtn');
     const searchResultsInfo = document.getElementById('searchResultsInfo');
     const blogCardsContainer = document.querySelector('.blog-cards-container');
     const paginationSection = document.querySelector('.blog-pagination-section');
@@ -657,22 +656,45 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Show/hide search results
-        if (query !== '' || filter !== 'all') {
+        // When 'All' is selected with no search, show all cards without pagination
+        if (filter === 'all' && query === '') {
+            isSearchActive = true;
+            showAllBlogs(matchingCards);
+        } else if (query !== '' || filter !== 'all') {
             isSearchActive = true;
             showSearchResults(matchingCards, query, filter);
         } else {
             isSearchActive = false;
             hideSearchResults();
         }
-        
-        // Update clear button visibility
-        if (clearFiltersBtn) {
-            if (query !== '' || filter !== 'all') {
-                clearFiltersBtn.classList.add('visible');
-            } else {
-                clearFiltersBtn.classList.remove('visible');
-            }
+    }
+    
+    // Function to show all blogs without pagination
+    function showAllBlogs(cards) {
+        // Hide original blog pages and pagination
+        document.querySelectorAll('.blog-page').forEach(page => {
+            page.style.display = 'none';
+        });
+        if (paginationSection) {
+            paginationSection.style.display = 'none';
         }
+        
+        // Clear and populate search results container with all cards
+        searchResultsContainer.innerHTML = '';
+        noResultsMessage.style.display = 'none';
+        searchResultsContainer.style.display = 'flex';
+        searchResultsContainer.style.flexWrap = 'wrap';
+        searchResultsContainer.style.gap = '20px';
+        searchResultsContainer.style.justifyContent = 'flex-start';
+        
+        // Clone and append all cards
+        cards.forEach(card => {
+            const clone = card.cloneNode(true);
+            searchResultsContainer.appendChild(clone);
+        });
+        
+        // Hide results info for 'All' view
+        searchResultsInfo.classList.remove('visible');
     }
     
     // Function to show search results
@@ -788,24 +810,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Clear filters button
-    if (clearFiltersBtn) {
-        clearFiltersBtn.addEventListener('click', function() {
-            // Reset search input
-            searchInput.value = '';
-            searchQuery = '';
-            // Reset filter
-            activeFilter = 'all';
-            filterTags.forEach(t => t.classList.remove('active'));
-            // Set "All" as active if it exists
-            const allTag = document.querySelector('.filter-tag[data-category="all"]');
-            if (allTag) {
-                allTag.classList.add('active');
-            }
-            // Hide search results
-            hideSearchResults();
-            // Hide clear button
-            this.classList.remove('visible');
-        });
-    }
+    // Trigger 'All' filter on page load to show all blogs
+    performSearchAndFilter();
 });
