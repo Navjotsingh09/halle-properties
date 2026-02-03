@@ -313,11 +313,11 @@
     max-width: 1920px;
     margin: 0 auto;
     background-color: var(--grey);
-    padding: 80px;
+    padding: 83px 156px;
 }
 
 .comparison-container {
-    max-width: 1200px;
+    max-width: 1128px;
     margin: 0 auto;
 }
 
@@ -326,31 +326,30 @@
     background-color: white;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e8e7e7;
 }
 
 .comparison-header {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: var(--dark-bg);
 }
 
 .comparison-header .comparison-cell {
-    padding: 24px;
+    padding: 24px 16px;
     font-size: 16px;
     font-weight: 600;
     color: white;
     text-align: center;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
 }
 
-.comparison-header .comparison-cell:last-child {
-    border-right: none;
-}
-
-.comparison-header .feature-header {
-    text-align: left;
-    color: var(--primary);
+.comparison-header .service-header {
+    color: white;
+    font-weight: 600;
 }
 
 .comparison-header .comparison-cell.highlight {
@@ -360,8 +359,8 @@
 
 .comparison-row {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    border-bottom: 1px solid #eee;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-bottom: 1px solid #e8e7e7;
 }
 
 .comparison-row:last-child {
@@ -369,29 +368,43 @@
 }
 
 .comparison-row .comparison-cell {
-    padding: 20px 24px;
+    padding: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-right: 1px solid #eee;
+    border-right: 1px solid #e8e7e7;
+    min-height: 100px;
+    background-color: white;
 }
 
 .comparison-row .comparison-cell:last-child {
     border-right: none;
 }
 
-.comparison-row .comparison-cell.feature {
-    justify-content: flex-start;
-    font-size: 15px;
-    color: var(--dark-bg);
+.comparison-row .comparison-cell.service {
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
     font-weight: 500;
+    color: var(--dark-bg);
+    line-height: 1.5;
 }
 
 .comparison-row .comparison-cell.highlight {
-    background-color: rgba(130, 199, 190, 0.1);
+    background-color: rgba(130, 199, 190, 0.08);
 }
 
 .comparison-row .comparison-cell svg {
+    width: 24px;
+    height: 24px;
+}
+
+.comparison-row .comparison-cell.icon-check svg {
+    width: 32px;
+    height: 32px;
+}
+
+.comparison-row .comparison-cell.icon-cross svg {
     width: 24px;
     height: 24px;
 }
@@ -429,9 +442,8 @@
         font-size: 40px;
     }
     
-    .comparison-header,
-    .comparison-row {
-        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    .comparison-section {
+        padding: 80px 40px;
     }
 }
 
@@ -471,19 +483,16 @@
     }
     
     /* Comparison table mobile */
-    .comparison-header,
-    .comparison-row {
-        grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr;
+    .comparison-section {
+        padding: 60px 40px;
     }
     
-    .comparison-header .comparison-cell,
-    .comparison-row .comparison-cell {
-        padding: 16px 12px;
-        font-size: 14px;
-    }
-    
-    .comparison-row .comparison-cell.feature {
+    .comparison-row .comparison-cell.service {
         font-size: 13px;
+    }
+    
+    .comparison-row .comparison-cell {
+        min-height: 80px;
     }
 }
 
@@ -555,36 +564,39 @@
         padding: 10px 0;
         border: none;
         text-align: left;
+        min-height: auto;
     }
     
-    .comparison-row .comparison-cell.feature {
+    .comparison-row .comparison-cell.service {
         font-weight: 700;
         margin-bottom: 10px;
         padding-bottom: 10px;
         border-bottom: 1px solid #eee;
+        text-align: left;
+        justify-content: flex-start;
     }
     
-    .comparison-row .comparison-cell:not(.feature) {
+    .comparison-row .comparison-cell:not(.service) {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     
-    .comparison-row .comparison-cell:not(.feature)::before {
+    .comparison-row .comparison-cell:not(.service)::before {
         font-size: 13px;
         color: #666;
     }
     
     .comparison-row .comparison-cell:nth-child(2)::before {
-        content: "Tenant Find:";
+        content: "Let Only:";
     }
     
     .comparison-row .comparison-cell:nth-child(3)::before {
-        content: "Rent Collect:";
+        content: "Managed:";
     }
     
     .comparison-row .comparison-cell:nth-child(4)::before {
-        content: "Fully Managed:";
+        content: "Rent Guarantee:";
     }
     
     .comparison-row .comparison-cell.highlight {
