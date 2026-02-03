@@ -943,6 +943,13 @@ body.menu-open {
     justify-content: center;
     gap: 44px;
     width: 202px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
 }
 
 .service-icon {
@@ -952,6 +959,11 @@ body.menu-open {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover .service-icon {
+    transform: scale(1.05);
 }
 
 .service-circle {
@@ -960,6 +972,11 @@ body.menu-open {
     height: 202px;
     left: 0;
     top: 0;
+    transition: filter 0.3s ease;
+}
+
+.service-item:hover .service-circle {
+    filter: brightness(1.1);
 }
 
 .service-inner-icon {
@@ -969,6 +986,11 @@ body.menu-open {
     left: 45px;
     top: 48px;
     z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover .service-inner-icon {
+    transform: scale(1.1);
 }
 
 .service-item h3 {
