@@ -712,8 +712,7 @@ body.menu-open {
 .property-features {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 49px;
+    justify-content: space-between;
     width: 100%;
 }
 
@@ -725,9 +724,15 @@ body.menu-open {
     letter-spacing: -0.8px;
     text-align: center;
     line-height: normal;
-    width: 44px;
     white-space: pre-wrap;
-    flex-shrink: 0;
+}
+
+.property-features .feature:first-child {
+    text-align: left;
+}
+
+.property-features .feature:last-child {
+    text-align: right;
 }
 
 .property-features .feature .feature-value {
