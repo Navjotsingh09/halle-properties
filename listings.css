@@ -5,7 +5,7 @@
 /* Navigation Section */
 .listings-nav-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     height: 120px;
     background: var(--dark-bg);
@@ -23,7 +23,7 @@
 /* Hero Section */
 .listings-hero-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     background: var(--dark-bg);
     padding: 41px 80px;
@@ -36,7 +36,7 @@
     align-items: center;
     position: relative;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -106,7 +106,7 @@
 /* Property Listings Section */
 .property-listings-section {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     background: var(--white);
     padding: 43px 81px;

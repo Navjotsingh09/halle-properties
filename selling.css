@@ -11,13 +11,13 @@
     top: 0;
     left: 0;
     transform: none;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 20px 40px;
 }
 
 .selling-header .header-content {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -29,7 +29,7 @@
 
 .selling-hero-container {
     position: relative;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -88,7 +88,7 @@
 }
 
 .selling-steps-container {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
