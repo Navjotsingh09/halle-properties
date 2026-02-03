@@ -173,7 +173,8 @@ body > * {
 .hero-image-container {
     position: absolute;
     top: 137px;
-    left: 80px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 1280px;
     height: 764px;
     border-radius: 20px;
@@ -200,7 +201,8 @@ body > * {
 .hero-content {
     position: absolute;
     top: 285px;
-    left: 160px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 1120px;
     display: flex;
     flex-direction: column;
