@@ -1425,6 +1425,83 @@ body > * {
 }
 
 /* ========================================
+   NEWSLETTER SECTION
+   Newsletter signup banner above footer
+======================================== */
+.newsletter-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background: var(--dark-bg);
+    padding: 21px 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter-container {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.newsletter-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: -1.6px;
+    line-height: normal;
+    margin: 0;
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+}
+
+.newsletter-input {
+    width: 423px;
+    height: 60px;
+    padding: 0 30px;
+    border: 1px solid var(--white);
+    border-radius: 40px;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--white);
+    outline: none;
+}
+
+.newsletter-input::placeholder {
+    color: var(--white);
+    opacity: 0.7;
+}
+
+.newsletter-btn {
+    height: 60px;
+    padding: 0 40px;
+    background: var(--primary);
+    border: none;
+    border-radius: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--dark-bg);
+    cursor: pointer;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+}
+
+.newsletter-btn:hover {
+    opacity: 0.9;
+}
+
+/* ========================================
    FOOTER
    Frame: 1440x457px
 ======================================== */
@@ -1447,7 +1524,7 @@ body > * {
 .footer-content {
     display: flex;
     gap: 145px;
-    margin-bottom: 40px;
+    margin-bottom: 75px;
     justify-content: center;
 }
 
@@ -1546,7 +1623,9 @@ body > * {
     justify-content: space-between;
     align-items: center;
     padding-top: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .footer-bottom p {
@@ -1555,6 +1634,7 @@ body > * {
     font-weight: 600;
     color: var(--white);
     line-height: 1.4;
+    margin: 0;
 }
 
 .footer-bottom p:last-child {
@@ -1578,8 +1658,33 @@ html, body {
     .services-section,
     .testimonials-section,
     .cta-section,
-    .footer {
+    .footer,
+    .newsletter-section {
         max-width: 100%;
+    }
+
+    .newsletter-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .newsletter-title {
+        font-size: 26px;
+    }
+
+    .newsletter-form {
+        justify-content: center;
+    }
+
+    .newsletter-input {
+        width: 320px;
+        font-size: 18px;
+    }
+
+    .newsletter-btn {
+        font-size: 18px;
+        padding: 0 30px;
     }
 
     .container {
@@ -2853,6 +2958,42 @@ html, body {
 
     .faq-answer p {
         font-size: 13px;
+    }
+
+    /* Newsletter Mobile */
+    .newsletter-section {
+        padding: 30px 20px;
+    }
+
+    .newsletter-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .newsletter-title {
+        font-size: 22px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .newsletter-input {
+        width: 100%;
+        max-width: 300px;
+        height: 50px;
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    .newsletter-btn {
+        width: 100%;
+        max-width: 300px;
+        height: 50px;
+        font-size: 18px;
+        padding: 0;
     }
     
     .footer {
