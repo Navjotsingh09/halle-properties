@@ -378,14 +378,130 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Handle form submission
+    // Handle valuation form submission
     if (valuationForm) {
         valuationForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // You can add form submission logic here (e.g., send to server)
-            alert('Thank you! Your valuation request has been submitted. We will contact you soon.');
-            closeModal();
-            valuationForm.reset();
+            
+            const formData = new FormData(valuationForm);
+            const submitBtn = valuationForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = '<span>Sending...</span>';
+            submitBtn.disabled = true;
+            
+            fetch('https://formsubmit.co/ajax/navjot.singh@5rv.digital', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Thank you! Your valuation request has been submitted. We will contact you soon.');
+                    closeModal();
+                    valuationForm.reset();
+                } else {
+                    alert('There was an error submitting the form. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting the form. Please try again.');
+            })
+            .finally(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
         });
     }
 });
+
+// Newsletter Form Submission
+document.addEventListener('DOMContentLoaded', function() {
+    const newsletterForms = document.querySelectorAll('.newsletter-form');
+    
+    newsletterForms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const emailInput = form.querySelector('.newsletter-input');
+            const submitBtn = form.querySelector('.newsletter-btn');
+            const originalText = submitBtn.textContent;
+            
+            if (!emailInput.value) return;
+            
+            // Show loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            const formData = new FormData();
+            formData.append('email', emailInput.value);
+            formData.append('_subject', 'New Newsletter Subscription - Halle Properties');
+            
+            fetch('https://formsubmit.co/ajax/navjot.singh@5rv.digital', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Thank you for subscribing to our newsletter!');
+                    emailInput.value = '';
+                } else {
+                    alert('There was an error subscribing. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error subscribing. Please try again.');
+            })
+            .finally(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+    });
+});
+
+// Contact Form Submission (for AJAX handling)
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('.contact-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = '<span>Sending...</span>';
+            submitBtn.disabled = true;
+            
+            fetch('https://formsubmit.co/ajax/navjot.singh@5rv.digital', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Thank you for your message! We will get back to you soon.');
+                    contactForm.reset();
+                } else {
+                    alert('There was an error sending your message. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error sending your message. Please try again.');
+            })
+            .finally(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+    }
+});
+
