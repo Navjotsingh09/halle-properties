@@ -27,17 +27,16 @@
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
-    padding: 60px 40px;
+    padding: 75px 80px;
     background-color: var(--white);
 }
 
 .property-details-container {
     max-width: 1440px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
+    display: flex;
+    gap: 67px;
+    align-items: center;
 }
 
 /* Property Gallery */
@@ -45,6 +44,8 @@
     display: flex;
     flex-direction: row;
     gap: 16px;
+    width: 682px;
+    flex-shrink: 0;
 }
 
 .property-main-image {
@@ -101,20 +102,28 @@
     align-items: center;
     justify-content: center;
     color: var(--white);
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 28px;
+    font-weight: 400;
 }
 
 /* Property Info */
 .property-info {
-    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 71px;
+    width: 531px;
+}
+
+.property-name-status {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .property-status-row {
     display: flex;
     align-items: center;
     gap: 19px;
-    margin-bottom: 10px;
 }
 
 .property-status-text {
@@ -133,18 +142,27 @@
     font-size: 36px;
     font-weight: 600;
     color: var(--dark-bg);
-    margin-bottom: 10px;
-    line-height: 1.2;
+    line-height: normal;
+    margin: 0;
 }
 
 .property-location {
     font-size: 20px;
     color: #8c959f;
-    margin-bottom: 10px;
+    margin: 0;
+}
+
+.property-details-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
 }
 
 .property-price-section {
-    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .property-price {
@@ -152,24 +170,20 @@
     font-size: 44px;
     font-weight: 700;
     color: var(--primary);
-    margin-bottom: 24px;
-}
-
-.price-suffix {
-    font-size: 44px;
-    font-weight: 700;
+    line-height: normal;
+    margin: 0;
 }
 
 .property-financing {
     font-family: 'Mulish', sans-serif;
     font-size: 16px;
     color: #8c959f;
+    margin: 0;
 }
 
 .property-features {
     display: flex;
     gap: 25px;
-    margin-bottom: 71px;
     flex-wrap: wrap;
 }
 
@@ -551,13 +565,19 @@
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
+    .property-details-section {
+        padding: 50px 40px;
+    }
+
     .property-details-container {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 40px;
+        align-items: flex-start;
     }
     
     .property-gallery {
         flex-direction: column;
+        width: 100%;
     }
     
     .property-main-image {
@@ -574,6 +594,11 @@
     .property-thumb {
         width: 120px;
         height: 120px;
+    }
+
+    .property-info {
+        width: 100%;
+        gap: 40px;
     }
     
     .similar-properties-grid {
