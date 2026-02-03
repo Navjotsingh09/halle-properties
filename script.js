@@ -1,8 +1,25 @@
-// Mobile Menu Toggle
+// Mobile Menu Toggle with Scroll Lock
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     const btnValuation = document.querySelector('.btn-valuation');
+    const body = document.body;
+    let scrollPosition = 0;
+    
+    function openMenu() {
+        // Store scroll position before locking
+        scrollPosition = window.pageYOffset;
+        
+        mobileMenuToggle.classList.add('active');
+        navLinks.classList.add('active');
+        if (btnValuation) {
+            btnValuation.classList.add('active');
+        }
+        
+        // Lock body scroll
+        body.classList.add('menu-open');
+        body.style.top = `-${scrollPosition}px`;
+    }
     
     function closeMenu() {
         if (mobileMenuToggle) {
@@ -14,14 +31,20 @@ document.addEventListener('DOMContentLoaded', function() {
         if (btnValuation) {
             btnValuation.classList.remove('active');
         }
+        
+        // Unlock body scroll and restore position
+        body.classList.remove('menu-open');
+        body.style.top = '';
+        window.scrollTo(0, scrollPosition);
     }
     
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', () => {
-            mobileMenuToggle.classList.toggle('active');
-            navLinks.classList.toggle('active');
-            if (btnValuation) {
-                btnValuation.classList.toggle('active');
+            const isOpen = navLinks.classList.contains('active');
+            if (isOpen) {
+                closeMenu();
+            } else {
+                openMenu();
             }
         });
 
