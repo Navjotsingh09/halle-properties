@@ -2482,31 +2482,27 @@ html, body {
         visibility: visible;
     }
     
-    /* Hero Section - Mobile Layout */
+    /* Hero Section - KEEP OVERLAY DESIGN at 768px */
     .hero-section {
-        min-height: 0;
-        padding-bottom: 40px;
-        display: flex;
-        flex-direction: column;
+        min-height: clamp(500px, 80vh, 700px);
     }
     
     .hero-image-container {
-        position: relative;
-        top: 0;
-        left: 0;
-        transform: none;
-        width: 100%;
-        height: clamp(250px, 45vw, 400px);
-        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-        margin-top: 0;
+        position: absolute;
+        top: calc(var(--header-top) + 60px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 40px);
+        height: clamp(400px, 70vh, 600px);
+        border-radius: var(--radius-lg);
     }
     
     .hero-image-container::after {
-        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        border-radius: var(--radius-lg);
     }
     
     .hero-image {
-        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        border-radius: var(--radius-lg);
     }
     
     .header {
@@ -2516,65 +2512,103 @@ html, body {
         max-width: 100%;
     }
     
+    /* Hero content - KEEP INSIDE IMAGE */
     .hero-content {
-        position: relative;
-        top: 0;
-        left: 0;
-        transform: none;
-        width: 100%;
-        padding: 30px var(--container-padding);
-        margin-top: 0;
+        position: absolute;
+        top: calc(var(--header-top) + 60px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 40px);
+        height: clamp(400px, 70vh, 600px);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        z-index: 2;
     }
     
     .hero-title {
-        font-size: clamp(24px, 6vw, 36px);
+        font-size: clamp(24px, 5vw, 36px);
     }
     
     .hero-subtitle {
-        font-size: clamp(14px, 3vw, 18px);
+        font-size: clamp(13px, 2.5vw, 16px);
     }
     
-    /* Filter - Stacked on mobile */
+    /* Filter - HORIZONTAL COMPACT at 768px */
     .property-filter {
-        border-radius: var(--radius-md);
-        flex-direction: column;
+        border-radius: 40px;
+        flex-direction: row;
+        width: 100%;
+        max-width: 100%;
+        min-height: 60px;
     }
     
     .filter-fields {
-        flex-direction: column;
-        padding: 20px;
-        gap: 12px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px 15px;
+        gap: 8px;
+        justify-content: center;
     }
     
     .filter-field {
-        width: 100%;
-        min-width: 100%;
-        padding: 12px 15px;
-        background: #f5f5f5;
-        border-radius: var(--radius-sm);
+        width: auto;
+        min-width: 80px;
+        flex: 1 1 auto;
+        padding: 6px 10px;
+        background: transparent;
+        border-radius: 0;
+    }
+    
+    .filter-label {
+        font-size: 10px;
+    }
+    
+    .filter-select {
+        font-size: 12px;
+        min-width: 50px;
+    }
+    
+    .filter-divider {
+        display: none;
     }
     
     .filter-search-btn {
-        position: relative;
-        right: auto;
-        top: auto;
-        margin: 15px auto;
-        width: 100%;
-        max-width: 200px;
-        height: 50px;
-        border-radius: 25px;
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
     }
     
-    /* Partner logos */
+    /* Partner logos - PROPER SIZING */
     .partner-logos {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: center;
-        gap: 20px;
+        gap: 15px;
+        margin-top: 15px;
     }
     
-    .partner-logo.primelocation { width: 110px; }
-    .partner-logo.zoopla { width: 80px; }
-    .partner-logo.onthemarket { width: 90px; }
+    .partner-logo {
+        height: auto;
+        object-fit: contain;
+    }
+    
+    .partner-logo.primelocation { 
+        width: clamp(100px, 18vw, 150px);
+    }
+    .partner-logo.zoopla { 
+        width: clamp(70px, 12vw, 100px);
+    }
+    .partner-logo.onthemarket { 
+        width: clamp(80px, 14vw, 110px);
+    }
     
     /* Property cards - single column */
     .properties-grid {
