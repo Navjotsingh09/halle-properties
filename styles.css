@@ -2099,22 +2099,20 @@ html, body {
     
     /* ==========================================
        MOBILE HERO SECTION - Figma Specs
-       Height: 650px, dark bg, centered content
+       375px × 600px content + 50px padding-bottom = 650px total
     ========================================== */
     .hero-section {
         display: flex;
+        width: 375px;
         height: 650px;
         padding-bottom: 50px;
         flex-direction: column;
         align-items: center;
         gap: 45px;
         flex-shrink: 0;
-        align-self: stretch;
-        width: 100%;
-        max-width: 100%;
         background: var(--dark-bg);
         box-sizing: border-box;
-        margin: 0;
+        margin: 0 auto;
         overflow: visible;
     }
     
