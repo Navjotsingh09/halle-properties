@@ -1915,12 +1915,19 @@ html, body {
         z-index: var(--z-fixed);
     }
     
-    .desktop-nav {
-        display: none;
+    .header-content {
+        justify-content: space-between;
+    }
+    
+    .desktop-nav,
+    .desktop-nav ul,
+    .nav-links,
+    .btn-valuation {
+        display: none !important;
     }
     
     .mobile-menu-toggle {
-        display: flex;
+        display: flex !important;
     }
     
     /* Hero adjustments */
@@ -1939,16 +1946,27 @@ html, body {
         padding: 30px;
     }
     
-    /* Filter fields wrap */
+    /* Filter - Stack vertically on tablet */
+    .property-filter {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
     .filter-fields {
-        flex-wrap: wrap;
-        gap: 15px;
-        padding: 20px 25px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 12px;
+        padding: 0;
+        padding-right: 0;
+        width: 100%;
     }
     
     .filter-field {
-        min-width: calc(33% - 15px);
-        flex: 1 1 auto;
+        width: 100%;
+        min-width: 100%;
+        padding: 14px 18px;
+        background: #f5f5f5;
+        border-radius: 10px;
     }
     
     .filter-divider {
@@ -1959,23 +1977,25 @@ html, body {
         position: relative;
         right: auto;
         top: auto;
-        margin: 10px auto;
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
+        margin: 15px auto 0;
+        width: 56px;
+        height: 56px;
+        min-width: 56px;
         border-radius: 50%;
     }
     
-    /* Partner logos - smaller on tablet */
+    /* Partner logos - properly sized on tablet */
     .partner-logos {
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
+        align-items: center;
+        gap: 30px;
     }
     
-    .partner-logo.primelocation { width: 150px; height: auto; }
-    .partner-logo.zoopla { width: 100px; height: auto; }
-    .partner-logo.onthemarket { width: 110px; height: auto; }
+    .partner-logo.primelocation { width: 160px; height: 65px; }
+    .partner-logo.zoopla { width: 110px; height: 20px; }
+    .partner-logo.onthemarket { width: 120px; height: 30px; }
     
     /* Sections */
     .properties-section,
