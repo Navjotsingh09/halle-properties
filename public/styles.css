@@ -1949,8 +1949,12 @@ html, body {
     /* Filter - Stack vertically on tablet */
     .property-filter {
         flex-direction: column !important;
+        align-items: stretch !important;
         padding: 25px !important;
         border-radius: 20px !important;
+        min-height: auto !important;
+        height: auto !important;
+        overflow: visible !important;
     }
     
     .filter-fields {
@@ -1961,6 +1965,7 @@ html, body {
         padding: 0 !important;
         padding-right: 0 !important;
         width: 100% !important;
+        height: auto !important;
     }
     
     .filter-field {
@@ -1977,15 +1982,14 @@ html, body {
     }
     
     .filter-search-btn {
-        position: relative !important;
-        right: auto !important;
-        top: auto !important;
+        position: static !important;
         margin: 20px auto 0 !important;
         width: 60px !important;
         height: 60px !important;
         min-width: 60px !important;
         max-width: 60px !important;
         border-radius: 50% !important;
+        flex-shrink: 0 !important;
     }
     
     /* Partner logos - properly sized on tablet */
