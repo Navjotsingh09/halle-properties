@@ -1901,13 +1901,42 @@ html, body {
         font-size: 15px;
     }
     
+    /* Header - Tablet */
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        background: var(--dark-bg);
+        padding: 20px 30px;
+        z-index: var(--z-fixed);
+    }
+    
+    .desktop-nav {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
     /* Hero adjustments */
     .hero-section {
-        min-height: 0;
+        padding-top: 80px;
+        min-height: auto;
+        display: block;
     }
     
     .hero-image-container {
-        height: clamp(350px, 50vw, 550px);
+        height: clamp(300px, 40vw, 450px);
+    }
+    
+    .hero-content {
+        position: relative;
+        padding: 30px;
     }
     
     /* Filter fields wrap */
