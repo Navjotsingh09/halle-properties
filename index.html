@@ -48,6 +48,32 @@
 
             <!-- Property Filter Search Box -->
             <div class="property-filter" id="home-filter">
+                <!-- Mobile Search Filter (visible on mobile only) -->
+                <div class="mobile-filter">
+                    <div class="mobile-filter-tabs">
+                        <button class="mobile-filter-tab active" data-type="buy">Buy</button>
+                        <button class="mobile-filter-tab" data-type="rent">Rent</button>
+                    </div>
+                    <div class="mobile-filter-divider"></div>
+                    <div class="mobile-filter-search">
+                        <label class="mobile-filter-label">Search Properties to buy</label>
+                        <div class="mobile-search-bar">
+                            <input type="text" class="mobile-search-input" placeholder="Walsall, WV1, or Birmingham">
+                            <button class="mobile-filter-icon" aria-label="Filter">
+                                <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 2H1M12 8H3M10 14H5" stroke="#2a363a" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                            <button class="mobile-search-btn" aria-label="Search">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 14L14 8L8 2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desktop Filter Fields (hidden on mobile) -->
                 <div class="filter-fields">
                     <div class="filter-field">
                         <label class="filter-label" for="home-filter-payment">Payment</label>
@@ -119,6 +145,9 @@
                     <img src="https://www.figma.com/api/mcp/asset/2102bc2f-e100-4ecf-af52-70781e532ed6" alt="Search" class="search-btn-img">
                 </button>
             </div>
+            
+            <!-- Mobile Book a Valuation Button (visible on mobile only) -->
+            <a href="contact.html" class="mobile-valuation-btn">Book a Valuation</a>
 
             <!-- Partner Logos -->
             <div class="partner-logos">

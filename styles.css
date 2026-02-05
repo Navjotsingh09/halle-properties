@@ -196,6 +196,15 @@ body > * {
     background: var(--primary-hover);
 }
 
+/* Hide mobile-only elements on desktop */
+.mobile-filter {
+    display: none;
+}
+
+.mobile-valuation-btn {
+    display: none;
+}
+
 /* Mobile Menu Toggle - Bulletproof */
 .mobile-menu-toggle {
     display: none;
@@ -2225,49 +2234,170 @@ html, body {
         display: none;
     }
     
-    /* Show only first filter field as location search */
-    .filter-field:first-child {
-        display: block;
+    /* Hide desktop filter fields on mobile */
+    .filter-fields {
+        display: none !important;
+    }
+    
+    .filter-search-btn {
+        display: none;
+    }
+    
+    /* ==========================================
+       MOBILE FILTER - Figma Exact Specs
+       Buy/Rent tabs, divider, search input
+    ========================================== */
+    .mobile-filter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        padding: 11px 0;
+    }
+    
+    .mobile-filter-tabs {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 195px;
+    }
+    
+    .mobile-filter-tab {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -0.8px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        color: var(--dark-bg);
+        position: relative;
+    }
+    
+    .mobile-filter-tab.active {
+        color: var(--primary);
+    }
+    
+    .mobile-filter-tab.active::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--primary);
+    }
+    
+    .mobile-filter-divider {
+        width: 100%;
+        height: 1px;
+        background: var(--grey);
+    }
+    
+    .mobile-filter-search {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
         width: 295px;
     }
     
-    .filter-label {
+    .mobile-filter-label {
+        font-family: 'Poppins', sans-serif;
         font-size: 12px;
+        font-weight: 400;
         color: var(--dark-bg);
         letter-spacing: -0.6px;
         padding-left: 5px;
-        margin-bottom: 7px;
     }
     
-    .filter-select,
-    .filter-dropdown {
+    .mobile-search-bar {
+        display: flex;
+        align-items: center;
         width: 100%;
         height: 37px;
         background: var(--white);
         border: 1px solid var(--grey);
         border-radius: 20px;
-        padding: 4px 5px;
+        padding: 4px 4px 4px 10px;
+        gap: 10px;
+    }
+    
+    .mobile-search-input {
+        flex: 1;
+        border: none;
+        background: none;
+        font-family: 'Poppins', sans-serif;
         font-size: 12px;
         font-style: italic;
         color: #969696;
         letter-spacing: -0.6px;
+        outline: none;
     }
     
-    .filter-search-btn {
-        position: absolute;
-        right: 15px;
-        bottom: 25px;
+    .mobile-search-input::placeholder {
+        color: #969696;
+    }
+    
+    .mobile-filter-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 15px;
+        height: 16px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+    
+    .mobile-search-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 29px;
         height: 28px;
+        background: var(--primary);
+        border: none;
         border-radius: 50%;
-        padding: 0;
-        margin: 0;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+    
+    /* ==========================================
+       MOBILE BOOK A VALUATION BUTTON - Figma Specs
+       312px × 42px, teal bg, rounded 20px
+    ========================================== */
+    .mobile-valuation-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 312px;
+        height: 42px;
+        background: var(--primary);
+        color: var(--white);
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+        border-radius: 20px;
+        margin-top: 16px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    /* Hide partner logos on mobile */
+    .partner-logos {
+        display: none;
     }
     
     /* Partner logos */
-    .partner-logos {
-        flex-wrap: wrap;
-        justify-content: center;
+    @media (min-width: 769px) {
+        .partner-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         gap: 20px;
     }
     
