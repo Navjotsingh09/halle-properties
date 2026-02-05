@@ -205,6 +205,17 @@ body > * {
     display: none;
 }
 
+/* Desktop shows desktop titles, hides mobile titles */
+.hero-title-desktop,
+.hero-subtitle-desktop {
+    display: block;
+}
+
+.hero-title-mobile,
+.hero-subtitle-mobile {
+    display: none;
+}
+
 /* Mobile Menu Toggle - Bulletproof */
 .mobile-menu-toggle {
     display: none;
@@ -2088,14 +2099,15 @@ html, body {
     ========================================== */
     .hero-section {
         display: flex;
+        width: 100%;
         height: 650px;
         padding: 0 20px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
-        align-self: stretch;
         background: var(--dark-bg);
+        box-sizing: border-box;
     }
     
     /* Hide desktop hero image container on mobile */
@@ -2194,6 +2206,17 @@ html, body {
         line-height: 1.2;
         color: var(--white);
         text-align: center;
+    }
+    
+    /* Hide desktop title/subtitle, show mobile versions */
+    .hero-title-desktop,
+    .hero-subtitle-desktop {
+        display: none !important;
+    }
+    
+    .hero-title-mobile,
+    .hero-subtitle-mobile {
+        display: block !important;
     }
     
     .hero-subtitle {
