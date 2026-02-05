@@ -2283,93 +2283,406 @@ html, body {
         z-index: 1;
     }
     
-    /* Property cards - single column */
+    /* ==========================================
+       PHASE 3: FEATURED PROPERTIES - MOBILE
+       Figma: Single card 334px, with nav arrows
+       Section padding: 20px horizontal, 71px vertical
+    ========================================== */
+    
+    .properties-section {
+        padding: 71px 20px;
+    }
+    
+    .properties-section .section-header {
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .properties-section .section-header h2 {
+        font-size: 30px;
+        line-height: 1.2;
+        width: 100%;
+    }
+    
+    .properties-section .section-header p {
+        font-size: 14px;
+        width: 100%;
+    }
+    
     .properties-grid {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
     
     .property-card,
-    .property-card:nth-child(2) {
+    .property-card:nth-child(2),
+    .property-card:nth-child(3) {
         width: 100%;
-        max-width: 450px;
+        max-width: 334px;
         min-width: auto;
+        height: 437px;
+    }
+    
+    /* Hide 2nd and 3rd cards on mobile - show only first */
+    .property-card:nth-child(2),
+    .property-card:nth-child(3) {
+        display: none;
     }
     
     .property-info-overlay,
     .property-card:nth-child(2) .property-info-overlay {
-        width: calc(100% - 30px);
-        left: 15px;
+        width: calc(100% - 18px);
+        left: 9px;
+        bottom: 12px;
+        padding: 10px 18px;
+        border-radius: 20px;
     }
     
-    /* Services - 2 column grid */
+    .property-price {
+        font-size: 24px;
+    }
+    
+    .property-location {
+        font-size: 14px;
+    }
+    
+    .property-details span {
+        font-size: 14px;
+    }
+    
+    /* View More button - mobile style */
+    .btn-view-properties {
+        margin-top: 20px;
+    }
+    
+    /* ==========================================
+       PHASE 4: OUR KEY SERVICES - MOBILE
+       Figma: 110px icons, horizontal layout with text beside
+       Section padding: 39px horizontal, 71px vertical
+    ========================================== */
+    
+    .services-section {
+        padding: 71px 39px;
+    }
+    
+    .services-title {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+    
     .services-grid {
+        flex-direction: column;
+        gap: 40px;
         justify-content: center;
     }
     
     .service-item {
-        width: calc(50% - 15px);
-        min-width: 140px;
-        max-width: 180px;
+        width: 100%;
+        max-width: 246px;
+        flex-direction: row;
+        gap: 30px;
+        align-items: center;
     }
     
     .service-icon,
     .service-circle {
-        width: 120px;
-        height: 120px;
+        width: 110px;
+        height: 110px;
+        flex-shrink: 0;
     }
     
-    /* Testimonials - single column */
+    .service-inner-icon {
+        width: 58px;
+        height: 54px;
+        left: 26px;
+        top: 28px;
+    }
+    
+    .service-item h3 {
+        font-size: 22px;
+        text-align: left;
+        width: auto;
+        white-space: normal;
+    }
+    
+    /* ==========================================
+       PHASE 5: TESTIMONIALS - MOBILE
+       Figma: Single card, 333px wide, 230px height
+       Section height: 500px
+    ========================================== */
+    
+    .testimonials-section {
+        height: auto;
+        min-height: 500px;
+        padding: 50px 20px;
+    }
+    
+    .testimonials-header h2 {
+        font-size: 30px;
+        line-height: 1.2;
+        text-align: center;
+        max-width: 333px;
+        margin: 0 auto 60px auto;
+    }
+    
     .testimonials-grid {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
     
     .testimonial-card,
     .testimonial-card:nth-child(2) {
         width: 100%;
-        max-width: 450px;
+        max-width: 333px;
         min-width: auto;
+        height: auto;
+        min-height: 230px;
+        padding: 11px 32px;
     }
     
-    /* CTA */
+    /* Hide second testimonial on mobile */
+    .testimonial-card:nth-child(2) {
+        display: none;
+    }
+    
+    .testimonial-text {
+        font-size: 16px;
+    }
+    
+    .testimonial-author {
+        font-size: 16px;
+    }
+    
+    /* ==========================================
+       PHASE 6: CTA SECTION - MOBILE
+       Figma: 333px card with image background, 400px height
+    ========================================== */
+    
+    .cta-section {
+        padding: 30px 21px;
+    }
+    
     .cta-content {
         position: relative;
         top: auto;
         left: auto;
         width: 100%;
-        padding: 30px 20px;
+        max-width: 333px;
+        height: 400px;
+        padding: 68px 21px;
+        margin: 0 auto;
         text-align: center;
         align-items: center;
+        border-radius: 20px;
     }
     
-    /* Blog - single column */
+    .cta-content h2 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+    
+    .cta-content p {
+        font-size: 14px;
+    }
+    
+    .cta-btn {
+        height: 42px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    
+    /* ==========================================
+       PHASE 7: BLOG SECTION - MOBILE
+       Figma: Stacked cards, 335px wide
+    ========================================== */
+    
+    .blog-section {
+        padding: 92px 20px;
+    }
+    
+    .blog-section .section-header h3 {
+        font-size: 16px;
+    }
+    
+    .blog-section .section-header h2 {
+        font-size: 30px;
+    }
+    
+    .blog-content {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .blog-featured,
+    .blog-articles {
+        width: 100%;
+        max-width: 335px;
+        margin: 0 auto;
+    }
+    
     .blog-articles {
         flex-direction: column;
+        gap: 20px;
     }
     
     .blog-article-card {
         width: 100%;
         min-width: auto;
+        padding: 30px 20px;
     }
     
-    /* Newsletter */
-    .newsletter-form {
+    .blog-article-card h3 {
+        font-size: 16px;
+    }
+    
+    .blog-article-card p {
+        font-size: 12px;
+    }
+    
+    /* ==========================================
+       PHASE 8: FAQ SECTION - MOBILE
+       Figma: Accordion style, 320px wide
+    ========================================== */
+    
+    .faq-section {
+        padding: 48px 23px;
+    }
+    
+    .faq-wrapper {
         flex-direction: column;
+        gap: 50px;
+    }
+    
+    .faq-heading {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .faq-heading h2 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+    
+    .faq-content {
+        width: 100%;
         max-width: 320px;
+        margin: 0 auto;
+    }
+    
+    .faq-item {
+        padding: 16px;
+    }
+    
+    .faq-question {
+        font-size: 16px;
+    }
+    
+    .faq-answer {
+        font-size: 14px;
+    }
+    
+    /* ==========================================
+       PHASE 9: NEWSLETTER - MOBILE
+       Figma: 300px wide, stacked layout
+    ========================================== */
+    
+    .newsletter-section {
+        height: auto;
+        min-height: 156px;
+        padding: 40px 20px;
+    }
+    
+    .newsletter-container {
+        flex-direction: column;
+        gap: 30px;
+        max-width: 300px;
+    }
+    
+    .newsletter-text h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .newsletter-form {
+        flex-direction: row;
+        position: relative;
+        max-width: 300px;
+        width: 100%;
     }
     
     .newsletter-input {
         width: 100%;
-        padding: 0 20px;
-        height: 50px;
+        height: 44px;
+        padding: 0 120px 0 18px;
+        font-size: 12px;
+        border-radius: 40px;
     }
     
     .newsletter-btn {
-        position: relative;
-        right: auto;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        height: 34px;
+        padding: 12px 17px;
+        font-size: 14px;
+        margin-top: 0;
+    }
+    
+    /* ==========================================
+       PHASE 10: FOOTER - MOBILE
+       Figma: Accordion dropdowns, 320px wide
+    ========================================== */
+    
+    .footer {
+        padding: 28px 27px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 60px;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    
+    .footer-brand {
         width: 100%;
-        margin-top: 10px;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .footer-logo-img {
+        width: 85px;
+        height: 31px;
+    }
+    
+    .footer-description {
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .footer-links {
+        width: 100%;
+    }
+    
+    .footer-social {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .footer-social a {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .footer-bottom {
+        font-size: 12px;
+        text-align: center;
     }
     
     /* Footer - centered */
