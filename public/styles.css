@@ -1931,8 +1931,10 @@ html, body {
         right: auto;
         top: auto;
         margin: 10px auto;
-        width: auto;
-        min-width: 150px;
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        border-radius: 50%;
     }
     
     /* Partner logos - smaller on tablet */
