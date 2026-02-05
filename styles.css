@@ -2103,38 +2103,39 @@ html, body {
         visibility: visible;
     }
     
-    /* Hero Section - Mobile Layout */
+    /* ==========================================
+       PHASE 2: HERO SECTION - MOBILE
+       Figma: 335px card, 600px height, 20px radius
+       Title: 34px, centered, white text
+    ========================================== */
+    
     .hero-section {
-        min-height: 0;
-        padding-bottom: 40px;
+        min-height: auto;
+        height: auto;
+        padding: 120px 20px 50px 20px;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        background: var(--dark-bg);
     }
     
     .hero-image-container {
-        position: relative;
+        position: absolute;
         top: 0;
         left: 0;
-        transform: none;
+        right: 0;
         width: 100%;
-        height: clamp(250px, 45vw, 400px);
-        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-        margin-top: 0;
+        height: 120px;
+        border-radius: 0;
+        z-index: 0;
     }
     
     .hero-image-container::after {
-        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        display: none;
     }
     
     .hero-image {
-        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-    }
-    
-    .header {
-        position: absolute;
-        top: var(--header-top);
-        padding: 0 var(--container-padding);
-        max-width: 100%;
+        display: none;
     }
     
     .hero-content {
@@ -2143,59 +2144,132 @@ html, body {
         left: 0;
         transform: none;
         width: 100%;
-        padding: 30px var(--container-padding);
-        margin-top: 0;
+        max-width: 335px;
+        min-height: 600px;
+        padding: 68px 11px;
+        margin: 0 auto;
+        background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=375&h=600&fit=crop');
+        background-size: cover;
+        background-position: center;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .hero-content::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%);
+        border-radius: 20px;
+        z-index: 0;
+    }
+    
+    .hero-title-wrapper {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        gap: 10px;
     }
     
     .hero-title {
-        font-size: clamp(24px, 6vw, 36px);
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 1.2;
+        text-align: center;
     }
     
     .hero-subtitle {
-        font-size: clamp(14px, 3vw, 18px);
+        font-size: 16px;
+        text-align: center;
+        max-width: 289px;
+        margin: 0 auto;
     }
     
-    /* Filter - Stacked on mobile */
+    /* Filter - Simplified mobile search per Figma */
     .property-filter {
-        border-radius: var(--radius-md);
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 312px;
+        border-radius: 20px;
         flex-direction: column;
+        background: var(--white);
+        padding: 10px;
     }
     
     .filter-fields {
         flex-direction: column;
-        padding: 20px;
-        gap: 12px;
+        padding: 10px;
+        gap: 7px;
     }
     
     .filter-field {
         width: 100%;
         min-width: 100%;
-        padding: 12px 15px;
-        background: #f5f5f5;
-        border-radius: var(--radius-sm);
+        padding: 0 5px;
+        background: transparent;
+        border-radius: 0;
+    }
+    
+    .filter-divider {
+        display: none;
+    }
+    
+    .filter-label {
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+    
+    .filter-select {
+        height: 37px;
+        font-size: 12px;
+        border: 1px solid var(--grey);
+        border-radius: 20px;
+        padding: 0 15px;
     }
     
     .filter-search-btn {
         position: relative;
         right: auto;
         top: auto;
-        margin: 15px auto;
+        margin: 10px auto;
         width: 100%;
-        max-width: 200px;
-        height: 50px;
-        border-radius: 25px;
+        max-width: 312px;
+        height: 42px;
+        border-radius: 20px;
+        background: var(--primary);
     }
     
-    /* Partner logos */
+    .filter-search-btn .search-btn-img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Hide partner logos on mobile - not in Figma mobile design */
     .partner-logos {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
+        display: none;
     }
     
-    .partner-logo.primelocation { width: 110px; }
-    .partner-logo.zoopla { width: 80px; }
-    .partner-logo.onthemarket { width: 90px; }
+    /* Book Valuation button inside hero - mobile */
+    .hero-content .btn-valuation-hero {
+        display: flex;
+        width: 100%;
+        max-width: 312px;
+        height: 42px;
+        background: var(--primary);
+        border-radius: 20px;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--white);
+        text-decoration: none;
+        z-index: 1;
+    }
     
     /* Property cards - single column */
     .properties-grid {
