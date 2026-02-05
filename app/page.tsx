@@ -1,14 +1,8 @@
 "use client"
 
 import Script from "next/script"
-import { useEffect } from "react"
 
 export default function Home() {
-  useEffect(() => {
-    console.log("[v0] Page mounted, hero-section element:", document.querySelector('.hero-section'))
-    console.log("[v0] Hero section computed styles:", document.querySelector('.hero-section') ? getComputedStyle(document.querySelector('.hero-section')!).display : 'not found')
-  }, [])
-
   return (
     <>
       <link rel="stylesheet" href="/styles.css" />
@@ -17,7 +11,7 @@ export default function Home() {
       <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
       
       {/* Hero Section with Header */}
-      <section className="hero-section" style={{ display: 'block', minHeight: '600px', background: '#2a363a', position: 'relative', overflow: 'hidden' }}>
+      <section className="hero-section">
         {/* Header Navigation */}
         <header className="header">
           <div className="header-content">
