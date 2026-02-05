@@ -1,0 +1,574 @@
+"use client"
+
+import Script from "next/script"
+
+export default function Home() {
+  return (
+    <>
+      <link rel="stylesheet" href="/styles.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+      
+      {/* Hero Section with Header */}
+      <section className="hero-section">
+        {/* Header Navigation */}
+        <header className="header">
+          <div className="header-content">
+            <a href="/" className="logo-link">
+              <img src="https://www.figma.com/api/mcp/asset/7fc7d617-fb91-4e3d-ba92-48f3c2c27438" alt="Halle" className="logo-img" />
+            </a>
+            <button className="mobile-menu-toggle" aria-label="Toggle menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <nav className="nav-links">
+              <a href="/buying.html" className="nav-link">Buying</a>
+              <a href="/selling.html" className="nav-link">Selling</a>
+              <a href="/renting.html" className="nav-link">Letting</a>
+              <a href="/resources.html" className="nav-link">Resources</a>
+              <a href="/contact.html" className="nav-link">Contact</a>
+            </nav>
+            <a href="#" className="btn-valuation">Book a Valuation</a>
+          </div>
+        </header>
+
+        {/* Hero Image Container */}
+        <div className="hero-image-container">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1280&h=764&fit=crop" alt="Modern luxury home" className="hero-image" />
+        </div>
+
+        {/* Hero Content */}
+        <div className="hero-content">
+          <div className="hero-title-wrapper">
+            <h1 className="hero-title">Trusted Real Estate Agents Serving West Midlands</h1>
+            <p className="hero-subtitle">Guidance across buying, selling, and lettings for both residential & commercial property.</p>
+          </div>
+
+          {/* Property Filter Search Box */}
+          <div className="property-filter" id="home-filter">
+            <div className="filter-fields">
+              <div className="filter-field">
+                <label className="filter-label" htmlFor="home-filter-payment">Payment</label>
+                <div className="filter-dropdown">
+                  <select className="filter-select" id="home-filter-payment" title="Payment Type">
+                    <option value="all">All</option>
+                    <option value="sale">For Sale</option>
+                    <option value="rent">To Rent</option>
+                    <option value="lease">Lease</option>
+                  </select>
+                </div>
+              </div>
+              <div className="filter-divider"></div>
+              <div className="filter-field">
+                <label className="filter-label" htmlFor="home-filter-location">Location</label>
+                <div className="filter-dropdown">
+                  <select className="filter-select" id="home-filter-location" title="Location">
+                    <option value="all">All</option>
+                    <option value="wolverhampton">Wolverhampton</option>
+                    <option value="willenhall">Willenhall</option>
+                    <option value="birmingham">Birmingham</option>
+                    <option value="walsall">Walsall</option>
+                  </select>
+                </div>
+              </div>
+              <div className="filter-divider"></div>
+              <div className="filter-field">
+                <label className="filter-label" htmlFor="home-filter-type">Property Type</label>
+                <div className="filter-dropdown">
+                  <select className="filter-select" id="home-filter-type" title="Property Type">
+                    <option value="all">All</option>
+                    <option value="house">House</option>
+                    <option value="flat">Flat</option>
+                    <option value="bungalow">Bungalow</option>
+                    <option value="commercial">Commercial</option>
+                  </select>
+                </div>
+              </div>
+              <div className="filter-divider"></div>
+              <div className="filter-field">
+                <label className="filter-label" htmlFor="home-filter-bedrooms">Bedrooms</label>
+                <div className="filter-dropdown">
+                  <select className="filter-select" id="home-filter-bedrooms" title="Bedrooms">
+                    <option value="all">Any</option>
+                    <option value="1">1+</option>
+                    <option value="2">2+</option>
+                    <option value="3">3+</option>
+                    <option value="4">4+</option>
+                    <option value="5">5+</option>
+                  </select>
+                </div>
+              </div>
+              <div className="filter-divider"></div>
+              <div className="filter-field">
+                <label className="filter-label" htmlFor="home-filter-price">Price Range</label>
+                <div className="filter-dropdown">
+                  <select className="filter-select" id="home-filter-price" title="Price Range">
+                    <option value="all">Any</option>
+                    <option value="100000">Up to £100,000</option>
+                    <option value="200000">Up to £200,000</option>
+                    <option value="300000">Up to £300,000</option>
+                    <option value="500000">Up to £500,000</option>
+                    <option value="1000000">Up to £1,000,000</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <button className="filter-search-btn" id="home-search-btn">
+              <img src="https://www.figma.com/api/mcp/asset/2102bc2f-e100-4ecf-af52-70781e532ed6" alt="Search" className="search-btn-img" />
+            </button>
+          </div>
+
+          {/* Partner Logos */}
+          <div className="partner-logos">
+            <img src="https://www.figma.com/api/mcp/asset/6ab531c2-e697-431e-917a-cdce05f804e3" alt="PrimeLocation" className="partner-logo primelocation" />
+            <img src="https://www.figma.com/api/mcp/asset/9b9b5100-c9f3-4179-8459-f52edc36e828" alt="Zoopla" className="partner-logo zoopla" />
+            <img src="https://www.figma.com/api/mcp/asset/d264c4eb-8393-414d-b344-2f7c5d5f45ed" alt="OnTheMarket" className="partner-logo onthemarket" />
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Properties Section */}
+      <section className="properties-section">
+        <div className="container">
+          <div className="section-header">
+            <h2>Discover Your Perfect Dream Property Today</h2>
+            <p>Explore our carefully selected range of premium properties across Wolverhampton and the West Midlands. Find the perfect property to suit your lifestyle.</p>
+          </div>
+          
+          <div className="properties-grid">
+            <div className="property-card">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=413&h=540&fit=crop" alt="Property" className="property-bg-image" />
+              <div className="property-info-overlay">
+                <div className="property-info-contents">
+                  <div className="property-price-row">
+                    <span className="property-price">£195,000</span>
+                    <a href="/property.html" className="property-action-btn">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.16666 10H15.8333" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M10 4.16666L15.8333 10L10 15.8333" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                  <div className="property-location">
+                    <span className="property-street">Newport Street</span>
+                    <span className="property-city">Wolverhampton</span>
+                  </div>
+                  <div className="property-features">
+                    <span className="feature"><span className="feature-value">1,800</span><span className="feature-label">Sq. Ft.</span></span>
+                    <span className="feature-divider"></span>
+                    <span className="feature"><span className="feature-value">3</span><span className="feature-label">Beds</span></span>
+                    <span className="feature-divider"></span>
+                    <span className="feature"><span className="feature-value">2</span><span className="feature-label">Baths</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="property-card">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=414&h=540&fit=crop" alt="Property" className="property-bg-image" />
+              <div className="property-info-overlay">
+                <div className="property-info-contents">
+                  <div className="property-price-row">
+                    <span className="property-price">£165,500</span>
+                    <a href="/property.html" className="property-action-btn">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.16666 10H15.8333" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M10 4.16666L15.8333 10L10 15.8333" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                  <div className="property-location">
+                    <span className="property-street">Newport Street</span>
+                    <span className="property-city">Wolverhampton</span>
+                  </div>
+                  <div className="property-features">
+                    <span className="feature"><span className="feature-value">1,200</span><span className="feature-label">Sq. Ft.</span></span>
+                    <span className="feature-divider"></span>
+                    <span className="feature"><span className="feature-value">2</span><span className="feature-label">Beds</span></span>
+                    <span className="feature-divider"></span>
+                    <span className="feature"><span className="feature-value">2</span><span className="feature-label">Baths</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="property-card">
+              <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=413&h=540&fit=crop" alt="Property" className="property-bg-image" />
+              <div className="property-info-overlay">
+                <div className="property-info-contents">
+                  <div className="property-price-row">
+                    <span className="property-price">£250,875</span>
+                    <a href="/property.html" className="property-action-btn">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.16666 10H15.8333" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M10 4.16666L15.8333 10L10 15.8333" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                  <div className="property-location">
+                    <span className="property-street">Newport Street</span>
+                    <span className="property-city">Wolverhampton</span>
+                  </div>
+                  <div className="property-features">
+                    <span className="feature"><span className="feature-value">3,200</span><span className="feature-label">Sq. Ft.</span></span>
+                    <span className="feature-divider"></span>
+                    <span className="feature"><span className="feature-value">4</span><span className="feature-label">Beds</span></span>
+                    <span className="feature-divider"></span>
+                    <span className="feature"><span className="feature-value">3</span><span className="feature-label">Baths</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="section-cta">
+            <a href="/listings.html" className="btn-view-more">View More Properties</a>
+          </div>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section className="why-section">
+        <div className="container">
+          <div className="why-content">
+            <div className="why-image">
+              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=585&h=637&fit=crop" alt="Why Halle" />
+            </div>
+            <div className="why-text">
+              <div className="why-header">
+                <h2>Why Halle Is Your Best Property Partner!</h2>
+                <p>We provides clear advice and personal service across the West Midlands. As your trusted Wolverhampton estate agent, we focus on communication to achieve the right outcomes.</p>
+              </div>
+              <div className="why-reasons">
+                <div className="reason-item">
+                  <span className="reason-number">01</span>
+                  <div className="reason-text">
+                    <strong>Proven Experience</strong>
+                    <span>Expertise in residential and commercial property.</span>
+                  </div>
+                </div>
+                <div className="reason-item">
+                  <span className="reason-number">02</span>
+                  <div className="reason-text">
+                    <strong>Trusted by Thousands of Clients</strong>
+                    <span>We give clear guidance, tailored to your goals.</span>
+                  </div>
+                </div>
+                <div className="reason-item">
+                  <span className="reason-number">03</span>
+                  <div className="reason-text">
+                    <strong>Wide Range of Properties</strong>
+                    <span>A wide range of homes across Willenhall & Wolverhampton.</span>
+                  </div>
+                </div>
+                <div className="reason-item">
+                  <span className="reason-number">04</span>
+                  <div className="reason-text">
+                    <strong>Exceptional Customer Support</strong>
+                    <span>Personalised, seamless service you can rely on.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works / Services Section */}
+      <section className="services-section">
+        <div className="container">
+          <h2 className="services-title">Our Key Services</h2>
+          <div className="services-grid">
+            <a href="/contact.html" className="service-item">
+              <div className="service-icon">
+                <img src="https://www.figma.com/api/mcp/asset/90e25924-7552-4b6c-8c61-3e0cac2e0a7a" alt="" className="service-circle" />
+                <img src="https://www.figma.com/api/mcp/asset/73443f05-95f7-4543-acb9-d74e81983a34" alt="Book a Valuation" className="service-inner-icon" />
+              </div>
+              <h3>Book a Valuation</h3>
+            </a>
+            <a href="/renting.html" className="service-item">
+              <div className="service-icon">
+                <img src="https://www.figma.com/api/mcp/asset/90e25924-7552-4b6c-8c61-3e0cac2e0a7a" alt="" className="service-circle" />
+                <img src="https://www.figma.com/api/mcp/asset/08a10e28-8d90-436c-baad-c71b64a8ae51" alt="Renting & Letting" className="service-inner-icon" />
+              </div>
+              <h3>Renting & Letting</h3>
+            </a>
+            <a href="/buying.html" className="service-item">
+              <div className="service-icon">
+                <img src="https://www.figma.com/api/mcp/asset/90e25924-7552-4b6c-8c61-3e0cac2e0a7a" alt="" className="service-circle" />
+                <img src="https://www.figma.com/api/mcp/asset/c44388a7-bedf-4398-87d0-dcc05d6d619b" alt="Buying a Property" className="service-inner-icon" />
+              </div>
+              <h3>Buying a Property</h3>
+            </a>
+            <a href="/selling.html" className="service-item">
+              <div className="service-icon">
+                <img src="https://www.figma.com/api/mcp/asset/90e25924-7552-4b6c-8c61-3e0cac2e0a7a" alt="" className="service-circle" />
+                <img src="https://www.figma.com/api/mcp/asset/c2b5ba58-bf08-40fa-a83f-1e3f4485282c" alt="Selling a Property" className="service-inner-icon" />
+              </div>
+              <h3>Selling a Property</h3>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="testimonials-section">
+        <div className="testimonials-bottom-bg"></div>
+        <div className="container">
+          <div className="testimonials-header">
+            <h2>{"Here's What Our Satisfied Clients Have to Say About Us"}</h2>
+            <p>{"Here's what our happy clients have to say about their experience with Halle. From finding their dream home to seamless transactions, your satisfaction is our priority."}</p>
+          </div>
+          <div className="testimonials-grid">
+            <div className="testimonial-card">
+              <p className="testimonial-text">Great experience with Halle. Jatinder went out of his way to accommodate me and was genuinely friendly. Excellent service!</p>
+              <div className="testimonial-author">
+                <span className="author-name">Stephanie Wallis</span>
+                <div className="author-rating">
+                  {[1,2,3,4,5].map((i) => (
+                    <img key={i} src="https://www.figma.com/api/mcp/asset/830e1cfa-36ca-4d78-b240-fd3a0bb2adfe" alt="star" className="star-icon" />
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card">
+              <p className="testimonial-text">Great experience with Halle. Jatinder went out of his way to accommodate me and was genuinely friendly. Excellent service!</p>
+              <div className="testimonial-author">
+                <span className="author-name">Stephanie Wallis</span>
+                <div className="author-rating">
+                  {[1,2,3,4,5].map((i) => (
+                    <img key={i} src="https://www.figma.com/api/mcp/asset/830e1cfa-36ca-4d78-b240-fd3a0bb2adfe" alt="star" className="star-icon" />
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card">
+              <p className="testimonial-text">Great experience with Halle. Jatinder went out of his way to accommodate me and was genuinely friendly. Excellent service!</p>
+              <div className="testimonial-author">
+                <span className="author-name">Stephanie Wallis</span>
+                <div className="author-rating">
+                  {[1,2,3,4,5].map((i) => (
+                    <img key={i} src="https://www.figma.com/api/mcp/asset/830e1cfa-36ca-4d78-b240-fd3a0bb2adfe" alt="star" className="star-icon" />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="cta-section">
+        <div className="container">
+          <div className="cta-wrapper">
+            <img src="https://www.figma.com/api/mcp/asset/21b12865-f787-495b-837f-288b5041c010" alt="" className="cta-bg-image" />
+            <div className="cta-gradient"></div>
+            <div className="cta-content">
+              <h2>Find out what your property is worth in seconds</h2>
+              <div className="cta-text">
+                <p>With house prices shooting up, how much is your home worth now?</p>
+                <p>Get your house valued by us today in 60 seconds!</p>
+              </div>
+              <a href="#" className="btn-cta">
+                <span>Instant Valuation</span>
+                <svg className="cta-arrow-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.16666 10H15.8333" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M10 4.16666L15.8333 10L10 15.8333" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      <section className="blog-section">
+        <div className="container">
+          <div className="blog-header">
+            <span className="blog-label">Articles</span>
+            <h2>Explore New Insight</h2>
+          </div>
+          <div className="blog-content">
+            {/* Featured Article (Left side with image) */}
+            <div className="blog-featured">
+              <div className="blog-featured-image">
+                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=700&fit=crop" alt="Rising Insurance Costs" />
+              </div>
+              <div className="blog-featured-text">
+                <h3>Navigating Rising Insurance Costs: A Guide for Landlords in 2025</h3>
+                <p>{"As a landlord, you're likely all too familiar with the rising cost of insurance premiums. Recent years have seen a significant increase in insurance rates, particularly for rental properties."}</p>
+                <div className="blog-card-footer">
+                  <a href="/blog/rising-insurance-costs-guide-for-landlords.html" className="btn-read-more">Read More</a>
+                  <span className="blog-category-pill">Landlord</span>
+                </div>
+              </div>
+            </div>
+            {/* Article Cards (Right side - 2 cards only) */}
+            <div className="blog-articles">
+              <div className="blog-article-card">
+                <div className="blog-text-content">
+                  <h3>7 Ways Landlords Can Refresh Their Property</h3>
+                  <p>{"As schools restart, it's a great time for landlords to refresh their rentals. Here are seven practical tips to keep your property appealing."}</p>
+                  <div className="blog-card-footer">
+                    <a href="/blog/7-ways-landlords-can-refresh-their-property.html" className="btn-read-more">Read More</a>
+                    <span className="blog-category-pill">Landlord</span>
+                  </div>
+                </div>
+              </div>
+              <div className="blog-article-card">
+                <div className="blog-text-content">
+                  <h3>Navigating Changing Rental Markets in 2025: Strategies for Landlords</h3>
+                  <p>2025 will redefine landlording with shifting demand, evolving renter needs, and technology. Get strategies to stay ahead in this changing landscape.</p>
+                  <div className="blog-card-footer">
+                    <a href="/blog/2025-rental-market-shifts-landlord-strategies.html" className="btn-read-more">Read More</a>
+                    <span className="blog-category-pill">Landlord</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="faq-section">
+        <div className="faq-wrapper">
+          <div className="faq-heading">
+            <h2>Frequently Asked Questions</h2>
+          </div>
+          <div className="faq-content">
+            <div className="faq-item active">
+              <div className="faq-question">
+                <span>Title can be added here</span>
+                <button className="faq-toggle" aria-label="Toggle answer">
+                  <svg viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.24264 1.8856L0.942813 5.18547L0 4.24267L4.24264 0L8.48531 4.24267L7.54251 5.18547L4.24264 1.8856Z" fill="white"/>
+                  </svg>
+                </button>
+              </div>
+              <div className="faq-answer">
+                <p>Use Jambo for analyzing and engaging with customer feedback, unlocking valuable insights, and revealing new releases. Lorem ipsum aliquam vel justo fringillas enigma.</p>
+                <p>Lorem ipsum aliquam vel justo fringillas enigma.</p>
+              </div>
+            </div>
+            <div className="faq-divider"></div>
+            <div className="faq-item">
+              <div className="faq-question">
+                <span>Title can be added here</span>
+                <button className="faq-toggle" aria-label="Toggle answer">
+                  <svg viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.24264 4.11437L7.54251 0.814499L8.48531 1.7573L4.24264 5.99997L0 1.7573L0.942813 0.814499L4.24264 4.11437Z" fill="#2a363a"/>
+                  </svg>
+                </button>
+              </div>
+              <div className="faq-answer">
+                <p>Use Jambo for analyzing and engaging with customer feedback, unlocking valuable insights, and revealing new releases. Lorem ipsum aliquam vel justo fringillas enigma.</p>
+              </div>
+            </div>
+            <div className="faq-divider"></div>
+            <div className="faq-item">
+              <div className="faq-question">
+                <span>Title can be added here</span>
+                <button className="faq-toggle" aria-label="Toggle answer">
+                  <svg viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.24264 4.11437L7.54251 0.814499L8.48531 1.7573L4.24264 5.99997L0 1.7573L0.942813 0.814499L4.24264 4.11437Z" fill="#2a363a"/>
+                  </svg>
+                </button>
+              </div>
+              <div className="faq-answer">
+                <p>Use Jambo for analyzing and engaging with customer feedback, unlocking valuable insights, and revealing new releases. Lorem ipsum aliquam vel justo fringillas enigma.</p>
+              </div>
+            </div>
+            <div className="faq-divider"></div>
+            <div className="faq-item">
+              <div className="faq-question">
+                <span>Title can be added here</span>
+                <button className="faq-toggle" aria-label="Toggle answer">
+                  <svg viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.24264 4.11437L7.54251 0.814499L8.48531 1.7573L4.24264 5.99997L0 1.7573L0.942813 0.814499L4.24264 4.11437Z" fill="#2a363a"/>
+                  </svg>
+                </button>
+              </div>
+              <div className="faq-answer">
+                <p>Use Jambo for analyzing and engaging with customer feedback, unlocking valuable insights, and revealing new releases. Lorem ipsum aliquam vel justo fringillas enigma.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Banner */}
+      <section className="newsletter-section">
+        <div className="newsletter-container">
+          <h2 className="newsletter-title">Stay Updated & Unlock Exclusive Perks!</h2>
+          <form className="newsletter-form">
+            <input type="email" className="newsletter-input" placeholder="enter your email" required />
+            <button type="submit" className="newsletter-btn">Sign Up</button>
+          </form>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <div className="container">
+          <div className="footer-content">
+            <div className="footer-brand">
+              <img src="https://www.figma.com/api/mcp/asset/ae28e296-a670-4e4a-8882-959a8883ca88" alt="Halle" className="footer-logo-img" />
+              <p>Halle is a trusted estate agency in Willenhall, dedicated to connecting people with homes that truly fit their needs and aspirations.</p>
+              <div className="social-links">
+                <a href="#" className="social-link">
+                  <img src="https://www.figma.com/api/mcp/asset/e6189d22-a7ae-438f-9bbc-2873c1668c24" alt="Instagram" className="social-icon" />
+                </a>
+                <a href="#" className="social-link">
+                  <img src="https://www.figma.com/api/mcp/asset/e257987e-cc93-451c-96e1-c859cd108a80" alt="Facebook" className="social-icon" />
+                </a>
+                <a href="#" className="social-link">
+                  <img src="https://www.figma.com/api/mcp/asset/1a2565a4-4cb9-4519-83fc-c17694c9d428" alt="YouTube" className="social-icon" />
+                </a>
+                <a href="#" className="social-link">
+                  <img src="https://www.figma.com/api/mcp/asset/c78a41b3-0118-458d-84bf-c4bf2ae6f08e" alt="TikTok" className="social-icon" />
+                </a>
+              </div>
+            </div>
+            <div className="footer-links">
+              <h4>Quick Links:</h4>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/listings.html">Properties</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+              </ul>
+            </div>
+            <div className="footer-links">
+              <h4>Resources</h4>
+              <ul>
+                <li><a href="/buying.html">Buying</a></li>
+                <li><a href="/renting.html">Letting</a></li>
+                <li><a href="/renting.html">Landlords</a></li>
+                <li><a href="/tenant-resources.html">Tenant Resources</a></li>
+                <li><a href="/selling.html">Selling</a></li>
+              </ul>
+            </div>
+            <div className="footer-links">
+              <h4>Legal</h4>
+              <ul>
+                <li><a href="#">Terms of services</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Cookies</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <p>Halle © All rights reserved Copyrights 2025</p>
+            <p>Site By 5RV Digital</p>
+          </div>
+        </div>
+      </footer>
+
+      <Script src="/script.js" strategy="afterInteractive" />
+    </>
+  )
+}
