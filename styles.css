@@ -223,7 +223,6 @@ body > * {
 
 .mobile-menu-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
-    background: var(--dark-bg);
 }
 
 .mobile-menu-toggle.active span:nth-child(2) {
@@ -233,7 +232,6 @@ body > * {
 
 .mobile-menu-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -7px);
-    background: var(--dark-bg);
 }
 
 /* Body scroll lock when mobile menu is open */
@@ -2079,18 +2077,14 @@ html, body {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(42, 54, 58, 0.65);
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
+        background: rgba(42, 54, 58, 0.5);
         z-index: -1;
         opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.35s ease-out;
+        transition: opacity 0.3s ease;
     }
     
     .nav-links.active::before {
         opacity: 1;
-        pointer-events: auto;
     }
     
     .nav-links {
@@ -2098,50 +2092,51 @@ html, body {
         top: 0;
         left: 0;
         bottom: 0;
-        width: 85%;
-        max-width: 340px;
+        width: 80%;
+        max-width: 320px;
         height: 100vh;
         height: 100dvh;
         background: var(--white);
         flex-direction: column;
         justify-content: flex-start;
-        align-items: stretch;
-        padding: 60px 30px 40px;
+        align-items: flex-start;
+        padding: 80px 40px 40px;
         gap: 0;
         z-index: var(--z-modal);
         transform: translateX(-100%);
-        transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        box-shadow: 8px 0 30px rgba(0, 0, 0, 0.2);
-        border-radius: 0 24px 24px 0;
-        overflow-y: auto;
-        overscroll-behavior: contain;
+        transition: transform 0.3s ease;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+        border-radius: 0 20px 20px 0;
     }
 
     .nav-links.active {
         transform: translateX(0);
     }
     
+    /* Close X button - styled in hamburger toggle */
+    .mobile-menu-toggle.active span {
+        background-color: var(--dark-bg);
+    }
+    
     .nav-link {
         font-family: 'Poppins', sans-serif;
-        font-size: 17px;
-        font-weight: 500;
+        font-size: 18px;
+        font-weight: 400;
         color: var(--dark-bg);
         text-decoration: none;
-        padding: 18px 16px;
+        padding: 20px 0;
         width: 100%;
-        border-radius: 12px;
-        transition: all 0.2s ease;
-        margin: 4px 0;
+        border-bottom: none;
+        transition: color 0.2s ease;
     }
     
     .nav-link:first-of-type {
-        margin-top: 30px;
+        margin-top: 40px;
     }
     
     .nav-link:hover,
-    .nav-link:active {
+    .nav-link.active {
         color: var(--primary);
-        background: rgba(130, 199, 190, 0.1);
     }
     
     /* Mobile Menu Header - Logo + Tagline */
@@ -2149,34 +2144,27 @@ html, body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 6px;
+        gap: 8px;
         width: 100%;
-        padding-bottom: 24px;
-        border-bottom: 1px solid rgba(218, 221, 220, 0.8);
-        margin-bottom: 8px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid var(--grey);
     }
     
     .mobile-logo-link {
         display: block;
-        transition: transform 0.2s ease;
-    }
-    
-    .mobile-logo-link:hover {
-        transform: scale(1.02);
     }
     
     .mobile-logo-img {
-        width: 120px;
-        height: 44px;
+        width: 100px;
+        height: 37px;
         object-fit: contain;
     }
     
     .mobile-tagline {
         font-family: 'Poppins', sans-serif;
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 400;
         color: var(--text-muted);
-        letter-spacing: 0.5px;
         margin: 0;
     }
     
@@ -2190,33 +2178,24 @@ html, body {
     /* Book a Valuation button in menu */
     .btn-valuation {
         position: absolute;
-        bottom: 50px;
-        left: 30px;
-        right: 30px;
+        bottom: 60px;
+        left: 40px;
+        right: 40px;
         width: auto;
         transform: none;
         margin-left: 0;
-        padding: 0 24px;
-        height: 52px;
-        font-size: 15px;
-        font-weight: 600;
-        letter-spacing: 0.3px;
+        padding: 0 30px;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 500;
         background: var(--primary);
         color: var(--white);
-        border-radius: 26px;
-        box-shadow: 0 4px 15px rgba(130, 199, 190, 0.35);
+        border-radius: 25px;
         z-index: calc(var(--z-modal) + 5);
         opacity: 0;
         visibility: hidden;
-        transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transition: opacity 0.3s ease, visibility 0.3s ease;
         justify-content: center;
-    }
-    
-    .btn-valuation:hover,
-    .btn-valuation:active {
-        background: #6fb8ae;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(130, 199, 190, 0.45);
     }
 
     .btn-valuation.active {
