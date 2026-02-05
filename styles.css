@@ -2199,40 +2199,69 @@ html, body {
     
     /* ==========================================
        MOBILE SEARCH FILTER - Figma Specs
-       312px wide, white bg, rounded 20px
+       312px wide, 130px height, white bg, rounded 20px
+       Simplified: Buy/Rent tabs + single search input
     ========================================== */
     .property-filter {
         position: relative;
         z-index: 1;
         width: 312px;
+        height: 130px;
         background: var(--white);
         border-radius: 20px;
-        padding: 11px;
+        padding: 11px 10px;
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
     
+    /* Hide most filter fields on mobile - show simplified version */
     .filter-fields {
-        flex-direction: column;
-        padding: 10px;
-        gap: 7px;
+        display: none;
     }
     
-    .filter-field {
+    .filter-divider {
+        display: none;
+    }
+    
+    /* Show only first filter field as location search */
+    .filter-field:first-child {
+        display: block;
+        width: 295px;
+    }
+    
+    .filter-label {
+        font-size: 12px;
+        color: var(--dark-bg);
+        letter-spacing: -0.6px;
+        padding-left: 5px;
+        margin-bottom: 7px;
+    }
+    
+    .filter-select,
+    .filter-dropdown {
         width: 100%;
-        min-width: 100%;
-        padding: 0 5px;
-        background: transparent;
+        height: 37px;
+        background: var(--white);
+        border: 1px solid var(--grey);
+        border-radius: 20px;
+        padding: 4px 5px;
+        font-size: 12px;
+        font-style: italic;
+        color: #969696;
+        letter-spacing: -0.6px;
     }
     
     .filter-search-btn {
-        position: relative;
-        right: auto;
-        top: auto;
-        margin: 15px auto;
-        width: 100%;
-        max-width: 200px;
-        height: 50px;
-        border-radius: 25px;
+        position: absolute;
+        right: 15px;
+        bottom: 25px;
+        width: 29px;
+        height: 28px;
+        border-radius: 50%;
+        padding: 0;
+        margin: 0;
     }
     
     /* Partner logos */
