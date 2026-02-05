@@ -2124,6 +2124,7 @@ html, body {
     /* Hero Section - Mobile Layout */
     .hero-section {
         min-height: 0;
+        padding-top: 70px; /* Account for fixed header */
         padding-bottom: 40px;
         display: flex;
         flex-direction: column;
@@ -2135,24 +2136,40 @@ html, body {
         left: 0;
         transform: none;
         width: 100%;
-        height: clamp(220px, 40vw, 350px);
-        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        height: clamp(200px, 35vw, 300px);
+        border-radius: 0;
         margin-top: 0;
     }
     
     .hero-image-container::after {
-        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        border-radius: 0;
     }
     
     .hero-image {
-        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        border-radius: 0;
     }
     
     .header {
-        position: absolute;
-        top: var(--header-top);
-        padding: 0 var(--container-padding);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: none;
+        width: 100%;
         max-width: 100%;
+        background: var(--dark-bg);
+        padding: 20px 24px;
+        z-index: var(--z-fixed);
+    }
+    
+    .header-content {
+        justify-content: space-between;
+        gap: 20px;
+    }
+    
+    .logo-img {
+        width: 90px;
+        height: auto;
     }
     
     .hero-content {
