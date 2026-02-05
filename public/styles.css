@@ -1912,16 +1912,37 @@ html, body {
     .filter-fields {
         flex-wrap: wrap;
         gap: 15px;
-        padding: 20px 30px;
+        padding: 20px 25px;
     }
     
     .filter-field {
         min-width: calc(33% - 15px);
+        flex: 1 1 auto;
     }
     
     .filter-divider {
         display: none;
     }
+    
+    .filter-search-btn {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin: 10px auto;
+        width: auto;
+        min-width: 150px;
+    }
+    
+    /* Partner logos - smaller on tablet */
+    .partner-logos {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .partner-logo.primelocation { width: 150px; height: auto; }
+    .partner-logo.zoopla { width: 100px; height: auto; }
+    .partner-logo.onthemarket { width: 110px; height: auto; }
     
     /* Sections */
     .properties-section,
@@ -2110,7 +2131,7 @@ html, body {
         left: 0;
         transform: none;
         width: 100%;
-        height: clamp(250px, 45vw, 400px);
+        height: clamp(220px, 40vw, 350px);
         border-radius: 0 0 var(--radius-lg) var(--radius-lg);
         margin-top: 0;
     }
@@ -2136,59 +2157,76 @@ html, body {
         left: 0;
         transform: none;
         width: 100%;
-        padding: 30px var(--container-padding);
+        height: auto;
+        padding: 25px var(--container-padding);
         margin-top: 0;
+        gap: 20px;
     }
     
     .hero-title {
-        font-size: clamp(24px, 6vw, 36px);
+        font-size: clamp(22px, 5.5vw, 32px);
     }
     
     .hero-subtitle {
-        font-size: clamp(14px, 3vw, 18px);
+        font-size: clamp(13px, 3vw, 16px);
     }
     
     /* Filter - Stacked on mobile */
     .property-filter {
-        border-radius: var(--radius-md);
+        border-radius: var(--radius-lg);
         flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        min-height: auto;
+        padding: 0;
     }
     
     .filter-fields {
         flex-direction: column;
         padding: 20px;
-        gap: 12px;
+        gap: 10px;
+        width: 100%;
     }
     
     .filter-field {
         width: 100%;
         min-width: 100%;
-        padding: 12px 15px;
+        padding: 14px 16px;
         background: #f5f5f5;
         border-radius: var(--radius-sm);
+        flex: none;
+    }
+    
+    .filter-divider {
+        display: none;
     }
     
     .filter-search-btn {
         position: relative;
         right: auto;
         top: auto;
-        margin: 15px auto;
-        width: 100%;
-        max-width: 200px;
+        margin: 0 auto 20px;
+        width: calc(100% - 40px);
+        max-width: none;
         height: 50px;
         border-radius: 25px;
+        background: var(--primary);
     }
     
-    /* Partner logos */
+    .filter-search-btn:hover {
+        background: var(--primary-hover);
+    }
+    
+    .search-btn-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    /* Partner logos - hide on mobile to prevent overlap */
     .partner-logos {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
+        display: none;
     }
-    
-    .partner-logo.primelocation { width: 110px; }
-    .partner-logo.zoopla { width: 80px; }
-    .partner-logo.onthemarket { width: 90px; }
     
     /* Property cards - single column */
     .properties-grid {
@@ -2357,15 +2395,15 @@ html, body {
     /* Filter */
     .filter-fields {
         padding: 15px;
-        gap: 10px;
+        gap: 8px;
     }
     
     .filter-field {
-        padding: 10px 12px;
+        padding: 12px 14px;
     }
     
     .filter-label {
-        font-size: 10px;
+        font-size: 11px;
     }
     
     .filter-value,
@@ -2374,14 +2412,15 @@ html, body {
     }
     
     .filter-search-btn {
-        height: 45px;
-        max-width: 160px;
+        height: 48px;
+        width: calc(100% - 30px);
+        margin: 0 auto 15px;
     }
     
-    /* Partner logos smaller */
-    .partner-logo.primelocation { width: 90px; }
-    .partner-logo.zoopla { width: 60px; }
-    .partner-logo.onthemarket { width: 70px; }
+    /* Partner logos - keep hidden on small mobile */
+    .partner-logos {
+        display: none;
+    }
     
     /* Property cards */
     .property-card,
