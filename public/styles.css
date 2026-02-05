@@ -189,8 +189,6 @@ body > * {
     white-space: nowrap;
     flex-shrink: 0;
 }
-    margin-left: auto;
-}
 
 .btn-valuation:hover {
     background: var(--primary-hover);
