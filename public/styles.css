@@ -1948,40 +1948,44 @@ html, body {
     
     /* Filter - Stack vertically on tablet */
     .property-filter {
-        flex-direction: column;
-        padding: 20px;
+        flex-direction: column !important;
+        padding: 25px !important;
+        border-radius: 20px !important;
     }
     
     .filter-fields {
-        flex-direction: column;
-        flex-wrap: nowrap;
-        gap: 12px;
-        padding: 0;
-        padding-right: 0;
-        width: 100%;
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        gap: 12px !important;
+        padding: 0 !important;
+        padding-right: 0 !important;
+        width: 100% !important;
     }
     
     .filter-field {
-        width: 100%;
-        min-width: 100%;
-        padding: 14px 18px;
-        background: #f5f5f5;
-        border-radius: 10px;
+        width: 100% !important;
+        min-width: 100% !important;
+        padding: 16px 20px !important;
+        background: #f5f5f5 !important;
+        border-radius: 12px !important;
+        flex: none !important;
     }
     
     .filter-divider {
-        display: none;
+        display: none !important;
     }
     
     .filter-search-btn {
-        position: relative;
-        right: auto;
-        top: auto;
-        margin: 15px auto 0;
-        width: 56px;
-        height: 56px;
-        min-width: 56px;
-        border-radius: 50%;
+        position: relative !important;
+        right: auto !important;
+        top: auto !important;
+        margin: 20px auto 0 !important;
+        width: 60px !important;
+        height: 60px !important;
+        min-width: 60px !important;
+        max-width: 60px !important;
+        border-radius: 50% !important;
     }
     
     /* Partner logos - properly sized on tablet */
