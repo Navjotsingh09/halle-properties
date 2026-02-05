@@ -1944,6 +1944,9 @@ html, body {
     .hero-content {
         position: relative;
         padding: 30px;
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important;
     }
     
     /* Filter - Stack vertically on tablet */
