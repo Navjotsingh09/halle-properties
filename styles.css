@@ -2109,7 +2109,19 @@ html, body {
        Title: 34px, centered, white text
     ========================================== */
     
+    /* Ensure header stays visible on mobile */
+    .header {
+        position: absolute;
+        top: var(--header-top);
+        left: 0;
+        right: 0;
+        padding: 0 var(--container-padding);
+        max-width: 100%;
+        z-index: var(--z-fixed);
+    }
+    
     .hero-section {
+        position: relative;
         min-height: auto;
         height: auto;
         padding: 120px 20px 50px 20px;
