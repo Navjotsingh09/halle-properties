@@ -2010,192 +2010,62 @@ html, body {
 ======================================== */
 @media (max-width: 768px) {
     :root {
-        --header-top: 0;
+        --header-top: 20px;
         --container-padding: 20px;
     }
     
-    /* ==========================================
-       MOBILE NAVBAR - Figma specs
-       Height: 120px, dark bg
-       Logo: 108×40px on left
-       Hamburger: teal on right
-       Both centered at bottom of bar (60px from bottom)
-    ========================================== */
-    
-    .header {
-        position: relative;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 120px;
-        background: var(--dark-bg);
-        padding: 0 var(--container-padding);
-        z-index: var(--z-fixed);
-    }
-    
-    .header-content {
-        height: 100%;
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        padding-bottom: 40px;
-    }
-    
-    .logo-link {
-        display: block;
-    }
-    
-    .logo-img {
-        width: 108px;
-        height: 40px;
-        object-fit: contain;
-    }
-    
-    /* MOBILE MENU TOGGLE - Figma: teal color */
+    /* MOBILE MENU - BULLETPROOF */
     .mobile-menu-toggle {
         display: flex;
-        width: 22px;
-        height: 24px;
-    }
-    
-    .mobile-menu-toggle span {
-        background-color: var(--primary);
-    }
-    
-    /* ==========================================
-       SLIDE-IN MOBILE MENU PANEL
-       White bg, slides from left, ~80% width
-       Logo at top, nav links stacked, CTA at bottom
-    ========================================== */
-    
-    /* Dark overlay behind panel */
-    .nav-links::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(42, 54, 58, 0.5);
-        z-index: -1;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-    
-    .nav-links.active::before {
-        opacity: 1;
     }
     
     .nav-links {
         position: fixed;
         top: 0;
         left: 0;
+        right: 0;
         bottom: 0;
-        width: 80%;
-        max-width: 320px;
+        width: 100%;
         height: 100vh;
-        height: 100dvh;
-        background: var(--white);
+        height: 100dvh; /* Dynamic viewport height for mobile browsers */
+        background: var(--dark-bg);
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 80px 40px 40px;
-        gap: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
         z-index: var(--z-modal);
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
-        border-radius: 0 20px 20px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: opacity var(--transition-base), 
+                    visibility var(--transition-base), 
+                    transform var(--transition-base);
     }
 
     .nav-links.active {
-        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
-    
-    /* Close X button - styled in hamburger toggle */
-    .mobile-menu-toggle.active span {
-        background-color: var(--dark-bg);
-    }
-    
+
     .nav-link {
-        font-family: 'Poppins', sans-serif;
-        font-size: 18px;
-        font-weight: 400;
-        color: var(--dark-bg);
-        text-decoration: none;
-        padding: 20px 0;
-        width: 100%;
-        border-bottom: none;
-        transition: color 0.2s ease;
+        font-size: 24px;
+        color: var(--white);
     }
     
-    .nav-link:first-of-type {
-        margin-top: 40px;
-    }
-    
-    .nav-link:hover,
-    .nav-link.active {
-        color: var(--primary);
-    }
-    
-    /* Mobile Menu Header - Logo + Tagline */
-    .mobile-menu-header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        width: 100%;
-        padding-bottom: 30px;
-        border-bottom: 1px solid var(--grey);
-    }
-    
-    .mobile-logo-link {
-        display: block;
-    }
-    
-    .mobile-logo-img {
-        width: 100px;
-        height: 37px;
-        object-fit: contain;
-    }
-    
-    .mobile-tagline {
-        font-family: 'Poppins', sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        color: var(--text-muted);
-        margin: 0;
-    }
-    
-    /* Hide mobile menu header on desktop */
-    @media (min-width: 769px) {
-        .mobile-menu-header {
-            display: none;
-        }
-    }
-    
-    /* Book a Valuation button in menu */
     .btn-valuation {
-        position: absolute;
-        bottom: 60px;
-        left: 40px;
-        right: 40px;
-        width: auto;
-        transform: none;
+        position: fixed;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
         margin-left: 0;
         padding: 0 30px;
         height: 50px;
-        font-size: 16px;
-        font-weight: 500;
-        background: var(--primary);
-        color: var(--white);
-        border-radius: 25px;
+        font-size: 18px;
         z-index: calc(var(--z-modal) + 5);
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-        justify-content: center;
+        transition: opacity var(--transition-base), visibility var(--transition-base);
     }
 
     .btn-valuation.active {
@@ -2203,33 +2073,38 @@ html, body {
         visibility: visible;
     }
     
-    /* ==========================================
-       HERO SECTION - MOBILE
-       Figma: Dark bg, hero card 335px × 600px inside
-       Card has background image with overlay
-    ========================================== */
-    
+    /* Hero Section - Mobile Layout */
     .hero-section {
-        position: relative;
-        min-height: auto;
-        height: auto;
-        padding: 0 20px 50px 20px;
+        min-height: 0;
+        padding-bottom: 40px;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        background: var(--dark-bg);
     }
     
     .hero-image-container {
-        display: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: clamp(250px, 45vw, 400px);
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        margin-top: 0;
     }
     
     .hero-image-container::after {
-        display: none;
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
     }
     
     .hero-image {
-        display: none;
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    }
+    
+    .header {
+        position: absolute;
+        top: var(--header-top);
+        padding: 0 var(--container-padding);
+        max-width: 100%;
     }
     
     .hero-content {
@@ -2238,549 +2113,147 @@ html, body {
         left: 0;
         transform: none;
         width: 100%;
-        max-width: 335px;
-        min-height: 600px;
-        padding: 68px 11px;
-        margin: 0 auto;
-        background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=375&h=600&fit=crop');
-        background-size: cover;
-        background-position: center;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-    }
-    
-    .hero-content::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%);
-        border-radius: 20px;
-        z-index: 0;
-    }
-    
-    .hero-title-wrapper {
-        position: relative;
-        z-index: 1;
-        text-align: center;
-        gap: 10px;
+        padding: 30px var(--container-padding);
+        margin-top: 0;
     }
     
     .hero-title {
-        font-size: 34px;
-        font-weight: 700;
-        line-height: 1.2;
-        text-align: center;
+        font-size: clamp(24px, 6vw, 36px);
     }
     
     .hero-subtitle {
-        font-size: 16px;
-        text-align: center;
-        max-width: 289px;
-        margin: 0 auto;
+        font-size: clamp(14px, 3vw, 18px);
     }
     
-    /* ==========================================
-       MOBILE SEARCH FILTER - Figma specs
-       Simplified: Buy/Rent toggle + search bar
-       Width: 312px, height: 130px, radius: 20px
-    ========================================== */
-    
+    /* Filter - Stacked on mobile */
     .property-filter {
-        position: relative;
-        z-index: 1;
-        width: 100%;
-        max-width: 312px;
-        height: auto;
-        border-radius: 20px;
+        border-radius: var(--radius-md);
         flex-direction: column;
-        background: var(--white);
-        padding: 11px 10px;
     }
     
-    /* Hide all filter fields except first two on mobile */
     .filter-fields {
         flex-direction: column;
-        padding: 0;
-        gap: 7px;
+        padding: 20px;
+        gap: 12px;
     }
     
-    /* Hide most filter fields - show only first (Payment) */
     .filter-field {
-        display: none;
-    }
-    
-    .filter-field:first-child {
-        display: block;
         width: 100%;
-        padding: 0;
-        background: transparent;
-    }
-    
-    .filter-divider {
-        display: none;
-    }
-    
-    .filter-label {
-        font-size: 12px;
-        margin-bottom: 4px;
-        padding-left: 5px;
-    }
-    
-    .filter-select {
-        height: 37px;
-        font-size: 12px;
-        border: 1px solid var(--grey);
-        border-radius: 20px;
-        padding: 0 15px;
-        width: 100%;
+        min-width: 100%;
+        padding: 12px 15px;
+        background: #f5f5f5;
+        border-radius: var(--radius-sm);
     }
     
     .filter-search-btn {
         position: relative;
         right: auto;
         top: auto;
-        margin: 10px auto 0;
-        width: 29px;
-        height: 28px;
-        border-radius: 50%;
-        background: var(--primary);
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        margin: 15px auto;
+        width: 100%;
+        max-width: 200px;
+        height: 50px;
+        border-radius: 25px;
     }
     
-    .filter-search-btn .search-btn-img {
-        width: 16px;
-        height: 16px;
-    }
-    
-    /* Hide partner logos on mobile - not in Figma mobile design */
+    /* Partner logos */
     .partner-logos {
-        display: none;
-    }
-    
-    /* Book Valuation button inside hero - mobile */
-    .hero-content .btn-valuation-hero {
-        display: flex;
-        width: 100%;
-        max-width: 312px;
-        height: 42px;
-        background: var(--primary);
-        border-radius: 20px;
+        flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
-        font-size: 16px;
-        font-weight: 500;
-        color: var(--white);
-        text-decoration: none;
-        z-index: 1;
-    }
-    
-    /* ==========================================
-       PHASE 3: FEATURED PROPERTIES - MOBILE
-       Figma: Single card 334px, with nav arrows
-       Section padding: 20px horizontal, 71px vertical
-    ========================================== */
-    
-    .properties-section {
-        padding: 71px 20px;
-    }
-    
-    .properties-section .section-header {
-        flex-direction: column;
-        gap: 14px;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-    
-    .properties-section .section-header h2 {
-        font-size: 30px;
-        line-height: 1.2;
-        width: 100%;
-    }
-    
-    .properties-section .section-header p {
-        font-size: 14px;
-        width: 100%;
-    }
-    
-    .properties-grid {
-        flex-direction: column;
-        align-items: center;
         gap: 20px;
     }
     
-    .property-card,
-    .property-card:nth-child(2),
-    .property-card:nth-child(3) {
-        width: 100%;
-        max-width: 334px;
-        min-width: auto;
-        height: 437px;
+    .partner-logo.primelocation { width: 110px; }
+    .partner-logo.zoopla { width: 80px; }
+    .partner-logo.onthemarket { width: 90px; }
+    
+    /* Property cards - single column */
+    .properties-grid {
+        flex-direction: column;
+        align-items: center;
     }
     
-    /* Hide 2nd and 3rd cards on mobile - show only first */
-    .property-card:nth-child(2),
-    .property-card:nth-child(3) {
-        display: none;
+    .property-card,
+    .property-card:nth-child(2) {
+        width: 100%;
+        max-width: 450px;
+        min-width: auto;
     }
     
     .property-info-overlay,
     .property-card:nth-child(2) .property-info-overlay {
-        width: calc(100% - 18px);
-        left: 9px;
-        bottom: 12px;
-        padding: 10px 18px;
-        border-radius: 20px;
+        width: calc(100% - 30px);
+        left: 15px;
     }
     
-    .property-price {
-        font-size: 24px;
-    }
-    
-    .property-location {
-        font-size: 14px;
-    }
-    
-    .property-details span {
-        font-size: 14px;
-    }
-    
-    /* View More button - mobile style */
-    .btn-view-properties {
-        margin-top: 20px;
-    }
-    
-    /* ==========================================
-       PHASE 4: OUR KEY SERVICES - MOBILE
-       Figma: 110px icons, horizontal layout with text beside
-       Section padding: 39px horizontal, 71px vertical
-    ========================================== */
-    
-    .services-section {
-        padding: 71px 39px;
-    }
-    
-    .services-title {
-        font-size: 30px;
-        margin-bottom: 40px;
-    }
-    
+    /* Services - 2 column grid */
     .services-grid {
-        flex-direction: column;
-        gap: 40px;
         justify-content: center;
     }
     
     .service-item {
-        width: 100%;
-        max-width: 246px;
-        flex-direction: row;
-        gap: 30px;
-        align-items: center;
+        width: calc(50% - 15px);
+        min-width: 140px;
+        max-width: 180px;
     }
     
     .service-icon,
     .service-circle {
-        width: 110px;
-        height: 110px;
-        flex-shrink: 0;
+        width: 120px;
+        height: 120px;
     }
     
-    .service-inner-icon {
-        width: 58px;
-        height: 54px;
-        left: 26px;
-        top: 28px;
-    }
-    
-    .service-item h3 {
-        font-size: 22px;
-        text-align: left;
-        width: auto;
-        white-space: normal;
-    }
-    
-    /* ==========================================
-       PHASE 5: TESTIMONIALS - MOBILE
-       Figma: Single card, 333px wide, 230px height
-       Section height: 500px
-    ========================================== */
-    
-    .testimonials-section {
-        height: auto;
-        min-height: 500px;
-        padding: 50px 20px;
-    }
-    
-    .testimonials-header h2 {
-        font-size: 30px;
-        line-height: 1.2;
-        text-align: center;
-        max-width: 333px;
-        margin: 0 auto 60px auto;
-    }
-    
+    /* Testimonials - single column */
     .testimonials-grid {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
     }
     
     .testimonial-card,
     .testimonial-card:nth-child(2) {
         width: 100%;
-        max-width: 333px;
+        max-width: 450px;
         min-width: auto;
-        height: auto;
-        min-height: 230px;
-        padding: 11px 32px;
     }
     
-    /* Hide second testimonial on mobile */
-    .testimonial-card:nth-child(2) {
-        display: none;
-    }
-    
-    .testimonial-text {
-        font-size: 16px;
-    }
-    
-    .testimonial-author {
-        font-size: 16px;
-    }
-    
-    /* ==========================================
-       PHASE 6: CTA SECTION - MOBILE
-       Figma: 333px card with image background, 400px height
-    ========================================== */
-    
-    .cta-section {
-        padding: 30px 21px;
-    }
-    
+    /* CTA */
     .cta-content {
         position: relative;
         top: auto;
         left: auto;
         width: 100%;
-        max-width: 333px;
-        height: 400px;
-        padding: 68px 21px;
-        margin: 0 auto;
+        padding: 30px 20px;
         text-align: center;
         align-items: center;
-        border-radius: 20px;
     }
     
-    .cta-content h2 {
-        font-size: 30px;
-        line-height: 1.2;
-    }
-    
-    .cta-content p {
-        font-size: 14px;
-    }
-    
-    .cta-btn {
-        height: 42px;
-        padding: 10px 20px;
-        font-size: 16px;
-    }
-    
-    /* ==========================================
-       PHASE 7: BLOG SECTION - MOBILE
-       Figma: Stacked cards, 335px wide
-    ========================================== */
-    
-    .blog-section {
-        padding: 92px 20px;
-    }
-    
-    .blog-section .section-header h3 {
-        font-size: 16px;
-    }
-    
-    .blog-section .section-header h2 {
-        font-size: 30px;
-    }
-    
-    .blog-content {
-        flex-direction: column;
-        gap: 50px;
-    }
-    
-    .blog-featured,
-    .blog-articles {
-        width: 100%;
-        max-width: 335px;
-        margin: 0 auto;
-    }
-    
+    /* Blog - single column */
     .blog-articles {
         flex-direction: column;
-        gap: 20px;
     }
     
     .blog-article-card {
         width: 100%;
         min-width: auto;
-        padding: 30px 20px;
     }
     
-    .blog-article-card h3 {
-        font-size: 16px;
-    }
-    
-    .blog-article-card p {
-        font-size: 12px;
-    }
-    
-    /* ==========================================
-       PHASE 8: FAQ SECTION - MOBILE
-       Figma: Accordion style, 320px wide
-    ========================================== */
-    
-    .faq-section {
-        padding: 48px 23px;
-    }
-    
-    .faq-wrapper {
-        flex-direction: column;
-        gap: 50px;
-    }
-    
-    .faq-heading {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .faq-heading h2 {
-        font-size: 30px;
-        line-height: 1.2;
-    }
-    
-    .faq-content {
-        width: 100%;
-        max-width: 320px;
-        margin: 0 auto;
-    }
-    
-    .faq-item {
-        padding: 16px;
-    }
-    
-    .faq-question {
-        font-size: 16px;
-    }
-    
-    .faq-answer {
-        font-size: 14px;
-    }
-    
-    /* ==========================================
-       PHASE 9: NEWSLETTER - MOBILE
-       Figma: 300px wide, stacked layout
-    ========================================== */
-    
-    .newsletter-section {
-        height: auto;
-        min-height: 156px;
-        padding: 40px 20px;
-    }
-    
-    .newsletter-container {
-        flex-direction: column;
-        gap: 30px;
-        max-width: 300px;
-    }
-    
-    .newsletter-text h3 {
-        font-size: 20px;
-        text-align: center;
-    }
-    
+    /* Newsletter */
     .newsletter-form {
-        flex-direction: row;
-        position: relative;
-        max-width: 300px;
-        width: 100%;
+        flex-direction: column;
+        max-width: 320px;
     }
     
     .newsletter-input {
         width: 100%;
-        height: 44px;
-        padding: 0 120px 0 18px;
-        font-size: 12px;
-        border-radius: 40px;
+        padding: 0 20px;
+        height: 50px;
     }
     
     .newsletter-btn {
-        position: absolute;
-        right: 5px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: auto;
-        height: 34px;
-        padding: 12px 17px;
-        font-size: 14px;
-        margin-top: 0;
-    }
-    
-    /* ==========================================
-       PHASE 10: FOOTER - MOBILE
-       Figma: Accordion dropdowns, 320px wide
-    ========================================== */
-    
-    .footer {
-        padding: 28px 27px;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        gap: 60px;
-        max-width: 320px;
-        margin: 0 auto;
-    }
-    
-    .footer-brand {
+        position: relative;
+        right: auto;
         width: 100%;
-        text-align: center;
-        align-items: center;
-    }
-    
-    .footer-logo-img {
-        width: 85px;
-        height: 31px;
-    }
-    
-    .footer-description {
-        font-size: 16px;
-        text-align: center;
-    }
-    
-    .footer-links {
-        width: 100%;
-    }
-    
-    .footer-social {
-        justify-content: center;
-        gap: 20px;
-    }
-    
-    .footer-social a {
-        width: 38px;
-        height: 38px;
-    }
-    
-    .footer-bottom {
-        font-size: 12px;
-        text-align: center;
+        margin-top: 10px;
     }
     
     /* Footer - centered */

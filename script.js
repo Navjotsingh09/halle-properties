@@ -76,20 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 closeMenu();
             }
         });
-        
-        // Close menu when clicking on the dark overlay (outside menu panel)
-        document.addEventListener('click', (e) => {
-            const isMenuOpen = navLinks.classList.contains('active');
-            if (isMenuOpen) {
-                // Check if click is outside the nav-links panel and not on the hamburger
-                const clickedInsideMenu = navLinks.contains(e.target);
-                const clickedOnToggle = mobileMenuToggle.contains(e.target);
-                
-                if (!clickedInsideMenu && !clickedOnToggle) {
-                    closeMenu();
-                }
-            }
-        });
     }
 });
 
