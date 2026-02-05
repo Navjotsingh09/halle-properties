@@ -2100,11 +2100,40 @@ html, body {
         border-radius: 0 0 var(--radius-lg) var(--radius-lg);
     }
     
+    /* Mobile Header - Figma: 375px × 120px, dark bg */
     .header {
+        position: relative;
+        width: 100%;
+        height: 120px;
+        background: var(--dark-bg);
+        padding: 0;
+    }
+    
+    .header-content {
         position: absolute;
-        top: var(--header-top);
-        padding: 0 var(--container-padding);
-        max-width: 100%;
+        left: 50%;
+        bottom: 60px;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 180px;
+    }
+    
+    /* Mobile Logo - Figma: 108×40px */
+    .logo-img {
+        width: 108px;
+        height: 40px;
+        object-fit: contain;
+    }
+    
+    /* Mobile Hamburger - Figma: 22×24px, teal */
+    .mobile-menu-toggle {
+        width: 22px;
+        height: 24px;
+    }
+    
+    .mobile-menu-toggle span {
+        background-color: var(--primary);
     }
     
     .hero-content {
