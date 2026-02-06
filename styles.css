@@ -919,6 +919,13 @@ body.menu-open {
     width: 100%;
 }
 
+.reason-content {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+}
+
 .reason-number {
     font-family: 'Poppins', sans-serif;
     font-size: 40px;
