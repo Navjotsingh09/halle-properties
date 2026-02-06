@@ -451,6 +451,10 @@
     .about-halle-section,
     .why-halle-section {
         padding: 66px 20px;
+        min-height: auto;
+        height: auto;
+        position: relative;
+        display: block;
     }
     
     .about-halle-text h2,

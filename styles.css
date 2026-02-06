@@ -3107,9 +3107,13 @@ html, body {
         width: 100%;
         max-width: 375px;
         height: auto;
+        min-height: auto;
         padding: 71px 39px;
         margin: 0 auto;
         background: var(--dark-bg);
+        position: relative;
+        display: block;
+        clear: both;
     }
     
     .services-section .container {
