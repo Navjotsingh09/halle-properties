@@ -3031,13 +3031,15 @@ html, body {
     
     .reason-text {
         font-size: 12px;
-        width: calc(100% - 80px);
+        flex: 1;
     }
     
     .reason-text strong {
         display: block;
         font-weight: 600;
+        font-size: 11px;
         margin-bottom: 2px;
+        white-space: nowrap;
     }
     
     /* ==========================================
