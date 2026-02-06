@@ -3208,7 +3208,6 @@ html, body {
     .testimonials-section {
         width: 100%;
         max-width: 375px;
-        min-height: 500px;
         padding: 51px 21px;
         margin: 0 auto;
         background: var(--white);
