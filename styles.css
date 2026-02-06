@@ -3072,6 +3072,7 @@ html, body {
         gap: 40px;
         width: 246px;
         margin: 0 auto;
+        display: flex;
     }
     
     .service-item {
@@ -3081,13 +3082,42 @@ html, body {
         gap: 30px;
         align-items: center;
         text-decoration: none;
+        display: flex;
     }
     
-    .service-icon,
-    .service-circle {
+    .service-icon {
         width: 110px;
         height: 110px;
         flex-shrink: 0;
+        position: relative;
+        border-radius: 55px;
+        overflow: hidden;
+    }
+    
+    .service-full-icon {
+        width: 110px;
+        height: 110px;
+        border-radius: 55px;
+        object-fit: cover;
+    }
+    
+    .service-circle {
+        width: 110px;
+        height: 110px;
+        border-radius: 55px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .service-inner-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
     }
     
     .service-item h3 {
@@ -3097,6 +3127,7 @@ html, body {
         color: var(--white);
         text-align: left;
         line-height: 1.2;
+        width: 106px;
     }
     
     /* ==========================================
