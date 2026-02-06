@@ -1166,7 +1166,8 @@ body.menu-open {
     width: 100%;
 }
 
-.testimonial-card {
+.testimonial-card,
+.testimonial-card:nth-child(2) {
     position: relative;
     width: 413px;
     height: 210px;
@@ -1177,10 +1178,7 @@ body.menu-open {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-.testimonial-card:nth-child(2) {
-    width: 414px;
+    opacity: 1;
 }
 
 .testimonial-text {
@@ -3305,14 +3303,14 @@ html, body {
     
     .testimonial-card,
     .testimonial-card:nth-child(2) {
-        width: 333px !important;
-        min-width: 333px !important;
-        max-width: 333px !important;
-        height: 230px !important;
+        width: 333px;
+        min-width: 333px;
+        max-width: 333px;
+        height: 230px;
         background: var(--white);
         border-radius: 20px;
         box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
-        padding: 11px 32px !important;
+        padding: 11px 32px;
         display: none;
         flex-direction: column;
         align-items: center;
