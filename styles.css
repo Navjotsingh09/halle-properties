@@ -782,6 +782,11 @@ body.menu-open {
     transform: translateX(-50%);
 }
 
+/* Hide mobile navigation arrows on desktop */
+.property-nav-arrows {
+    display: none;
+}
+
 .btn-view-more {
     display: inline-flex;
     align-items: center;
@@ -2528,110 +2533,757 @@ html, body {
     .property-card:nth-child(n+2) {
         display: none;
     }
-    }
     
-    /* Services - 2 column grid */
-    .services-grid {
+    /* Featured Properties Navigation Arrows */
+    .section-cta {
+        display: flex;
+        gap: 15px;
+        align-items: center;
         justify-content: center;
     }
     
+    .btn-view-more {
+        display: none;
+    }
+    
+    .property-nav-arrows {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .property-nav-arrow {
+        width: 50px;
+        height: 50px;
+        background: var(--white);
+        border: 0.5px solid var(--primary);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .property-nav-arrow span {
+        font-family: 'Poppins', sans-serif;
+        font-size: 30px;
+        font-weight: 600;
+        color: var(--primary);
+        line-height: 1;
+    }
+    
+    .property-nav-arrow.prev {
+        transform: rotate(180deg);
+    }
+    
+    .property-nav-arrow:hover {
+        background: var(--primary);
+    }
+    
+    .property-nav-arrow:hover span {
+        color: var(--white);
+    }
+    
+    /* ==========================================
+       MOBILE ABOUT US / WHY SECTION - Figma Specs
+       Grey bg with background image, 66px padding
+    ========================================== */
+    .why-section {
+        width: 375px;
+        padding: 66px 20px;
+        margin: 0 auto;
+        background: var(--grey);
+        position: relative;
+    }
+    
+    .why-section .container {
+        width: 334px;
+        max-width: 334px;
+        padding: 0;
+    }
+    
+    .why-content {
+        flex-direction: column;
+        gap: 35px;
+    }
+    
+    .why-image {
+        display: none;
+    }
+    
+    .why-text {
+        width: 100%;
+    }
+    
+    .why-header {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+    
+    .why-header h2 {
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+    
+    .why-header p {
+        font-size: 14px;
+        line-height: normal;
+    }
+    
+    .why-reasons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .reason-item {
+        width: 100%;
+        height: 84px;
+        background: var(--white);
+        border-radius: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        padding: 10px 26px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .reason-number {
+        font-family: 'Poppins', sans-serif;
+        font-size: 40px;
+        font-weight: 500;
+        color: var(--primary);
+        width: 60px;
+        flex-shrink: 0;
+    }
+    
+    .reason-text {
+        font-size: 12px;
+    }
+    
+    .reason-text strong {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 2px;
+    }
+    
+    /* ==========================================
+       MOBILE SERVICES SECTION - Figma Specs
+       Dark bg, vertical list with icon left, text right
+    ========================================== */
+    .services-section {
+        width: 375px;
+        padding: 71px 39px;
+        margin: 0 auto;
+        background: var(--dark-bg);
+    }
+    
+    .services-section .container {
+        width: 296px;
+        max-width: 296px;
+        padding: 0;
+    }
+    
+    .services-title {
+        font-size: 30px;
+        font-weight: 600;
+        color: var(--white);
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .services-grid {
+        flex-direction: column;
+        gap: 40px;
+        width: 246px;
+        margin: 0 auto;
+    }
+    
     .service-item {
-        width: calc(50% - 15px);
-        min-width: 140px;
-        max-width: 180px;
+        flex-direction: row;
+        width: 100%;
+        max-width: none;
+        gap: 30px;
+        align-items: center;
+        text-decoration: none;
     }
     
     .service-icon,
     .service-circle {
-        width: 120px;
-        height: 120px;
+        width: 110px;
+        height: 110px;
+        flex-shrink: 0;
     }
     
-    /* Testimonials - single column */
+    .service-item h3 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 22px;
+        font-weight: 400;
+        color: var(--white);
+        text-align: left;
+        line-height: 1.2;
+    }
+    
+    /* ==========================================
+       MOBILE TESTIMONIALS - Figma Specs
+       White bg, grey bottom section, single card
+    ========================================== */
+    .testimonials-section {
+        width: 375px;
+        height: 500px;
+        padding: 0;
+        margin: 0 auto;
+        background: var(--white);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .testimonials-bottom-bg {
+        position: absolute;
+        bottom: 0;
+        left: -4px;
+        width: 384px;
+        height: 159px;
+        background: var(--grey);
+    }
+    
+    .testimonials-section .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 333px;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        align-items: center;
+    }
+    
+    .testimonials-header {
+        text-align: center;
+    }
+    
+    .testimonials-header h2 {
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: 0;
+    }
+    
+    .testimonials-header p {
+        display: none;
+    }
+    
     .testimonials-grid {
         flex-direction: column;
         align-items: center;
     }
     
-    .testimonial-card,
-    .testimonial-card:nth-child(2) {
-        width: 100%;
-        max-width: 450px;
-        min-width: auto;
-    }
-    
-    /* CTA */
-    .cta-content {
-        position: relative;
-        top: auto;
-        left: auto;
-        width: 100%;
-        padding: 30px 20px;
-        text-align: center;
+    .testimonial-card {
+        width: 333px;
+        height: 230px;
+        background: var(--white);
+        border-radius: 20px;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+        padding: 11px 32px;
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
     
-    /* Blog - single column */
+    .testimonial-card:nth-child(n+2) {
+        display: none;
+    }
+    
+    .testimonial-text {
+        font-size: 16px;
+        text-align: center;
+        letter-spacing: -0.8px;
+        margin-bottom: 20px;
+    }
+    
+    .testimonial-author {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+    
+    .author-name {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--primary);
+    }
+    
+    .author-rating {
+        display: flex;
+        gap: 4px;
+    }
+    
+    .star-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    /* ==========================================
+       MOBILE CTA SECTION - Figma Specs
+       Grey bg, 30px padding, rounded image
+    ========================================== */
+    .cta-section {
+        width: 375px;
+        padding: 30px 21px;
+        margin: 0 auto;
+        background: var(--grey);
+    }
+    
+    .cta-section .container {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .cta-wrapper {
+        position: relative;
+        width: 333px;
+        height: 400px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    
+    .cta-bg-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    
+    .cta-gradient {
+        display: none;
+    }
+    
+    .cta-content {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 68px 21px;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .cta-content h2 {
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: var(--white);
+    }
+    
+    .cta-text {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .cta-text p {
+        font-size: 14px;
+        color: var(--white);
+        line-height: normal;
+    }
+    
+    .btn-cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: var(--white);
+        color: var(--dark-bg);
+        padding: 10px 20px;
+        height: 42px;
+        border-radius: 20px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    /* ==========================================
+       MOBILE BLOG SECTION - Figma Specs
+       Dark bg, 92px padding, vertical cards
+    ========================================== */
+    .blog-section {
+        width: 375px;
+        padding: 92px 20px;
+        margin: 0 auto;
+        background: var(--dark-bg);
+    }
+    
+    .blog-section .container {
+        width: 335px;
+        max-width: 335px;
+        padding: 0;
+    }
+    
+    .blog-header {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .blog-label {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--primary);
+    }
+    
+    .blog-header h2 {
+        font-size: 30px;
+        font-weight: 600;
+        color: var(--white);
+        line-height: 1;
+    }
+    
+    .blog-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .blog-featured {
+        display: none;
+    }
+    
     .blog-articles {
         flex-direction: column;
+        gap: 20px;
+        width: 100%;
     }
     
     .blog-article-card {
         width: 100%;
-        min-width: auto;
-    }
-    
-    /* Newsletter */
-    .newsletter-form {
+        background: #fefeff;
+        border-radius: 20px;
+        padding: 30px 20px;
+        box-shadow: 6px 9px 198.5px 0px rgba(36, 134, 57, 0.08);
+        display: flex;
         flex-direction: column;
-        max-width: 320px;
-    }
-    
-    .newsletter-input {
-        width: 100%;
-        padding: 0 20px;
-        height: 50px;
-    }
-    
-    .newsletter-btn {
-        position: relative;
-        right: auto;
-        width: 100%;
-        margin-top: 10px;
-    }
-    
-    /* Footer - centered */
-    .footer-content {
-        flex-direction: column;
+        gap: 26px;
         align-items: center;
         text-align: center;
     }
     
-    .footer-brand {
+    .blog-article-card .blog-text-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
         align-items: center;
     }
     
-    .footer-links {
-        width: 100%;
-        align-items: center;
+    .blog-article-card h3,
+    .blog-text-content h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--dark-bg);
     }
     
-    .footer-links ul {
-        align-items: center;
+    .blog-article-card p,
+    .blog-text-content p {
+        font-size: 12px;
+        line-height: 20px;
+        color: var(--dark-bg);
     }
     
-    .social-links {
+    .btn-read-more {
+        width: 173px;
+        height: 42px;
+        background: var(--primary);
+        color: var(--white);
+        border-radius: 53px;
+        font-size: 16px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
         justify-content: center;
     }
     
-    .footer-bottom {
+    .blog-card-footer {
         flex-direction: column;
-        gap: 10px;
+        gap: 26px;
+        align-items: center;
+    }
+    
+    .blog-category-pill {
+        display: none;
+    }
+    
+    /* ==========================================
+       MOBILE FAQ SECTION - Figma Specs
+       White bg, 48px padding, accordion style
+    ========================================== */
+    .faq-section {
+        width: 375px;
+        padding: 48px 23px;
+        margin: 0 auto;
+        background: var(--white);
+    }
+    
+    .faq-section .container {
+        width: 329px;
+        max-width: 329px;
+        padding: 0;
+    }
+    
+    .faq-content {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    }
+    
+    .faq-heading h2 {
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 1.2;
         text-align: center;
     }
     
-    .footer-bottom p:last-child {
+    .faq-list {
+        width: 320px;
+        background: var(--white);
+        border: 0.5px solid var(--grey);
+        border-radius: 12px;
+        padding: 8px;
+    }
+    
+    .faq-item {
+        padding: 16px;
+        border-radius: 8px;
+        box-shadow: 0px 1px 2px rgba(35, 39, 46, 0.08);
+    }
+    
+    .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .faq-question span {
+        font-size: 16px;
+        font-weight: 500;
+        flex: 1;
+        line-height: 24px;
+    }
+    
+    .faq-toggle {
+        width: 32px;
+        height: 32px;
+        border-radius: 96px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .faq-answer p {
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 12px;
+    }
+
+    /* ==========================================
+       MOBILE NEWSLETTER SECTION - Figma Specs
+       Dark bg, 40px top padding, email input with button
+    ========================================== */
+    .newsletter-section {
+        width: 375px;
+        height: 156px;
+        padding: 40px 37px;
+        margin: 0 auto;
+        background: var(--dark-bg);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .newsletter-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #fefeff;
         text-align: center;
+        line-height: 1.2;
+    }
+    
+    .newsletter-form {
+        position: relative;
+        width: 300px;
+        height: 44px;
+        border: 1px solid #fefeff;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        padding: 0 5px 0 19px;
+    }
+    
+    .newsletter-input {
+        flex: 1;
+        background: none;
+        border: none;
+        font-size: 12px;
+        color: var(--white);
+        height: 100%;
+        padding: 0;
+    }
+    
+    .newsletter-input::placeholder {
+        color: var(--white);
+        text-transform: capitalize;
+    }
+    
+    .newsletter-btn {
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 111px;
+        height: 34px;
+        background: var(--primary);
+        color: #fefeff;
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        border-radius: 40px;
+        cursor: pointer;
+        margin: 0;
+    }
+
+    /* ==========================================
+       MOBILE FOOTER SECTION - Figma Specs
+       Dark bg, accordion-style links
+    ========================================== */
+    .footer {
+        width: 375px;
+        padding: 28px 27px;
+        margin: 0 auto;
+        background: var(--dark-bg);
+    }
+    
+    .footer .container {
+        width: 320px;
+        max-width: 320px;
+        padding: 0;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 60px;
+        align-items: center;
+    }
+    
+    .footer-links-accordion {
+        width: 100%;
+        background: var(--dark-bg);
+        border-radius: 12px;
+        padding: 8px;
+    }
+    
+    .footer-accordion-item {
+        padding: 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer-accordion-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .footer-accordion-header span {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--white);
+    }
+    
+    .footer-accordion-toggle {
+        width: 32px;
+        height: 32px;
+        border-radius: 96px;
+        background: var(--dark-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .footer-accordion-content {
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 12px;
+    }
+    
+    .footer-accordion-content.active {
+        display: flex;
+    }
+    
+    .footer-accordion-content a {
+        font-size: 14px;
+        color: var(--white);
+        text-decoration: none;
+        line-height: 20px;
+    }
+    
+    .footer-brand {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-logo {
+        width: 85px;
+        height: 31px;
+    }
+    
+    .footer-description {
+        font-size: 16px;
+        color: var(--white);
+        line-height: normal;
+        text-align: center;
+    }
+    
+    .social-links {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .social-icon {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        text-align: center;
+        margin-top: 60px;
+    }
+    
+    .footer-bottom p {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--white);
+        text-align: center;
+        line-height: 1.4;
     }
 }
 
