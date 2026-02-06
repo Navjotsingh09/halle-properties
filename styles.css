@@ -2187,8 +2187,8 @@ html, body {
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        max-width: 375px;
-        padding: 0 32px;
+        max-width: 100%;
+        padding: 0 20px;
         gap: 0;
     }
     
@@ -2234,7 +2234,7 @@ html, body {
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
-        width: 335px !important;
+        width: calc(100% - 40px) !important;
         max-width: 335px !important;
         height: auto !important;
         padding: 68px 11px !important;
@@ -2268,13 +2268,14 @@ html, body {
     
     .hero-title {
         font-family: 'Poppins', sans-serif !important;
-        font-size: 34px !important;
+        font-size: clamp(28px, 9vw, 34px) !important;
         font-weight: 700 !important;
         line-height: 120% !important;
         letter-spacing: 0 !important;
         color: var(--white) !important;
         text-align: center !important;
-        width: 312px !important;
+        width: 100% !important;
+        max-width: 312px !important;
         margin: 0 !important;
     }
     
@@ -2291,12 +2292,13 @@ html, body {
     
     .hero-subtitle {
         font-family: 'Poppins', sans-serif !important;
-        font-size: 16px !important;
+        font-size: clamp(14px, 4.5vw, 16px) !important;
         font-weight: 400 !important;
         line-height: normal !important;
         color: var(--white) !important;
         text-align: center !important;
-        width: 289px !important;
+        width: 100% !important;
+        max-width: 289px !important;
         margin: 0 !important;
     }
     
