@@ -3108,7 +3108,7 @@ html, body {
         max-width: 375px;
         height: auto;
         padding: 71px 39px;
-        margin: 0 auto;
+        margin: 50px auto 0 auto;
         background: var(--dark-bg);
         display: block;
     }
