@@ -3389,8 +3389,12 @@ html, body {
     }
     
     .cta-text p {
+        color: #FFF;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
         font-size: 14px;
-        color: var(--white);
+        font-style: normal;
+        font-weight: 400;
         line-height: normal;
         margin: 0;
     }
