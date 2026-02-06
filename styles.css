@@ -3477,8 +3477,10 @@ html, body {
         flex-direction: column;
         gap: 20px;
         align-items: center;
+        justify-content: center;
         text-align: center;
         margin-bottom: 50px;
+        width: 100%;
     }
     
     .blog-label {
@@ -3487,6 +3489,7 @@ html, body {
         color: var(--primary);
         text-align: center;
         line-height: normal;
+        width: 100%;
     }
     
     .blog-header h2 {
@@ -3495,6 +3498,7 @@ html, body {
         color: var(--white);
         line-height: 80px;
         text-align: center;
+        width: 100%;
     }
     
     .blog-content {
