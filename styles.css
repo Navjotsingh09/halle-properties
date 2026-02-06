@@ -3210,11 +3210,11 @@ html, body {
     .testimonials-section {
         width: 100%;
         max-width: 375px;
-        min-height: 500px;
+        height: 500px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 51px 21px 0;
+        padding: 51px 21px 51px;
         margin: 0 auto;
         background: var(--white);
         position: relative;
@@ -3245,6 +3245,7 @@ html, body {
     .testimonials-header {
         text-align: center;
         width: 100%;
+        height: 108px;
     }
     
     .testimonials-header h2 {
