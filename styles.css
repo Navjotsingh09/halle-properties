@@ -2264,6 +2264,7 @@ html, body {
         width: 100%;
         max-width: 312px;
         text-align: center;
+        padding: 0 10px;
     }
     
     .hero-title {
@@ -2310,7 +2311,8 @@ html, body {
     .property-filter {
         position: relative;
         z-index: 1;
-        width: 312px;
+        width: 100%;
+        max-width: 312px;
         height: auto;
         background: var(--white);
         border-radius: 20px;
@@ -2400,7 +2402,8 @@ html, body {
         display: flex;
         flex-direction: column;
         gap: 5px;
-        width: 290px;
+        width: 100%;
+        max-width: 290px;
     }
     
     .mobile-filter-label {
@@ -2474,12 +2477,13 @@ html, body {
         display: flex !important;
         align-items: center;
         justify-content: center;
-        width: 312px;
+        width: 100%;
+        max-width: 312px;
         height: 42px;
         background: var(--primary);
         color: var(--white);
         font-family: 'Poppins', sans-serif;
-        font-size: 16px;
+        font-size: clamp(14px, 4.5vw, 16px);
         font-weight: 500;
         text-decoration: none;
         border-radius: 20px;
