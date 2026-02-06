@@ -3132,6 +3132,31 @@ html, body {
         text-align: left;
         line-height: 1.2;
         width: 106px;
+        transition: color 0.3s ease;
+    }
+    
+    .service-item {
+        transition: transform 0.3s ease;
+    }
+    
+    .service-icon {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .service-item:hover,
+    .service-item:active {
+        transform: translateY(-5px);
+    }
+    
+    .service-item:hover .service-icon,
+    .service-item:active .service-icon {
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(130, 199, 190, 0.4);
+    }
+    
+    .service-item:hover h3,
+    .service-item:active h3 {
+        color: var(--primary);
     }
     
     /* ==========================================
