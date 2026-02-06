@@ -971,6 +971,7 @@ body.menu-open {
     padding: 117px 121px;
     background: var(--dark-bg);
     position: relative;
+    clear: both;
 }
 
 .services-section .container {
