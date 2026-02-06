@@ -2844,6 +2844,16 @@ html, body {
         border-radius: 20px;
     }
     
+    .property-card:hover .property-bg-image,
+    .property-card.active:hover .property-bg-image {
+        transform: scale(1.03);
+    }
+    
+    .property-card:hover .property-info-overlay,
+    .property-card.active:hover .property-info-overlay {
+        background: #1f2a2d;
+    }
+    
     .property-card.prev:hover {
         transform: translateX(calc(-50% - 100%)) translateY(-8px);
     }
