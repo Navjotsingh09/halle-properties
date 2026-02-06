@@ -114,6 +114,7 @@ body > * {
     max-width: var(--section-max);
     margin: 0 auto;
     min-height: clamp(600px, 67vw, 971px);
+    background: #2a363a;
     background: var(--dark-bg);
     position: relative;
     overflow: hidden;
@@ -2121,7 +2122,8 @@ html, body {
         justify-content: flex-start;
         gap: 0;
         flex-shrink: 0;
-        background: var(--dark-bg);
+        background: #2a363a !important;
+        background: var(--dark-bg) !important;
         box-sizing: border-box;
         margin: 0 auto;
     }
