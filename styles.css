@@ -3107,15 +3107,24 @@ html, body {
         width: 100%;
         max-width: 375px;
         height: auto !important;
-        min-height: 0;
-        max-height: none;
+        min-height: 0 !important;
+        max-height: none !important;
         padding: 71px 39px;
         margin: 0 auto;
         background: var(--dark-bg);
-        display: block;
+        display: block !important;
         position: relative;
         clear: both;
         z-index: 1;
+        float: none !important;
+    }
+    
+    .services-section::before {
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+        width: 100%;
     }
     
     .services-section .container {
