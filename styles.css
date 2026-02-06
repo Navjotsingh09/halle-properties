@@ -2206,14 +2206,14 @@ html, body {
         justify-content: flex-start;
         width: 335px;
         height: auto;
-        min-height: 580px;
-        padding: 50px 11px 50px 11px;
+        min-height: 520px;
+        padding: 40px 11px 30px 11px;
         gap: 0;
         border-radius: 20px;
         background: url('public/images/hero-mobile-bg.jpg') lightgray 50% / cover no-repeat;
         margin: 0 auto;
         flex-shrink: 0;
-        overflow: visible;
+        overflow: hidden;
     }
     
     .hero-content::before {
@@ -2234,7 +2234,7 @@ html, body {
         gap: 10px;
         width: 312px;
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     
     .hero-title {
