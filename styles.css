@@ -3919,7 +3919,7 @@ html, body {
     
     /* CTA */
     .cta-content h2 {
-        font-size: clamp(20px, 5vw, 24px);
+        font-size: 30px;
     }
     
     .cta-text p {
