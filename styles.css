@@ -3369,10 +3369,13 @@ html, body {
     }
     
     .cta-content h2 {
+        color: #FFF;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
         font-size: 30px;
+        font-style: normal;
         font-weight: 600;
-        line-height: 1.2;
-        color: var(--white);
+        line-height: 120%;
         width: 290px;
         margin: 0;
     }
