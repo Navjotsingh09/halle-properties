@@ -1153,6 +1153,11 @@ body.menu-open {
     margin-top: 20px;
 }
 
+/* Desktop: Hide carousel dots */
+.testimonials-dots {
+    display: none;
+}
+
 .testimonials-grid {
     display: flex;
     gap: 20px;
@@ -3280,16 +3285,25 @@ html, body {
         display: none;
     }
     
+    /* Mobile Testimonials Carousel */
+    .testimonials-carousel-wrapper {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    
     .testimonials-grid {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         width: 100%;
+        transition: transform 0.4s ease-in-out;
     }
     
     .testimonial-card {
         width: 100%;
         max-width: 333px;
+        min-width: 333px;
         height: 230px;
         background: var(--white);
         border-radius: 20px;
@@ -3300,10 +3314,33 @@ html, body {
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
+        flex-shrink: 0;
     }
     
     .testimonial-card:nth-child(n+2) {
-        display: none;
+        display: flex;
+    }
+    
+    .testimonials-dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    
+    .testimonials-dots .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.4);
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        transition: background 0.3s ease;
+    }
+    
+    .testimonials-dots .dot.active {
+        background: var(--primary);
     }
     
     .testimonial-text {

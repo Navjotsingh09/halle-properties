@@ -1,3 +1,108 @@
+// Mobile Testimonials Carousel
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.testimonials-grid');
+    const cards = document.querySelectorAll('.testimonial-card');
+    const dots = document.querySelectorAll('.testimonials-dots .dot');
+    let currentIndex = 0;
+    let autoSlideInterval;
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    // Only run on mobile
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+    
+    function updateCarousel() {
+        if (!isMobile() || !carousel) return;
+        
+        const cardWidth = cards[0].offsetWidth;
+        const containerWidth = carousel.parentElement.offsetWidth;
+        const offset = (containerWidth - cardWidth) / 2;
+        carousel.style.transform = `translateX(${-currentIndex * cardWidth + offset}px)`;
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+    
+    function nextSlide() {
+        if (!isMobile()) return;
+        currentIndex = (currentIndex + 1) % cards.length;
+        updateCarousel();
+    }
+    
+    function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+        resetAutoSlide();
+    }
+    
+    function startAutoSlide() {
+        if (!isMobile()) return;
+        autoSlideInterval = setInterval(nextSlide, 4000);
+    }
+    
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+    }
+    
+    // Touch/Swipe support
+    if (carousel) {
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+    }
+    
+    function handleSwipe() {
+        if (!isMobile()) return;
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                // Swipe left - next slide
+                currentIndex = Math.min(currentIndex + 1, cards.length - 1);
+            } else {
+                // Swipe right - previous slide
+                currentIndex = Math.max(currentIndex - 1, 0);
+            }
+            updateCarousel();
+            resetAutoSlide();
+        }
+    }
+    
+    // Dot click handlers
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToSlide(index));
+    });
+    
+    // Initialize
+    if (isMobile() && carousel) {
+        updateCarousel();
+        startAutoSlide();
+    }
+    
+    // Handle resize
+    window.addEventListener('resize', () => {
+        if (isMobile()) {
+            updateCarousel();
+            if (!autoSlideInterval) startAutoSlide();
+        } else {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = null;
+            if (carousel) carousel.style.transform = '';
+        }
+    });
+});
+
 // Mobile Menu Toggle with Scroll Lock
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
