@@ -3058,10 +3058,12 @@ html, body {
     }
     
     .reason-number {
+        color: #82C7BE;
         font-family: 'Poppins', sans-serif;
         font-size: 40px;
+        font-style: normal;
         font-weight: 500;
-        color: var(--primary);
+        line-height: normal;
         width: 60px;
         flex-shrink: 0;
     }
@@ -3898,7 +3900,7 @@ html, body {
     }
     
     .reason-number {
-        font-size: 26px;
+        font-size: 40px;
     }
     
     .reason-text {
