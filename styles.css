@@ -3106,11 +3106,16 @@ html, body {
     .services-section {
         width: 100%;
         max-width: 375px;
-        height: auto;
+        height: auto !important;
+        min-height: 0;
+        max-height: none;
         padding: 71px 39px;
         margin: 50px auto 0 auto;
         background: var(--dark-bg);
         display: block;
+        position: relative;
+        clear: both;
+        z-index: 1;
     }
     
     .services-section .container {

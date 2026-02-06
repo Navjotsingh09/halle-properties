@@ -458,16 +458,37 @@
         display: block;
         margin-bottom: 0;
         overflow: visible;
+        clear: both;
+        z-index: 2;
     }
     
     .why-halle-content,
     .about-halle-content {
         align-items: flex-start;
         gap: 35px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    
+    .why-halle-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
     }
     
     .why-halle-reasons {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 0;
+    }
+    
+    .reason-card {
+        position: relative;
+        margin-bottom: 0;
     }
     
     .about-halle-text h2,
