@@ -2120,7 +2120,7 @@ html, body {
         background: var(--dark-bg);
         box-sizing: border-box;
         margin: 0 auto;
-        overflow: hidden;
+        overflow: visible;
     }
     
     /* Hide desktop hero image container on mobile */
