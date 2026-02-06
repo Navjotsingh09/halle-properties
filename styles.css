@@ -2106,7 +2106,7 @@ html, body {
         display: flex;
         width: 375px;
         height: 650px;
-        padding: 0 20px 50px 20px;
+        padding: 25px 20px 50px 20px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -2115,7 +2115,7 @@ html, body {
         background: var(--dark-bg);
         box-sizing: border-box;
         margin: 0 auto;
-        overflow: hidden;
+        overflow: visible;
     }
     
     /* Hide desktop hero image container on mobile */
