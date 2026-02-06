@@ -2104,18 +2104,19 @@ html, body {
     
     /* ==========================================
        MOBILE HERO SECTION - Figma Specs
-       W: 375px, navbar 120px, then content card
+       W: 375px, H: auto, content below navbar
     ========================================== */
     .hero-section {
         position: relative;
         display: flex;
         width: 375px;
         height: auto;
-        padding: 120px 20px 50px 20px;
+        min-height: 100vh;
+        padding: 145px 20px 50px 20px;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        gap: 0;
+        gap: 45px;
         flex-shrink: 0;
         background: var(--dark-bg);
         box-sizing: border-box;
@@ -2197,24 +2198,22 @@ html, body {
     /* ==========================================
        MOBILE HERO CONTENT CARD - Figma Specs
        335px × 600px, rounded 20px, padding 68px 11px
-       Contains: title, subtitle, search filter, and Book a Valuation button
     ========================================== */
     .hero-content {
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         width: 335px;
         height: 600px;
-        padding: 68px 11px 68px 11px;
+        padding: 68px 11px;
         gap: 30px;
         border-radius: 20px;
         background: url('public/images/hero-mobile-bg.jpg') lightgray 50% / cover no-repeat;
         margin-left: auto;
         margin-right: auto;
         flex-shrink: 0;
-        overflow: visible;
     }
     
     .hero-content::before {
@@ -2431,7 +2430,6 @@ html, body {
     /* ==========================================
        MOBILE BOOK A VALUATION BUTTON - Figma Specs
        312px × 42px, teal bg, rounded 20px
-       Should be inside the hero content card
     ========================================== */
     .mobile-valuation-btn {
         display: flex;
@@ -2446,10 +2444,9 @@ html, body {
         font-weight: 500;
         text-decoration: none;
         border-radius: 20px;
-        margin: 0 auto;
+        margin: 16px auto 0;
         position: relative;
         z-index: 1;
-        flex-shrink: 0;
     }
     
     /* Hide partner logos on mobile */
