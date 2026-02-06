@@ -203,7 +203,7 @@ body > * {
 
 /* Hide mobile-only elements on desktop */
 .mobile-only {
-    display: none;
+    display: none !important;
 }
 
 .mobile-filter {
@@ -2077,7 +2077,7 @@ html, body {
     
     /* Show mobile-only elements */
     .mobile-only {
-        display: flex;
+        display: flex !important;
     }
     
     /* MOBILE MENU - BULLETPROOF */
