@@ -2222,7 +2222,6 @@ html, body {
         width: 100%;
         max-width: 100%;
         padding: 0 clamp(15px, 5vw, 20px);
-        gap: 180px;
     }
     
     /* Mobile Logo - Figma: 108×40px */
@@ -2697,7 +2696,8 @@ html, body {
        White bg, 71px padding top/bottom, 20px left/right
     ========================================== */
     .properties-section {
-        width: 375px;
+        width: 100%;
+        max-width: 375px;
         height: auto;
         padding: 71px 20px;
         background: var(--white);
@@ -3104,7 +3104,8 @@ html, body {
        Dark bg, vertical list with icon left, text right
     ========================================== */
     .services-section {
-        width: 375px;
+        width: 100%;
+        max-width: 375px;
         padding: 71px 39px;
         margin: 0 auto;
         background: var(--dark-bg);
@@ -3497,7 +3498,8 @@ html, body {
        Dark bg, 92px padding, vertical cards
     ========================================== */
     .blog-section {
-        width: 375px;
+        width: 100%;
+        max-width: 375px;
         padding: 92px 20px;
         margin: 0 auto;
         background: var(--dark-bg);
@@ -3639,7 +3641,8 @@ html, body {
        White bg, 48px padding, accordion style
     ========================================== */
     .faq-section {
-        width: 375px;
+        width: 100%;
+        max-width: 375px;
         padding: 48px 23px;
         margin: 0 auto;
         background: var(--white);
@@ -3712,7 +3715,8 @@ html, body {
        Dark bg, 40px top padding, email input with button
     ========================================== */
     .newsletter-section {
-        width: 375px;
+        width: 100%;
+        max-width: 375px;
         height: 156px;
         padding: 40px 37px;
         margin: 0 auto;
@@ -3780,7 +3784,8 @@ html, body {
        Dark bg, accordion-style links
     ========================================== */
     .footer {
-        width: 375px;
+        width: 100%;
+        max-width: 375px;
         padding: 28px 27px;
         margin: 0 auto;
         background: var(--dark-bg);
