@@ -209,6 +209,10 @@ body > * {
     display: none;
 }
 
+.mobile-filter-modal {
+    display: none !important;
+}
+
 /* Desktop shows desktop titles, hides mobile titles */
 .hero-title-desktop,
 .hero-subtitle-desktop {
@@ -2468,7 +2472,7 @@ html, body {
        Full screen overlay with filter options
     ========================================== */
     .mobile-filter-modal {
-        display: none;
+        display: none !important;
         position: fixed;
         top: 0;
         left: 0;
@@ -2481,7 +2485,7 @@ html, body {
     }
     
     .mobile-filter-modal.active {
-        display: flex;
+        display: flex !important;
     }
     
     .mobile-filter-modal-content {
