@@ -1621,6 +1621,7 @@ body.menu-open {
     justify-content: space-between;
     padding: 16px;
     cursor: pointer;
+    gap: 12px;
 }
 
 .faq-question span {
@@ -1629,7 +1630,7 @@ body.menu-open {
     font-weight: 500;
     color: var(--dark-bg);
     line-height: 24px;
-    flex: 1;
+    flex: 1 0 0;
 }
 
 .faq-item.active .faq-question span {
