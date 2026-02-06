@@ -3491,7 +3491,8 @@ html, body {
         font-size: 30px;
         font-weight: 600;
         color: var(--white);
-        line-height: 1;
+        line-height: 80px;
+        text-align: center;
     }
     
     .blog-content {
@@ -3990,6 +3991,7 @@ html, body {
     /* Blog - Fixed to match Figma specs */
     .blog-header h2 {
         font-size: 30px;
+        line-height: 80px;
     }
     
     .blog-featured {
