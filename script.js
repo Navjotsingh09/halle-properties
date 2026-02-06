@@ -247,6 +247,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Footer Accordion for Mobile
+document.addEventListener('DOMContentLoaded', function() {
+    const footerAccordionItems = document.querySelectorAll('.footer-accordion-item');
+    
+    footerAccordionItems.forEach(item => {
+        const header = item.querySelector('.footer-accordion-header');
+        
+        if (header) {
+            header.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all items
+                footerAccordionItems.forEach(i => {
+                    i.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    });
+});
+
 // Smooth scroll for anchor links
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
