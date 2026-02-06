@@ -3160,12 +3160,13 @@ html, body {
     }
     
     .service-item h3 {
+        color: #FFF;
         font-family: 'Poppins', sans-serif;
         font-size: 22px;
+        font-style: normal;
         font-weight: 400;
-        color: var(--white);
+        line-height: 120%;
         text-align: left;
-        line-height: 1.2;
         min-width: 106px;
         transition: color 0.3s ease;
     }
@@ -3913,7 +3914,7 @@ html, body {
     }
     
     .service-item h3 {
-        font-size: 14px;
+        font-size: 22px;
     }
     
     /* Testimonials */
