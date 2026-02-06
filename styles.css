@@ -2805,32 +2805,33 @@ html, body {
         position: relative;
         overflow: hidden;
         width: 100%;
+        height: 437px; /* Fixed height matching card */
     }
     
-    .property-card {
+    .property-card,
+    .property-card:nth-child(2) {
         position: absolute;
         top: 0;
-        left: 0;
+        left: 50%;
+        transform: translateX(calc(-50% + 100%));
         opacity: 0;
-        transform: translateX(100%);
         transition: transform 0.4s ease, opacity 0.4s ease;
         pointer-events: none;
     }
     
     .property-card.active {
-        position: relative;
+        transform: translateX(-50%);
         opacity: 1;
-        transform: translateX(0);
         pointer-events: auto;
     }
     
     .property-card.prev {
-        transform: translateX(-100%);
+        transform: translateX(calc(-50% - 100%));
         opacity: 0;
     }
     
     .property-card.next {
-        transform: translateX(100%);
+        transform: translateX(calc(-50% + 100%));
         opacity: 0;
     }
     
