@@ -3209,7 +3209,10 @@ html, body {
     ========================================== */
     .testimonials-section {
         width: 100%;
-        padding: 51px 21px;
+        display: flex;
+        padding: 30px 21px;
+        align-items: center;
+        gap: 10px;
         margin: 0 auto;
         background: var(--white);
         position: relative;
