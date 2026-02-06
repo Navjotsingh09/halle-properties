@@ -3235,6 +3235,9 @@ html, body {
         font-weight: 600;
         line-height: 1.2;
         margin-bottom: 0;
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .testimonials-header p {
