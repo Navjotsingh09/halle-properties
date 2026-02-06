@@ -2188,7 +2188,7 @@ html, body {
         justify-content: space-between;
         width: 100%;
         max-width: 100%;
-        padding: 0 20px;
+        padding: 0 clamp(15px, 5vw, 20px);
         gap: 0;
     }
     
@@ -2234,11 +2234,11 @@ html, body {
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
-        width: calc(100% - 40px) !important;
+        width: calc(100% - clamp(30px, 10vw, 40px)) !important;
         max-width: 335px !important;
         height: auto !important;
-        padding: clamp(50px, 18vw, 68px) clamp(8px, 3vw, 11px) !important;
-        gap: clamp(20px, 8vw, 30px) !important;
+        padding: clamp(40px, 14vw, 68px) clamp(10px, 4vw, 15px) !important;
+        gap: clamp(16px, 6vw, 30px) !important;
         border-radius: clamp(16px, 5vw, 20px) !important;
         background: url('public/images/hero-mobile-bg.jpg') center center / cover no-repeat !important;
         margin: 0 auto !important;
@@ -2250,7 +2250,7 @@ html, body {
         position: absolute;
         inset: 0;
         background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 100%);
-        border-radius: 20px;
+        border-radius: clamp(16px, 5vw, 20px);
         z-index: 0;
     }
     
@@ -2260,23 +2260,21 @@ html, body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: clamp(6px, 2.5vw, 10px);
         width: 100%;
-        max-width: 312px;
         text-align: center;
-        padding: 0 10px;
+        padding: 0;
     }
     
     .hero-title {
         font-family: 'Poppins', sans-serif !important;
-        font-size: clamp(28px, 9vw, 34px) !important;
+        font-size: clamp(24px, 8vw, 34px) !important;
         font-weight: 700 !important;
         line-height: 120% !important;
         letter-spacing: 0 !important;
         color: var(--white) !important;
         text-align: center !important;
         width: 100% !important;
-        max-width: 312px !important;
         margin: 0 !important;
     }
     
@@ -2293,13 +2291,12 @@ html, body {
     
     .hero-subtitle {
         font-family: 'Poppins', sans-serif !important;
-        font-size: clamp(14px, 4.5vw, 16px) !important;
+        font-size: clamp(13px, 4vw, 16px) !important;
         font-weight: 400 !important;
-        line-height: normal !important;
+        line-height: 140% !important;
         color: var(--white) !important;
         text-align: center !important;
         width: 100% !important;
-        max-width: 289px !important;
         margin: 0 !important;
     }
     
@@ -2312,11 +2309,10 @@ html, body {
         position: relative;
         z-index: 1;
         width: 100%;
-        max-width: 312px;
         height: auto;
         background: var(--white);
-        border-radius: 20px;
-        padding: 10px 11px;
+        border-radius: clamp(16px, 5vw, 20px);
+        padding: clamp(8px, 2.5vw, 10px) clamp(8px, 3vw, 11px);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -2484,12 +2480,11 @@ html, body {
         align-items: center;
         justify-content: center;
         width: 100%;
-        max-width: 312px;
         height: clamp(36px, 11vw, 42px);
         background: var(--primary);
         color: var(--white);
         font-family: 'Poppins', sans-serif;
-        font-size: clamp(14px, 4.5vw, 16px);
+        font-size: clamp(13px, 4vw, 16px);
         font-weight: 500;
         text-decoration: none;
         border-radius: clamp(16px, 5vw, 20px);
