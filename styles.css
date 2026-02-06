@@ -2196,7 +2196,7 @@ html, body {
     
     /* ==========================================
        MOBILE HERO CONTENT CARD - Figma Specs
-       335px × 600px, rounded 20px, padding 68px 11px
+       335px × auto, rounded 20px
     ========================================== */
     .hero-content {
         position: relative;
@@ -2206,9 +2206,8 @@ html, body {
         justify-content: flex-start;
         width: 335px;
         height: auto;
-        min-height: 520px;
-        padding: 40px 11px 30px 11px;
-        gap: 0;
+        padding: 35px 11px 25px 11px;
+        gap: 15px;
         border-radius: 20px;
         background: url('public/images/hero-mobile-bg.jpg') lightgray 50% / cover no-repeat;
         margin: 0 auto;
@@ -2231,19 +2230,20 @@ html, body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
         width: 312px;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 0;
     }
     
     .hero-title {
         font-family: 'Poppins', sans-serif;
-        font-size: 34px;
+        font-size: 28px;
         font-weight: 700;
-        line-height: 1.2;
+        line-height: 1.15;
         color: var(--white);
         text-align: center;
+        margin: 0;
     }
     
     /* Hide desktop title/subtitle, show mobile versions */
@@ -2259,12 +2259,13 @@ html, body {
     
     .hero-subtitle {
         font-family: 'Poppins', sans-serif;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
-        line-height: normal;
+        line-height: 1.4;
         color: var(--white);
         text-align: center;
-        width: 289px;
+        width: 280px;
+        margin: 0;
     }
     
     /* ==========================================
@@ -2279,13 +2280,12 @@ html, body {
         height: auto;
         background: var(--white);
         border-radius: 20px;
-        padding: 12px 11px;
+        padding: 10px 11px;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 0;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
     }
     
     /* Hide most filter fields on mobile - show simplified version */
@@ -2314,9 +2314,9 @@ html, body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 8px;
+        gap: 6px;
         width: 100%;
-        padding: 8px 0;
+        padding: 5px 0;
     }
     
     .mobile-filter-tabs {
@@ -2440,17 +2440,18 @@ html, body {
         align-items: center;
         justify-content: center;
         width: 312px;
-        height: 42px;
+        height: 40px;
         background: var(--primary);
         color: var(--white);
         font-family: 'Poppins', sans-serif;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 500;
         text-decoration: none;
         border-radius: 20px;
-        margin-top: 16px;
+        margin: 0;
         position: relative;
         z-index: 1;
+        flex-shrink: 0;
     }
     
     /* Hide partner logos on mobile */
