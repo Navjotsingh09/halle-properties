@@ -3485,6 +3485,8 @@ html, body {
         font-size: 16px;
         font-weight: 600;
         color: var(--primary);
+        text-align: center;
+        line-height: normal;
     }
     
     .blog-header h2 {
