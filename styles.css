@@ -2239,15 +2239,15 @@ html, body {
     }
     
     .hero-title {
-        font-family: 'Poppins', sans-serif;
-        font-size: 34px;
-        font-weight: 700;
-        line-height: 120%;
-        letter-spacing: 0;
-        color: var(--white);
-        text-align: center;
-        width: 312px;
-        margin: 0;
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 34px !important;
+        font-weight: 700 !important;
+        line-height: 120% !important;
+        letter-spacing: 0 !important;
+        color: var(--white) !important;
+        text-align: center !important;
+        width: 312px !important;
+        margin: 0 !important;
     }
     
     /* Hide desktop title/subtitle, show mobile versions */
