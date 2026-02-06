@@ -2111,16 +2111,16 @@ html, body {
         display: flex;
         width: 375px;
         height: auto;
-        padding: 120px 20px 50px 20px;
+        padding: 120px 20px 30px 20px;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        gap: 0;
+        gap: 16px;
         flex-shrink: 0;
         background: var(--dark-bg);
         box-sizing: border-box;
         margin: 0 auto;
-        overflow: visible;
+        overflow: hidden;
     }
     
     /* Hide desktop hero image container on mobile */
@@ -2440,17 +2440,15 @@ html, body {
         align-items: center;
         justify-content: center;
         width: 312px;
-        height: 40px;
+        height: 42px;
         background: var(--primary);
         color: var(--white);
         font-family: 'Poppins', sans-serif;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 500;
         text-decoration: none;
         border-radius: 20px;
-        margin: 0;
-        position: relative;
-        z-index: 1;
+        margin: 0 auto;
         flex-shrink: 0;
     }
     
