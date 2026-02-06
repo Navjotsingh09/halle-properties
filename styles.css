@@ -974,6 +974,13 @@ body.menu-open {
     clear: both;
 }
 
+@media (max-width: 768px) {
+    .services-section {
+        height: auto !important;
+        padding: 71px 39px !important;
+    }
+}
+
 .services-section .container {
     max-width: 1198px;
     margin: 0 auto;

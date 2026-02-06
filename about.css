@@ -450,13 +450,13 @@
 @media (max-width: 768px) {
     .about-halle-section,
     .why-halle-section {
-        padding: 66px 20px 200px 20px;
+        padding: 66px 20px 300px 20px !important;
         height: auto !important;
         min-height: 0;
         max-height: none;
         position: relative;
         display: block;
-        margin-bottom: 0;
+        margin-bottom: 50px !important;
         overflow: visible;
         clear: both;
         z-index: 2;
@@ -466,7 +466,7 @@
         content: "";
         display: block;
         clear: both;
-        height: 0;
+        height: 50px;
     }
     
     .why-halle-content,
@@ -538,8 +538,9 @@
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
     .why-halle-section {
-        padding-bottom: 250px !important;
+        padding-bottom: 350px !important;
+        margin-bottom: 80px !important;
     }
 }
