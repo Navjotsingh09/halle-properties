@@ -2099,16 +2099,16 @@ html, body {
     
     /* ==========================================
        MOBILE HERO SECTION - Figma Specs
-       375px × 600px content + 50px padding-bottom = 650px total
+       W: 375px, H: 659px, Gap: 46px
     ========================================== */
     .hero-section {
         display: flex;
         width: 375px;
-        height: 650px;
+        height: 659px;
         padding-bottom: 50px;
         flex-direction: column;
         align-items: center;
-        gap: 45px;
+        gap: 46px;
         flex-shrink: 0;
         background: var(--dark-bg);
         box-sizing: border-box;
@@ -2167,23 +2167,24 @@ html, body {
     
     /* ==========================================
        MOBILE HERO CONTENT CARD - Figma Specs
-       335px × 600px, rounded, bg image with overlay
+       335px × 600px, rounded 20px, padding 68px 11px
     ========================================== */
     .hero-content {
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         width: 335px;
-        min-height: 600px;
-        height: auto;
-        padding: 48px 11px 40px;
+        height: 600px;
+        padding: 68px 11px;
+        gap: 30px;
         border-radius: 20px;
         background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=375&h=600&fit=crop');
         background-size: cover;
         background-position: center;
         margin: 0 auto;
+        flex-shrink: 0;
     }
     
     .hero-content::before {
