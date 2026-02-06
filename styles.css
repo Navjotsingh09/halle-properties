@@ -2200,13 +2200,14 @@ html, body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 335.079px;
+        width: 335px;
         height: 600px;
         padding: 68px 11px;
         gap: 30px;
         border-radius: 20px;
         background: url('public/images/hero-mobile-bg.jpg') lightgray 50% / cover no-repeat;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
         flex-shrink: 0;
     }
     
@@ -2277,6 +2278,8 @@ html, body {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     /* Hide most filter fields on mobile - show simplified version */
@@ -2436,7 +2439,7 @@ html, body {
         font-weight: 500;
         text-decoration: none;
         border-radius: 20px;
-        margin-top: 16px;
+        margin: 16px auto 0;
         position: relative;
         z-index: 1;
     }
