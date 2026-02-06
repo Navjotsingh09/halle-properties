@@ -451,7 +451,9 @@
     .about-halle-section,
     .why-halle-section {
         padding: 66px 20px 150px 20px;
-        height: auto;
+        height: auto !important;
+        min-height: 0;
+        max-height: none;
         position: relative;
         display: block;
         margin-bottom: 0;
