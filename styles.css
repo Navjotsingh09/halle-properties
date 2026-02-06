@@ -2959,12 +2959,14 @@ html, body {
        Grey bg with background image, 66px padding
     ========================================== */
     .why-section {
-        width: 375px;
+        width: 100%;
+        max-width: 375px;
         padding: 66px 20px;
         margin: 0 auto;
         background: var(--grey);
         position: relative;
         overflow: hidden;
+        box-sizing: border-box;
     }
     
     .why-section::before {
@@ -2982,16 +2984,19 @@ html, body {
     }
     
     .why-section .container {
-        width: 334px;
+        width: 100%;
         max-width: 334px;
         padding: 0;
+        margin: 0 auto;
         position: relative;
         z-index: 1;
     }
     
     .why-content {
+        display: flex;
         flex-direction: column;
         gap: 35px;
+        align-items: center;
     }
     
     .why-image {
@@ -3008,11 +3013,13 @@ html, body {
     }
     
     .why-header h2 {
-        font-size: 22px;
+        font-size: 30px;
         font-weight: 600;
         line-height: 1.2;
         margin-bottom: 20px;
-        white-space: nowrap;
+        max-width: 334px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .why-header p {
@@ -3024,10 +3031,12 @@ html, body {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        width: 100%;
     }
     
     .reason-item {
-        width: 334px;
+        width: 100%;
+        max-width: 334px;
         height: auto;
         min-height: 84px;
         background: var(--white);
@@ -3036,6 +3045,7 @@ html, body {
         padding: 10px 26px;
         display: flex;
         align-items: center;
+        box-sizing: border-box;
     }
     
     .reason-content {
