@@ -3151,8 +3151,8 @@ html, body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 60px;
-        height: 60px;
+        width: 58px;
+        height: 55px;
         object-fit: contain;
     }
     
