@@ -3210,8 +3210,7 @@ html, body {
     .testimonials-section {
         width: 100%;
         max-width: 375px;
-        height: 500px;
-        padding: 0;
+        padding: 51px 21px;
         margin: 0 auto;
         background: var(--white);
         position: relative;
@@ -3229,11 +3228,11 @@ html, body {
     }
     
     .testimonials-section .container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 333px;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 333px;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         gap: 60px;
@@ -3250,6 +3249,7 @@ html, body {
         font-weight: 600;
         line-height: 1.2;
         margin-bottom: 0;
+        word-wrap: break-word;
     }
     
     .testimonials-header p {
@@ -3257,6 +3257,7 @@ html, body {
     }
     
     .testimonials-grid {
+        display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
@@ -3264,6 +3265,7 @@ html, body {
     
     .testimonial-card {
         width: 100%;
+        max-width: 333px;
         height: 230px;
         background: var(--white);
         border-radius: 20px;
@@ -3288,6 +3290,7 @@ html, body {
     }
     
     .testimonial-author {
+        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 4px;
