@@ -450,12 +450,13 @@
 @media (max-width: 768px) {
     .about-halle-section,
     .why-halle-section {
-        padding: 66px 20px 100px 20px;
-        min-height: auto;
+        padding: 66px 20px;
+        min-height: 817px;
         height: auto;
         position: relative;
         display: block;
         margin-bottom: 0;
+        overflow: visible;
     }
     
     .about-halle-text h2,
