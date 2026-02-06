@@ -889,3 +889,63 @@ document.addEventListener('DOMContentLoaded', function() {
     // Trigger 'All' filter on page load to show all blogs
     performSearchAndFilter();
 });
+
+// Mobile Buy/Rent Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileFilterTabs = document.querySelectorAll('.mobile-filter-tab');
+    const mobileFilterLabel = document.querySelector('.mobile-filter-label');
+    
+    if (mobileFilterTabs.length > 0 && mobileFilterLabel) {
+        mobileFilterTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                mobileFilterTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Update the search label based on selected tab
+                const type = this.getAttribute('data-type');
+                if (type === 'buy') {
+                    mobileFilterLabel.textContent = 'Search Properties to buy';
+                } else if (type === 'rent') {
+                    mobileFilterLabel.textContent = 'Search Properties to rent';
+                }
+            });
+        });
+    }
+    
+    // Mobile search button functionality
+    const mobileSearchBtn = document.querySelector('.mobile-search-btn');
+    const mobileSearchInput = document.querySelector('.mobile-search-input');
+    
+    if (mobileSearchBtn && mobileSearchInput) {
+        mobileSearchBtn.addEventListener('click', function() {
+            const searchValue = mobileSearchInput.value.trim();
+            const activeTab = document.querySelector('.mobile-filter-tab.active');
+            const searchType = activeTab ? activeTab.getAttribute('data-type') : 'buy';
+            
+            // Redirect to listings page with search parameters
+            if (searchValue) {
+                window.location.href = `listings.html?location=${encodeURIComponent(searchValue)}&type=${searchType}`;
+            } else {
+                window.location.href = `listings.html?type=${searchType}`;
+            }
+        });
+        
+        // Allow Enter key to trigger search
+        mobileSearchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                mobileSearchBtn.click();
+            }
+        });
+    }
+    
+    // Mobile filter icon (open filter modal - placeholder)
+    const mobileFilterIcon = document.querySelector('.mobile-filter-icon');
+    if (mobileFilterIcon) {
+        mobileFilterIcon.addEventListener('click', function() {
+            // TODO: Open filter modal/panel
+            console.log('Filter icon clicked - implement filter modal');
+        });
+    }
+});
