@@ -2162,14 +2162,18 @@ html, body {
         object-fit: contain;
     }
     
-    /* Mobile Hamburger - Figma: 22×24px, teal */
+    /* Mobile Hamburger - Figma: 22×24px, teal lines */
     .mobile-menu-toggle {
         width: 22px;
         height: 24px;
+        justify-content: space-between;
     }
     
     .mobile-menu-toggle span {
+        width: 100%;
+        height: 2px;
         background-color: var(--primary);
+        border-radius: 2px;
     }
     
     /* ==========================================
