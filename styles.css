@@ -2883,7 +2883,7 @@ html, body {
         transform: none;
         bottom: auto;
         left: auto;
-        margin-top: 20px;
+        margin-top: -50px;
     }
     
     .btn-view-more {
@@ -2939,12 +2939,29 @@ html, body {
         margin: 0 auto;
         background: var(--grey);
         position: relative;
+        overflow: hidden;
+    }
+    
+    .why-section::before {
+        content: '';
+        position: absolute;
+        top: -2.42%;
+        left: -69.78%;
+        width: 220.38%;
+        height: 104.97%;
+        background-image: url('https://www.figma.com/api/mcp/asset/9e74de24-bf29-406a-a23f-4dd638deae79');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.2;
+        pointer-events: none;
     }
     
     .why-section .container {
         width: 334px;
         max-width: 334px;
         padding: 0;
+        position: relative;
+        z-index: 1;
     }
     
     .why-content {
@@ -2966,10 +2983,11 @@ html, body {
     }
     
     .why-header h2 {
-        font-size: 30px;
+        font-size: 22px;
         font-weight: 600;
         line-height: 1.2;
         margin-bottom: 20px;
+        white-space: nowrap;
     }
     
     .why-header p {
