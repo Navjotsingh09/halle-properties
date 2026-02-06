@@ -87,11 +87,16 @@ document.addEventListener('DOMContentLoaded', function() {
         dot.addEventListener('click', () => goToSlide(index));
     });
     
-    // Initialize on mobile
+    // Initialize - only on mobile
     if (isMobile() && cards.length > 0) {
         cards[0].classList.add('active');
         updateCarousel();
         startAutoSlide();
+    } else {
+        // Desktop - ensure all cards visible, remove active class
+        cards.forEach(card => {
+            card.classList.remove('active');
+        });
     }
     
     // Handle resize
@@ -108,8 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // Show all cards on desktop
             cards.forEach(card => {
                 card.classList.remove('active');
-                card.style.display = '';
-                card.style.opacity = '';
             });
         }
     });
