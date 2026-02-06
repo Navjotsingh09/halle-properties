@@ -3076,8 +3076,12 @@ html, body {
     
     .reason-text strong {
         display: block;
-        font-weight: 600;
+        color: #2A363A;
+        font-family: 'Poppins', sans-serif;
         font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
         margin-bottom: 2px;
     }
     
@@ -3904,7 +3908,7 @@ html, body {
     }
     
     .reason-text {
-        font-size: 13px;
+        font-size: 12px;
     }
     
     /* Services */
