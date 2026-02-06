@@ -3030,6 +3030,7 @@ html, body {
     }
     
     .reason-text {
+        font-family: 'Poppins', sans-serif;
         font-size: 12px;
         flex: 1;
     }
@@ -3037,9 +3038,8 @@ html, body {
     .reason-text strong {
         display: block;
         font-weight: 600;
-        font-size: 11px;
+        font-size: 12px;
         margin-bottom: 2px;
-        white-space: nowrap;
     }
     
     /* ==========================================
