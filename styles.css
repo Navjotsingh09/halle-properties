@@ -2100,6 +2100,7 @@ html, body {
     /* ==========================================
        MOBILE HERO SECTION - Figma Specs
        W: 375px, H: 659px, Gap: 46px
+       Content card centered vertically
     ========================================== */
     .hero-section {
         display: flex;
@@ -2108,6 +2109,7 @@ html, body {
         padding-bottom: 50px;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 46px;
         flex-shrink: 0;
         background: var(--dark-bg);
