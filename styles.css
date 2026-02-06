@@ -3020,7 +3020,12 @@ html, body {
     }
     
     .why-header p {
+        color: #2A363A;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
         font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
         line-height: normal;
     }
     
