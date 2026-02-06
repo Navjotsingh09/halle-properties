@@ -1051,3 +1051,71 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+// Mobile Property Carousel
+document.addEventListener('DOMContentLoaded', function() {
+    const propertyCards = document.querySelectorAll('.properties-grid .property-card');
+    const prevBtn = document.querySelector('.property-nav-arrow.prev');
+    const nextBtn = document.querySelector('.property-nav-arrow.next');
+    
+    if (propertyCards.length === 0 || !prevBtn || !nextBtn) return;
+    
+    // Only activate on mobile
+    if (window.innerWidth > 768) return;
+    
+    let currentIndex = 0;
+    const totalCards = propertyCards.length;
+    
+    // Initialize - set first card as active
+    function initCarousel() {
+        propertyCards.forEach((card, index) => {
+            card.classList.remove('active', 'prev', 'next');
+            if (index === currentIndex) {
+                card.classList.add('active');
+            } else if (index < currentIndex) {
+                card.classList.add('prev');
+            } else {
+                card.classList.add('next');
+            }
+        });
+    }
+    
+    // Go to next card
+    function nextCard() {
+        if (currentIndex < totalCards - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0; // Loop back to first
+        }
+        initCarousel();
+    }
+    
+    // Go to previous card
+    function prevCard() {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = totalCards - 1; // Loop to last
+        }
+        initCarousel();
+    }
+    
+    // Initialize on load
+    initCarousel();
+    
+    // Event listeners
+    nextBtn.addEventListener('click', nextCard);
+    prevBtn.addEventListener('click', prevCard);
+    
+    // Re-initialize on resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth <= 768) {
+            initCarousel();
+        } else {
+            // Reset all cards for desktop
+            propertyCards.forEach(card => {
+                card.classList.remove('active', 'prev', 'next');
+            });
+        }
+    });
+});
