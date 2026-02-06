@@ -2203,11 +2203,12 @@ html, body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         width: 335px;
-        height: 600px;
-        padding: 68px 11px;
-        gap: 30px;
+        height: auto;
+        min-height: 580px;
+        padding: 50px 11px 50px 11px;
+        gap: 0;
         border-radius: 20px;
         background: url('public/images/hero-mobile-bg.jpg') lightgray 50% / cover no-repeat;
         margin: 0 auto;
@@ -2233,6 +2234,7 @@ html, body {
         gap: 10px;
         width: 312px;
         text-align: center;
+        margin-bottom: 30px;
     }
     
     .hero-title {
@@ -2274,14 +2276,14 @@ html, body {
         position: relative;
         z-index: 1;
         width: 312px;
-        height: 130px;
+        height: auto;
         background: var(--white);
         border-radius: 20px;
-        padding: 11px;
+        padding: 12px 11px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 0;
         margin-left: auto;
         margin-right: auto;
     }
@@ -2312,16 +2314,17 @@ html, body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
         width: 100%;
-        padding: 11px 0;
+        padding: 8px 0;
     }
     
     .mobile-filter-tabs {
         display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        width: 195px;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        width: 100%;
     }
     
     .mobile-filter-tab {
@@ -2332,7 +2335,7 @@ html, body {
         background: none;
         border: none;
         cursor: pointer;
-        padding: 0;
+        padding: 0 0 5px 0;
         color: var(--dark-bg);
         position: relative;
     }
@@ -2344,11 +2347,12 @@ html, body {
     .mobile-filter-tab.active::after {
         content: '';
         position: absolute;
-        bottom: -5px;
+        bottom: 0;
         left: 0;
         width: 100%;
         height: 2px;
         background: var(--primary);
+        border-radius: 1px;
     }
     
     .mobile-filter-divider {
@@ -2360,8 +2364,8 @@ html, body {
     .mobile-filter-search {
         display: flex;
         flex-direction: column;
-        gap: 7px;
-        width: 295px;
+        gap: 5px;
+        width: 290px;
     }
     
     .mobile-filter-label {
@@ -2370,7 +2374,8 @@ html, body {
         font-weight: 400;
         color: var(--dark-bg);
         letter-spacing: -0.6px;
-        padding-left: 5px;
+        padding-left: 0;
+        width: 100%;
     }
     
     .mobile-search-bar {
@@ -2443,7 +2448,7 @@ html, body {
         font-weight: 500;
         text-decoration: none;
         border-radius: 20px;
-        margin: 0;
+        margin-top: 16px;
         position: relative;
         z-index: 1;
     }
