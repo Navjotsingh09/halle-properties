@@ -3688,10 +3688,13 @@ html, body {
     }
     
     .faq-heading h2 {
+        font-family: 'Poppins', sans-serif;
         font-size: 30px;
+        font-style: normal;
         font-weight: 600;
-        line-height: 1.2;
+        line-height: 120%;
         text-align: center;
+        color: var(--dark-bg);
     }
     
     .faq-item {
