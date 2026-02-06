@@ -3024,13 +3024,14 @@ html, body {
     
     .reason-text {
         font-size: 12px;
+        flex: 1;
+        min-width: 0;
     }
     
     .reason-text strong {
         display: block;
         font-weight: 600;
         margin-bottom: 2px;
-        white-space: nowrap;
     }
     
     /* ==========================================
