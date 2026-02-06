@@ -460,6 +460,16 @@
         overflow: visible;
     }
     
+    .why-halle-content,
+    .about-halle-content {
+        align-items: flex-start;
+        gap: 35px;
+    }
+    
+    .why-halle-reasons {
+        width: 100%;
+    }
+    
     .about-halle-text h2,
     .why-halle-text h2 {
         font-size: 32px;
@@ -482,7 +492,7 @@
 @media (max-width: 480px) {
     .about-halle-image,
     .why-halle-image {
-        height: 300px;
+        display: none;
     }
     
     .about-halle-text h2,
