@@ -404,7 +404,7 @@
 @media (max-width: 1200px) {
     .about-halle-section,
     .why-halle-section {
-        padding: 60px 40px;
+        padding: 60px 40px 100px 40px;
     }
     
     .about-halle-content,
@@ -450,7 +450,7 @@
 @media (max-width: 768px) {
     .about-halle-section,
     .why-halle-section {
-        padding: 60px 20px;
+        padding: 60px 20px 80px 20px;
     }
     
     .about-halle-text h2,

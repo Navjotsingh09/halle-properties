@@ -3106,9 +3106,10 @@ html, body {
     .services-section {
         width: 100%;
         max-width: 375px;
+        height: auto;
         padding: 71px 39px;
         margin: 0 auto;
-        background: var(-- -bg);
+        background: var(--dark-bg);
     }
     
     .services-section .container {
