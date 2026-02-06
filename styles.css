@@ -3123,14 +3123,11 @@ html, body {
         flex-shrink: 0;
         position: relative;
         border-radius: 55px;
-        overflow: visible;
+        overflow: hidden;
     }
     
     .service-icon-bg {
         background: var(--white);
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
     
     .service-full-icon {
@@ -3150,6 +3147,10 @@ html, body {
     }
     
     .service-inner-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 58px;
         height: 55px;
         object-fit: contain;
