@@ -3306,9 +3306,7 @@ html, body {
         position: relative;
     }
     
-    .testimonial-card,
-    .testimonial-card:nth-child(2),
-    .testimonial-card.active {
+    .testimonial-card {
         width: 333px;
         min-width: 333px;
         max-width: 333px;
@@ -3322,9 +3320,6 @@ html, body {
         justify-content: center;
         box-sizing: border-box;
         text-align: center;
-    }
-    
-    .testimonial-card {
         display: none;
         opacity: 0;
         transition: opacity 0.5s ease-in-out;
