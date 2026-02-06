@@ -320,7 +320,7 @@
     max-width: 1920px;
     margin: 0 auto;
     background-color: var(--grey);
-    padding: 99px 80px 120px 80px;
+    padding: 99px 80px;
 }
 
 .why-halle-content {
@@ -404,7 +404,7 @@
 @media (max-width: 1200px) {
     .about-halle-section,
     .why-halle-section {
-        padding: 60px 40px 100px 40px;
+        padding: 60px 40px;
     }
     
     .about-halle-content,
