@@ -3011,6 +3011,13 @@ html, body {
         padding: 10px 26px;
         display: flex;
         align-items: center;
+        justify-content: center;
+    }
+    
+    .reason-content {
+        display: flex;
+        width: 254px;
+        align-items: center;
         gap: 20px;
     }
     
