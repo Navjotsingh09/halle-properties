@@ -450,7 +450,7 @@
 @media (max-width: 768px) {
     .about-halle-section,
     .why-halle-section {
-        padding: 66px 20px 150px 20px;
+        padding: 66px 20px 200px 20px;
         height: auto !important;
         min-height: 0;
         max-height: none;
@@ -460,6 +460,13 @@
         overflow: visible;
         clear: both;
         z-index: 2;
+    }
+    
+    .why-halle-section::after {
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
     }
     
     .why-halle-content,
