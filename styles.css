@@ -2448,36 +2448,85 @@ html, body {
         display: none;
     }
     
-    /* Partner logos */
-    @media (min-width: 769px) {
-        .partner-logos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        gap: 20px;
+    /* ==========================================
+       MOBILE FEATURED PROPERTIES - Figma Specs
+       White bg, 71px padding top/bottom, 20px left/right
+    ========================================== */
+    .properties-section {
+        width: 375px;
+        height: auto;
+        padding: 71px 20px;
+        background: var(--white);
+        margin: 0 auto;
     }
     
-    .partner-logo.primelocation { width: 110px; }
-    .partner-logo.zoopla { width: 80px; }
-    .partner-logo.onthemarket { width: 90px; }
+    .properties-section .container {
+        width: 334px;
+        max-width: 334px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        padding: 0;
+    }
     
-    /* Property cards - single column */
+    .section-header {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: auto;
+    }
+    
+    .section-header h2 {
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: var(--dark-bg);
+        width: 100%;
+        white-space: normal;
+    }
+    
+    .section-header p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+        color: var(--dark-bg);
+        width: 100%;
+    }
+    
     .properties-grid {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        gap: 20px;
     }
     
     .property-card,
     .property-card:nth-child(2) {
-        width: 100%;
-        max-width: 450px;
+        width: 334px;
+        height: 437px;
+        max-width: 334px;
         min-width: auto;
+        border-radius: 20px;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     }
     
     .property-info-overlay,
     .property-card:nth-child(2) .property-info-overlay {
-        width: calc(100% - 30px);
-        left: 15px;
+        width: 316px;
+        height: 154px;
+        left: 9px;
+        bottom: 12px;
+        padding: 10px 18px;
+    }
+    
+    /* Hide extra property cards on mobile - show only one */
+    .property-card:nth-child(n+2) {
+        display: none;
+    }
     }
     
     /* Services - 2 column grid */
