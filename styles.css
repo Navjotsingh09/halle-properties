@@ -2099,12 +2099,12 @@ html, body {
     
     /* ==========================================
        MOBILE HERO SECTION - Figma Specs
-       W: 100%, Header at top, content centered
+       W: 375px, Header at top, content centered
     ========================================== */
     .hero-section {
         position: relative;
         display: flex;
-        width: 100%;
+        width: 375px;
         min-height: 100vh;
         min-height: 100dvh;
         padding-top: 0;
