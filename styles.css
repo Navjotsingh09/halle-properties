@@ -2114,7 +2114,9 @@ html, body {
     .hero-section {
         position: relative;
         display: flex;
-        width: 375px;
+        width: 100%;
+        max-width: 100%;
+        min-height: auto;
         height: auto;
         padding: 100px 20px 50px 20px;
         flex-direction: column;
@@ -2125,7 +2127,7 @@ html, body {
         background: #2a363a !important;
         background: var(--dark-bg) !important;
         box-sizing: border-box;
-        margin: 0 auto;
+        margin: 0;
     }
     
     /* Hide desktop hero image container on mobile */
