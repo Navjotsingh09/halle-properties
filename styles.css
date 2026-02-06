@@ -2203,7 +2203,7 @@ html, body {
         width: 335.079px;
         height: 600px;
         padding: 68px 11px;
-        gap: 10px;
+        gap: 30px;
         border-radius: 20px;
         background: url('public/images/hero-mobile-bg.jpg') lightgray 50% / cover no-repeat;
         margin: 0 auto;
