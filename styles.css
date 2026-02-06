@@ -3209,6 +3209,7 @@ html, body {
     ========================================== */
     .testimonials-section {
         width: 100%;
+        height: auto;
         display: flex;
         padding: 30px 21px;
         align-items: center;
@@ -3233,6 +3234,7 @@ html, body {
         z-index: 1;
         width: 100%;
         max-width: 333px;
+        height: auto;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -3243,6 +3245,7 @@ html, body {
     .testimonials-header {
         text-align: center;
         width: 100%;
+        height: auto;
     }
     
     .testimonials-header h2 {
@@ -3251,6 +3254,7 @@ html, body {
         line-height: 1.2;
         margin: 0 auto;
         max-width: 270px;
+        width: 100%;
     }
     
     .testimonials-header p {
@@ -3339,7 +3343,7 @@ html, body {
         max-width: 333px;
         height: 400px;
         border-radius: 20px;
-        overflow: hidden;
+        overflow: visible;
     }
     
     .cta-bg-image {
@@ -3364,6 +3368,9 @@ html, body {
         justify-content: center;
         padding: 68px 21px;
         text-align: center;
+        box-sizing: border-box;
+        overflow: hidden;
+        border-radius: 20px;
     }
     
     .cta-content h2 {
