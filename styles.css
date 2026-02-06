@@ -2104,19 +2104,18 @@ html, body {
     
     /* ==========================================
        MOBILE HERO SECTION - Figma Specs
-       W: 375px, H: auto, content below navbar
+       W: 375px, H: 650px, content right below 120px navbar
     ========================================== */
     .hero-section {
         position: relative;
         display: flex;
         width: 375px;
-        height: auto;
-        min-height: 100vh;
-        padding: 145px 20px 50px 20px;
+        height: 770px;
+        padding: 120px 20px 50px 20px;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        gap: 45px;
+        gap: 0;
         flex-shrink: 0;
         background: var(--dark-bg);
         box-sizing: border-box;
