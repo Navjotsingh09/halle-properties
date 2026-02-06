@@ -1,12 +1,12 @@
-// Mobile Testimonials Carousel
+// Mobile Testimonials Carousel - Smooth fade transition
 document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.querySelector('.testimonials-grid');
     const cards = document.querySelectorAll('.testimonial-card');
     const dots = document.querySelectorAll('.testimonials-dots .dot');
     let currentIndex = 0;
     let autoSlideInterval;
     let touchStartX = 0;
     let touchEndX = 0;
+    const wrapper = document.querySelector('.testimonials-carousel-wrapper');
     
     // Only run on mobile
     function isMobile() {
@@ -14,12 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function updateCarousel() {
-        if (!isMobile() || !carousel) return;
+        if (!isMobile() || cards.length === 0) return;
         
-        const cardWidth = cards[0].offsetWidth;
-        const containerWidth = carousel.parentElement.offsetWidth;
-        const offset = (containerWidth - cardWidth) / 2;
-        carousel.style.transform = `translateX(${-currentIndex * cardWidth + offset}px)`;
+        // Hide all cards, show only current
+        cards.forEach((card, index) => {
+            card.classList.toggle('active', index === currentIndex);
+        });
         
         // Update dots
         dots.forEach((dot, index) => {
@@ -30,6 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function nextSlide() {
         if (!isMobile()) return;
         currentIndex = (currentIndex + 1) % cards.length;
+        updateCarousel();
+    }
+    
+    function prevSlide() {
+        if (!isMobile()) return;
+        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
         updateCarousel();
     }
     
@@ -50,12 +56,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Touch/Swipe support
-    if (carousel) {
-        carousel.addEventListener('touchstart', (e) => {
+    if (wrapper) {
+        wrapper.addEventListener('touchstart', (e) => {
             touchStartX = e.changedTouches[0].screenX;
         }, { passive: true });
         
-        carousel.addEventListener('touchend', (e) => {
+        wrapper.addEventListener('touchend', (e) => {
             touchEndX = e.changedTouches[0].screenX;
             handleSwipe();
         }, { passive: true });
@@ -68,13 +74,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (Math.abs(diff) > swipeThreshold) {
             if (diff > 0) {
-                // Swipe left - next slide
-                currentIndex = Math.min(currentIndex + 1, cards.length - 1);
+                nextSlide();
             } else {
-                // Swipe right - previous slide
-                currentIndex = Math.max(currentIndex - 1, 0);
+                prevSlide();
             }
-            updateCarousel();
             resetAutoSlide();
         }
     }
@@ -84,8 +87,9 @@ document.addEventListener('DOMContentLoaded', function() {
         dot.addEventListener('click', () => goToSlide(index));
     });
     
-    // Initialize
-    if (isMobile() && carousel) {
+    // Initialize on mobile
+    if (isMobile() && cards.length > 0) {
+        cards[0].classList.add('active');
         updateCarousel();
         startAutoSlide();
     }
@@ -93,12 +97,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle resize
     window.addEventListener('resize', () => {
         if (isMobile()) {
+            if (cards.length > 0 && !document.querySelector('.testimonial-card.active')) {
+                cards[0].classList.add('active');
+            }
             updateCarousel();
             if (!autoSlideInterval) startAutoSlide();
         } else {
             clearInterval(autoSlideInterval);
             autoSlideInterval = null;
-            if (carousel) carousel.style.transform = '';
+            // Show all cards on desktop
+            cards.forEach(card => {
+                card.classList.remove('active');
+                card.style.display = '';
+                card.style.opacity = '';
+            });
         }
     });
 });
