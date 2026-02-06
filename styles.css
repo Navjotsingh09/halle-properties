@@ -2198,18 +2198,22 @@ html, body {
        335px × auto, rounded 20px
     ========================================== */
     .hero-content {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        width: 335px;
-        height: auto;
-        padding: 50px 11px 40px 11px;
-        gap: 30px;
-        border-radius: 20px;
-        background: url('public/images/hero-mobile-bg.jpg') center center / cover no-repeat;
-        margin: 0 auto;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        width: 335px !important;
+        max-width: 335px !important;
+        height: auto !important;
+        padding: 50px 11px 40px 11px !important;
+        gap: 30px !important;
+        border-radius: 20px !important;
+        background: url('public/images/hero-mobile-bg.jpg') center center / cover no-repeat !important;
+        margin: 0 auto !important;
         flex-shrink: 0;
     }
     
@@ -2435,7 +2439,7 @@ html, body {
        312px × 42px, teal bg, rounded 20px
     ========================================== */
     .mobile-valuation-btn {
-        display: flex;
+        display: flex !important;
         align-items: center;
         justify-content: center;
         width: 312px;
@@ -3380,25 +3384,7 @@ html, body {
         font-size: 20px;
     }
     
-    /* Hero */
-    .hero-image-container {
-        height: clamp(200px, 45vh, 320px);
-    }
-    
-    .hero-content {
-        padding: 25px 15px;
-        gap: 20px;
-    }
-    
-    .hero-title {
-        font-size: clamp(20px, 6vw, 28px);
-    }
-    
-    .hero-subtitle {
-        font-size: 14px;
-    }
-    
-    /* Filter */
+    /* Filter - desktop only, hidden on mobile */
     .filter-fields {
         padding: 15px;
         gap: 10px;
