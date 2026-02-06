@@ -2807,10 +2807,16 @@ html, body {
     
     /* Featured Properties Navigation Arrows */
     .section-cta {
+        position: static;
         display: flex;
+        width: 115px;
+        height: 50px;
         gap: 15px;
         align-items: center;
         justify-content: center;
+        transform: none;
+        bottom: auto;
+        left: auto;
     }
     
     .btn-view-more {
