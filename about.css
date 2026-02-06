@@ -457,6 +457,7 @@
         display: block;
         margin-bottom: 0;
         overflow: visible;
+        z-index: 2;
     }
     
     .about-halle-text h2,

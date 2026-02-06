@@ -3110,10 +3110,12 @@ html, body {
         min-height: auto;
         padding: 71px 39px;
         margin: 0 auto;
+        margin-top: 0;
         background: var(--dark-bg);
-        position: relative;
+        position: static;
         display: block;
         clear: both;
+        z-index: 1;
     }
     
     .services-section .container {
