@@ -2111,7 +2111,7 @@ html, body {
         display: flex;
         width: 375px;
         height: auto;
-        padding: 120px 20px 50px 20px;
+        padding: 100px 20px 50px 20px;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
@@ -2143,7 +2143,7 @@ html, body {
         right: 0;
         width: 100%;
         display: flex;
-        height: 120px;
+        height: 100px;
         padding: 0;
         justify-content: center;
         align-items: center;
@@ -2205,8 +2205,8 @@ html, body {
         justify-content: flex-start;
         width: 335px;
         height: auto;
-        padding: 40px 11px 30px 11px;
-        gap: 20px;
+        padding: 50px 11px 40px 11px;
+        gap: 30px;
         border-radius: 20px;
         background: url('public/images/hero-mobile-bg.jpg') center center / cover no-repeat;
         margin: 0 auto;
@@ -2229,15 +2229,16 @@ html, body {
         flex-direction: column;
         align-items: center;
         gap: 10px;
-        width: 312px;
+        width: 100%;
+        max-width: 312px;
         text-align: center;
     }
     
     .hero-title {
         font-family: 'Poppins', sans-serif;
-        font-size: 32px;
+        font-size: 34px;
         font-weight: 700;
-        line-height: 1.15;
+        line-height: 1.2;
         color: var(--white);
         text-align: center;
         margin: 0;
@@ -2256,12 +2257,13 @@ html, body {
     
     .hero-subtitle {
         font-family: 'Poppins', sans-serif;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 400;
-        line-height: 1.4;
+        line-height: 1.5;
         color: var(--white);
         text-align: center;
-        width: 290px;
+        width: 100%;
+        max-width: 300px;
         margin: 0;
     }
     
