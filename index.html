@@ -161,6 +161,77 @@
         </div>
     </section>
 
+    <!-- Mobile Filter Modal -->
+    <div class="mobile-filter-modal" id="mobile-filter-modal">
+        <div class="mobile-filter-modal-content">
+            <div class="mobile-filter-modal-header">
+                <h3>Filter Properties</h3>
+                <button class="mobile-filter-modal-close" id="mobile-filter-close" aria-label="Close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="#2a363a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="mobile-filter-modal-body">
+                <div class="mobile-filter-field">
+                    <label for="mobile-filter-payment">Payment</label>
+                    <select id="mobile-filter-payment">
+                        <option value="all">All</option>
+                        <option value="sale">For Sale</option>
+                        <option value="rent">To Rent</option>
+                        <option value="lease">Lease</option>
+                    </select>
+                </div>
+                <div class="mobile-filter-field">
+                    <label for="mobile-filter-location">Location</label>
+                    <select id="mobile-filter-location">
+                        <option value="all">All</option>
+                        <option value="wolverhampton">Wolverhampton</option>
+                        <option value="willenhall">Willenhall</option>
+                        <option value="birmingham">Birmingham</option>
+                        <option value="walsall">Walsall</option>
+                    </select>
+                </div>
+                <div class="mobile-filter-field">
+                    <label for="mobile-filter-type">Property Type</label>
+                    <select id="mobile-filter-type">
+                        <option value="all">All</option>
+                        <option value="house">House</option>
+                        <option value="flat">Flat</option>
+                        <option value="bungalow">Bungalow</option>
+                        <option value="commercial">Commercial</option>
+                    </select>
+                </div>
+                <div class="mobile-filter-field">
+                    <label for="mobile-filter-bedrooms">Bedrooms</label>
+                    <select id="mobile-filter-bedrooms">
+                        <option value="all">Any</option>
+                        <option value="1">1+</option>
+                        <option value="2">2+</option>
+                        <option value="3">3+</option>
+                        <option value="4">4+</option>
+                        <option value="5">5+</option>
+                    </select>
+                </div>
+                <div class="mobile-filter-field">
+                    <label for="mobile-filter-price">Price Range</label>
+                    <select id="mobile-filter-price">
+                        <option value="all">Any</option>
+                        <option value="100000">Up to £100,000</option>
+                        <option value="200000">Up to £200,000</option>
+                        <option value="300000">Up to £300,000</option>
+                        <option value="500000">Up to £500,000</option>
+                        <option value="1000000">Up to £1,000,000</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mobile-filter-modal-footer">
+                <button class="mobile-filter-reset" id="mobile-filter-reset">Reset</button>
+                <button class="mobile-filter-apply" id="mobile-filter-apply">Apply Filters</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Featured Properties Section -->
     <section class="properties-section">
         <div class="container">

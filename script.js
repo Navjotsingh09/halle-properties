@@ -924,12 +924,42 @@ document.addEventListener('DOMContentLoaded', function() {
             const activeTab = document.querySelector('.mobile-filter-tab.active');
             const searchType = activeTab ? activeTab.getAttribute('data-type') : 'buy';
             
-            // Redirect to listings page with search parameters
+            // Get mobile filter values if they exist
+            const mobilePayment = document.getElementById('mobile-filter-payment');
+            const mobileLocation = document.getElementById('mobile-filter-location');
+            const mobileType = document.getElementById('mobile-filter-type');
+            const mobileBedrooms = document.getElementById('mobile-filter-bedrooms');
+            const mobilePrice = document.getElementById('mobile-filter-price');
+            
+            const params = new URLSearchParams();
+            
+            // Add search type (buy/rent)
+            params.set('payment', searchType === 'buy' ? 'sale' : 'rent');
+            
+            // Add location search
             if (searchValue) {
-                window.location.href = `listings.html?location=${encodeURIComponent(searchValue)}&type=${searchType}`;
-            } else {
-                window.location.href = `listings.html?type=${searchType}`;
+                params.set('location', searchValue);
             }
+            
+            // Add filter values if set
+            if (mobilePayment && mobilePayment.value !== 'all') {
+                params.set('payment', mobilePayment.value);
+            }
+            if (mobileLocation && mobileLocation.value !== 'all') {
+                params.set('location', mobileLocation.value);
+            }
+            if (mobileType && mobileType.value !== 'all') {
+                params.set('type', mobileType.value);
+            }
+            if (mobileBedrooms && mobileBedrooms.value !== 'all') {
+                params.set('bedrooms', mobileBedrooms.value);
+            }
+            if (mobilePrice && mobilePrice.value !== 'all') {
+                params.set('price', mobilePrice.value);
+            }
+            
+            const queryString = params.toString();
+            window.location.href = `listings.html?${queryString}`;
         });
         
         // Allow Enter key to trigger search
@@ -940,12 +970,84 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Mobile filter icon (open filter modal - placeholder)
+    // Mobile Filter Modal Functionality
     const mobileFilterIcon = document.querySelector('.mobile-filter-icon');
-    if (mobileFilterIcon) {
-        mobileFilterIcon.addEventListener('click', function() {
-            // TODO: Open filter modal/panel
-            console.log('Filter icon clicked - implement filter modal');
+    const mobileFilterModal = document.getElementById('mobile-filter-modal');
+    const mobileFilterClose = document.getElementById('mobile-filter-close');
+    const mobileFilterReset = document.getElementById('mobile-filter-reset');
+    const mobileFilterApply = document.getElementById('mobile-filter-apply');
+    
+    if (mobileFilterIcon && mobileFilterModal) {
+        // Open modal when filter icon clicked
+        mobileFilterIcon.addEventListener('click', function(e) {
+            e.preventDefault();
+            mobileFilterModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
         });
+        
+        // Close modal when X clicked
+        if (mobileFilterClose) {
+            mobileFilterClose.addEventListener('click', function() {
+                mobileFilterModal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+        
+        // Close modal when clicking overlay
+        mobileFilterModal.addEventListener('click', function(e) {
+            if (e.target === mobileFilterModal) {
+                mobileFilterModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Reset filters
+        if (mobileFilterReset) {
+            mobileFilterReset.addEventListener('click', function() {
+                const selects = mobileFilterModal.querySelectorAll('select');
+                selects.forEach(select => {
+                    select.value = 'all';
+                });
+            });
+        }
+        
+        // Apply filters and search
+        if (mobileFilterApply) {
+            mobileFilterApply.addEventListener('click', function() {
+                const mobilePayment = document.getElementById('mobile-filter-payment');
+                const mobileLocation = document.getElementById('mobile-filter-location');
+                const mobileType = document.getElementById('mobile-filter-type');
+                const mobileBedrooms = document.getElementById('mobile-filter-bedrooms');
+                const mobilePrice = document.getElementById('mobile-filter-price');
+                const mobileSearchInput = document.querySelector('.mobile-search-input');
+                
+                const params = new URLSearchParams();
+                
+                // Add search input value as location if present
+                if (mobileSearchInput && mobileSearchInput.value.trim()) {
+                    params.set('search', mobileSearchInput.value.trim());
+                }
+                
+                if (mobilePayment && mobilePayment.value !== 'all') {
+                    params.set('payment', mobilePayment.value);
+                }
+                if (mobileLocation && mobileLocation.value !== 'all') {
+                    params.set('location', mobileLocation.value);
+                }
+                if (mobileType && mobileType.value !== 'all') {
+                    params.set('type', mobileType.value);
+                }
+                if (mobileBedrooms && mobileBedrooms.value !== 'all') {
+                    params.set('bedrooms', mobileBedrooms.value);
+                }
+                if (mobilePrice && mobilePrice.value !== 'all') {
+                    params.set('price', mobilePrice.value);
+                }
+                
+                const queryString = params.toString();
+                const url = queryString ? `listings.html?${queryString}` : 'listings.html';
+                window.location.href = url;
+            });
+        }
     }
 });

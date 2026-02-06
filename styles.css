@@ -2464,6 +2464,131 @@ html, body {
     }
     
     /* ==========================================
+       MOBILE FILTER MODAL
+       Full screen overlay with filter options
+    ========================================== */
+    .mobile-filter-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    .mobile-filter-modal.active {
+        display: flex;
+    }
+    
+    .mobile-filter-modal-content {
+        width: 100%;
+        max-width: 375px;
+        background: var(--white);
+        border-radius: 20px 20px 0 0;
+        padding: 20px;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    
+    .mobile-filter-modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid var(--grey);
+    }
+    
+    .mobile-filter-modal-header h3 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--dark-bg);
+        margin: 0;
+    }
+    
+    .mobile-filter-modal-close {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+    }
+    
+    .mobile-filter-modal-body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .mobile-filter-field {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .mobile-filter-field label {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--dark-bg);
+    }
+    
+    .mobile-filter-field select {
+        width: 100%;
+        height: 48px;
+        padding: 0 15px;
+        border: 1px solid var(--grey);
+        border-radius: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        color: var(--dark-bg);
+        background: var(--white);
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%232a363a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+        cursor: pointer;
+    }
+    
+    .mobile-filter-modal-footer {
+        display: flex;
+        gap: 12px;
+        margin-top: 25px;
+        padding-top: 20px;
+        border-top: 1px solid var(--grey);
+    }
+    
+    .mobile-filter-reset {
+        flex: 1;
+        height: 48px;
+        background: var(--white);
+        border: 1px solid var(--dark-bg);
+        border-radius: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--dark-bg);
+        cursor: pointer;
+    }
+    
+    .mobile-filter-apply {
+        flex: 2;
+        height: 48px;
+        background: var(--primary);
+        border: none;
+        border-radius: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--white);
+        cursor: pointer;
+    }
+
+    /* ==========================================
        MOBILE FEATURED PROPERTIES - Figma Specs
        White bg, 71px padding top/bottom, 20px left/right
     ========================================== */
