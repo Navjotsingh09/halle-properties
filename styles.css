@@ -1746,7 +1746,7 @@ body.menu-open {
 .newsletter-input {
     width: 100%;
     height: 60px;
-    padding: 0 180px 0 17px;
+    padding: 0 180px 0 19px;
     border: 1px solid var(--white);
     border-radius: 40px;
     background: transparent;
