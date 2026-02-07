@@ -551,7 +551,6 @@ body.menu-open {
 ======================================== */
 .properties-section {
     width: 100%;
-    max-width: 1920px;
     margin: 0 auto;
     height: 936px;
     padding: 73px 80px;
@@ -833,7 +832,6 @@ body.menu-open {
 ======================================== */
 .why-section {
     width: 100%;
-    max-width: 1920px;
     margin: 0 auto;
     height: 850px;
     padding: 99px 80px;
@@ -965,7 +963,6 @@ body.menu-open {
 ======================================== */
 .services-section {
     width: 100%;
-    max-width: 1920px;
     margin: 0 auto;
     height: 810px;
     padding: 117px 121px;
@@ -1103,7 +1100,6 @@ body.menu-open {
 ======================================== */
 .testimonials-section {
     width: 100%;
-    max-width: 1920px;
     margin: 0 auto;
     height: 655px;
     padding: 103px 80px 0;
@@ -1241,7 +1237,6 @@ body.menu-open {
 ======================================== */
 .cta-section {
     width: 100%;
-    max-width: 1920px;
     margin: 0 auto;
     height: 530px;
     padding: 80px;
@@ -1363,7 +1358,6 @@ body.menu-open {
 ======================================== */
 .blog-section {
     width: 100%;
-    max-width: 1920px;
     margin: 0 auto;
     background: var(--dark-bg);
     padding: 145px 80px;
@@ -1575,7 +1569,6 @@ body.menu-open {
 ======================================== */
 .faq-section {
     width: 100%;
-    max-width: 1920px;
     margin: 0 auto;
     background: var(--white);
     padding: 88px 98px;
@@ -2728,7 +2721,6 @@ html, body {
     ========================================== */
     .properties-section {
         width: 100%;
-        max-width: 375px;
         height: auto;
         padding: 71px 20px;
         background: var(--white);
@@ -2994,7 +2986,6 @@ html, body {
     ========================================== */
     .why-section {
         width: 100%;
-        max-width: 375px;
         padding: 66px 20px 300px 20px !important;
         margin: 0 auto 50px auto !important;
         background: var(--grey);
@@ -3131,7 +3122,6 @@ html, body {
     ========================================== */
     .services-section {
         width: 100%;
-        max-width: 375px;
         height: auto !important;
         min-height: 0 !important;
         max-height: none !important;
@@ -3434,7 +3424,6 @@ html, body {
     ========================================== */
     .cta-section {
         width: 100%;
-        max-width: 375px;
         padding: 30px 21px;
         margin: 0 auto;
         background: var(--grey);
@@ -3548,7 +3537,6 @@ html, body {
     ========================================== */
     .blog-section {
         width: 100%;
-        max-width: 375px;
         padding: 92px 20px;
         margin: 0 auto;
         background: var(--dark-bg);
@@ -3691,7 +3679,6 @@ html, body {
     ========================================== */
     .faq-section {
         width: 100%;
-        max-width: 375px;
         padding: 48px 23px;
         margin: 0 auto;
         background: var(--white);
