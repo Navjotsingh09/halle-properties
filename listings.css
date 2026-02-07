@@ -640,8 +640,11 @@
     }
 
     .listings-hero-content {
-        gap: 25px;
-        padding: 0 10px;
+        height: 328px;
+        gap: 30px;
+        padding: 140px 11px 50px;
+        width: 335px;
+        max-width: 335px;
     }
 
     .listings-filter .filter-fields {
