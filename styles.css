@@ -2985,12 +2985,21 @@ html, body {
     .why-section {
         width: 100%;
         max-width: 375px;
-        padding: 66px 20px;
-        margin: 0 auto;
+        padding: 66px 20px 300px 20px !important;
+        margin: 0 auto 50px auto !important;
         background: var(--grey);
         position: relative;
-        overflow: hidden;
+        overflow: visible;
         box-sizing: border-box;
+        clear: both;
+        z-index: 2;
+    }
+    
+    .why-section::after {
+        content: "";
+        display: block;
+        clear: both;
+        height: 50px;
     }
     
     .why-section::before {
@@ -4254,6 +4263,11 @@ html, body {
     .service-item {
         width: 100%;
         max-width: 150px;
+    }
+    
+    .why-section {
+        padding-bottom: 350px !important;
+        margin-bottom: 80px !important;
     }
     
     .property-card,
