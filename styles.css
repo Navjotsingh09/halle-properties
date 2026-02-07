@@ -1708,7 +1708,6 @@ body.menu-open {
 ======================================== */
 .newsletter-section {
     width: 100%;
-    max-width: 1920px;
     margin: 0 auto;
     background: var(--dark-bg);
     padding: 21px 80px;
@@ -1801,7 +1800,6 @@ body.menu-open {
 ======================================== */
 .footer {
     width: 100%;
-    max-width: 1920px;
     margin: 0 auto;
     min-height: 457px;
     padding: 80px 80px 25px;
@@ -3862,7 +3860,6 @@ html, body {
     ========================================== */
     .footer {
         width: 100%;
-        max-width: 375px;
         padding: 28px 27px;
         margin: 0 auto;
         background: var(--dark-bg);
