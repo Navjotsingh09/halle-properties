@@ -1759,7 +1759,8 @@ body.menu-open {
 
 .newsletter-input::placeholder {
     color: var(--white);
-    opacity: 0.7;
+    opacity: 1;
+    text-transform: capitalize;
 }
 
 .newsletter-btn {
@@ -3825,7 +3826,7 @@ html, body {
     
     .newsletter-input::placeholder {
         color: var(--white);
-        text-transform: capitalize;
+        opacity: 1;
     }
     
     .newsletter-btn {
