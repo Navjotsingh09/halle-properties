@@ -3829,10 +3829,9 @@ html, body {
         flex: 1;
         background: none;
         border: none;
-        font-size: 12px;
         color: var(--white);
         height: 100%;
-        padding: 0;
+        padding: 17px;
     }
     
     .newsletter-input::placeholder {
