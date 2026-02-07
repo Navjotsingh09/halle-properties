@@ -3791,7 +3791,6 @@ html, body {
     ========================================== */
     .newsletter-section {
         width: 100%;
-        max-width: 375px;
         height: 156px;
         padding: 40px 37px;
         margin: 0 auto;
